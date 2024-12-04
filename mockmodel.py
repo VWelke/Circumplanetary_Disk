@@ -22,10 +22,11 @@ R_sun = R_sun.cgs.value  # Solar radius            [cm]
 # radmc3d.inp parameter : main settings for RADMC-3D
 nphot    = 1000000  #for the thermal monte carto simulation
 
-# Grid
+# Grid : defines layout of space
 
-# Density
+# Density: dust values (for each species) for each cell in the grid
 
+# Number of cells in the grid is defined by
 
 
 
@@ -41,17 +42,19 @@ with open('radmc3d.inp','w+') as f: # Open the file in write-plus (can both read
     f.write('scattering_mode_max = 1\n') # if scattering opacity is included anywhere
     f.write('iranfreqmode = 1\n') # frequency grid is based on input files
 
+
 # Grid
 
-with open('dust_density.inp','w+') as f:
 
 # Density
 
+with open('dust_density.inp','w+') as f:
+    f.write('1\n')                       # Format number
+    f.write('%d\n'%(nr*ntheta*nphi))     # number of cells in the grid
+    f.write('ndust%d\n'%(ndustspec))                       # how many species of dust 
+    data = rhod.ravel(order='F')         # Create a 1-D view, fortran-style indexing ?
+    data.tofile(f, sep='\n', format="%13.6e")  #?
+    f.write('\n')
         
 
 
-
-
-
-
-# Write the parameter to inp.files
