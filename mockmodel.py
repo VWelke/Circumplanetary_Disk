@@ -1,15 +1,17 @@
 import numpy as np
 # Reference files from radmc3d-2.0/examples/run_ppdisk_simple_1/problem_setup.py
 
+# Make some plots in between to visualize the grid and density distribution
 
 # Import some astronomical constants
-from astropy.constants import M_sun, L_sun, R_sun,T_sun, au, pc, G
+from astropy.constants import M_sun, L_sun, R_sun, au, pc, G
+
 
 # Convert constants to cgs units
 au = au.cgs.value     # Astronomical Unit       [cm]
 pc = pc.cgs.value     # Parsec                  [cm]
 M_sun = M_sun.cgs.value  # Solar mass              [g]
-T_sun = T_sun.value      # Solar temperature       [K]
+T_sun = 3000      # Solar temperature       [K]
 L_sun = L_sun.cgs.value  # Solar luminosity        [erg/s]
 R_sun = R_sun.cgs.value  # Solar radius            [cm]
 
@@ -27,15 +29,15 @@ nphot    = 1000000  #for the thermal monte carto simulation
 
 nr       = 32 
 ntheta   = 32
-nphi     = 1
+nphi     = 1 #axisymmetric for each r and theta 
 r_in      = 10*au   # disk inner radius
 r_out     = 100*au # disk outer radius 
-theta_up  = 2*np.pi
+theta_up  = np.pi*0.5 - 0.7e0  # mighr need to be adjusted
 
         # Coordinate array
 
 r_i       = np.logspace(np.log10(r_in),np.log10(r_out),nr+1)  #+1 because it is not counting cell centers, but the walls
-theta_i   = np.linspace(0.e0,np.pi*2.e0,ntheta+1)
+theta_i   = np.linspace(theta_up,0.5e0*np.pi,ntheta+1)  # theta goes to pi/2 lets z starts from zero 
 phi_i     = np.linspace(0.e0,np.pi*2.e0,nphi+1)
 
         # Cell center position array
@@ -47,21 +49,25 @@ phi_c = 0.5*(phi_i[0:nphi]+phi_i[1:nphi+1])
         # Make the grid
             # takes in the center positions of the cells and returns a 3D matrix of the grid
             # indexing='ij' means that the first two indices of the 3D matrix are the r and theta coordinates
-qq       = np.meshgrid(rc,thetac,phic,indexing='ij')
+qq       = np.meshgrid(r_c,theta_c,phi_c,indexing='ij')
             # Extract the coordinates (r,theta, z) from the 3D matrix
 rr       = qq[0]  # final r coor defined by cell center
-tt       = qq[1] # final theta coor defined by cell center
-zr       = np.pi/2.e0 - qq[1]    # z = pi/2 - theta, z is the vertical coordinate
+tt       = qq[1] # final theta coor defined by cell center, just for defining zr
+zr       = np.pi/2.e0 - qq[1]    # z = pi/2 - theta, essentially frame rotated by 90 degrees, and z is from 0 to 0.7 radians
 
 
     # Density: dust values (for each species) for each cell in the grid
                                                                                                                                                              
         # number of dust species
 ndustspec = 1
+
+        # Disk parameters   (Science) - ( to be referenced/lorna?)
+
         # dust density function
 
 
 
+    # Star and planet parameters
 
 
 # Write to .inp files
