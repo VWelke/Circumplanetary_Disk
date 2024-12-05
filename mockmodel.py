@@ -30,8 +30,8 @@ nphot    = 1000000  #for the thermal monte carto simulation
 nr       = 32 
 ntheta   = 32
 nphi     = 1 #axisymmetric for each r and theta 
-r_in      = 10*au   # disk inner radius
-r_out     = 100*au # disk outer radius 
+r_in      = 0.1*au   # disk inner radius
+r_out     = 10*au # disk outer radius 
 theta_up  = np.pi*0.5 - 0.7e0  # mighr need to be adjusted
 
         # Coordinate array
@@ -62,12 +62,21 @@ zr       = np.pi/2.e0 - qq[1]    # z = pi/2 - theta, essentially frame rotated b
 ndustspec = 1
 
         # Disk parameters   (Science) - ( to be referenced/lorna?)
+sigma_g0 =     # gas surface density at 1 au
+sigma_D0 = # dust surface density at 1 au
+h_r0 =  # dust scale height at 1 au
+pl_sig # power law index for the dust surface density
+pl_h   # power law index for the dust scale height
 
         # dust density function
 
+sigma_D   = sigma_D0 * (rr/au)**pl_sig         # surface density : power law function of r
+hh_r      = h_r0 * (rr/au)**pl_h       # scale height : power law function of r, dimensionless
+hh       = hh_r * rr         # physical scale height
+rho_D     = ( sigma_D / (np.sqrt(2.e0*np.pi)*hh) ) * np.exp(-(zr**2/hh_r**2)/2.e0)  # vertical Gaussian density profile
 
 
-    # Star and planet parameters
+    # Star and planet parameters  # Luke Keyte? 
 
 
 # Write to .inp files
