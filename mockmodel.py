@@ -4,7 +4,8 @@ import numpy as np
 # Make some plots in between to visualize the grid and density distribution
 
 # Import some astronomical constants
-from astropy.constants import M_sun, L_sun, R_sun, au, pc, G
+from astropy.constants import M_sun, L_sun, R_sun, au, pc, G, M_jup, R_jup
+from astropy.units import K, g, cm
 
 
 # Convert constants to cgs units
@@ -62,11 +63,11 @@ zr       = np.pi/2.e0 - qq[1]    # z = pi/2 - theta, essentially frame rotated b
 ndustspec = 1
 
         # Disk parameters   (Science) - ( to be referenced/lorna?)
-sigma_g0 =     # gas surface density at 1 au
-sigma_D0 = # dust surface density at 1 au
-h_r0 =  # dust scale height at 1 au
-pl_sig # power law index for the dust surface density
-pl_h   # power law index for the dust scale height
+sigma_g0 =  10**3*(g/cm**2)   # gas surface density at 1 au
+sigma_D0 = 0.01*10**3*(g/cm**2) #g/cm^2 # dust surface density at 1 au
+h_r0 = 0.1*au # dust scale height at 1 au
+pl_sig = -1.5# power law index for the dust surface density
+pl_h  = 1.15 # power law index for the dust scale height
 
         # dust density function
 
@@ -76,8 +77,20 @@ hh       = hh_r * rr         # physical scale height
 rho_D     = ( sigma_D / (np.sqrt(2.e0*np.pi)*hh) ) * np.exp(-(zr**2/hh_r**2)/2.e0)  # vertical Gaussian density profile
 
 
-    # Star and planet parameters  # Luke Keyte? 
+    # Star and planet parameters  
+# Star parameters
+#
+mstar    = 1.65*M_sun
+rstar    = 1.6*R_sun
+tstar    = 7650*K
+pstar    = np.array([37.2*au,0.,0.])
 
+
+# Planet parameters
+mplanet  = 3*M_jup
+rplanet  = 1.17*R_jup
+tplanet  = 1000
+pplanet  = np.array([0.,0.,0.])
 
 # Write to .inp files
 
@@ -117,9 +130,17 @@ with open('dust_density.inp','w+') as f:
     f.write('%d\n'%(ndustspec))          # how many species of dust 
 
     # WHy flatten even if grid is 3D? 
-    data = rhod.ravel(order='F')         # Fortran-like index ordering, flatten density structure to 1D
+    data = rho_D.ravel(order='F')         # Fortran-like index ordering, flatten density structure to 1D
     data.tofile(f, sep='\n', format="%13.6e")  # 13 characters long, include integer and decider, 6 decimal long
     # sep = '\n' means each value is separated by a new line
     f.write('\n') # new line at the end of the file
         
 
+    # Stars and Planets
+with open('stars.inp','w+') as f:
+    f.write('2\n')
+    f.write('1 %d\n\n'%(nlam))
+    f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n'%(rstar,mstar,pstar[0],pstar[1],pstar[2]))
+    for value in lam:
+        f.write('%13.6e\n'%(value))
+    f.write('\n%13.6e\n'%(-tstar))
