@@ -41,19 +41,24 @@ else:
 # The first 5 rows are the header information: iformat, number of pixels(x,y), number of wavlength images, pixel size(cm,x,y), wavelength (micron)
 
 
-with open(out_path, 'r') as file:
-    lines = file.readlines()
+with open(out_path, 'r') as file: # opens the file in read mode
+    lines = file.readlines() #returns a list of all lines in the file
 
 # Parse header information
-grid_size = list(map(int, lines[1].strip().split()))  # Line 2: Grid dimensions
-data_values = lines[5:]  # Remaining lines: Numerical data
+grid_size = list(map(int, lines[1].strip().split())) # Grid size in x and y directions
+# split: split tbe line into a list of strings, strip: remove leading and trailing whitespaces
+# map: apply int function to each element of the list->make them integer of a list 
+# this applies for lines[1] which is the number of pixels in x and y directions
+data_values = lines[5:]  # Numerical data
 
 # Convert the data into a numpy array and reshape
-data_values = np.array([float(value.strip()) for value in data_values if value.strip()])
-reshaped_data = data_values.reshape(grid_size)  # Reshape based on grid dimensions
-
+data_values = np.array([float(value.strip()) for value in data_values if value.strip()]) # Convert to float and remove empty strings
+reshaped_data = data_values.reshape(grid_size)  # Reshape the 1d array into a 2d array based
 # Call the image function
+#image:image(ff,x=None,y=None,aspect='equal',cmap=None,range=None)
 fig, ax = image(reshaped_data, cmap='inferno')
+
+# Add labels and title
 plt.colorbar(label='Intensity')  # Add colorbar for context
 plt.xlabel('X (pixels)')
 plt.ylabel('Y (pixels)')

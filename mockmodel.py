@@ -30,8 +30,8 @@ nphot    = 1000000  #for the thermal monte carto simulation
 nr       = 32 
 ntheta   = 32
 nphi     = 1 #axisymmetric for each r and theta 
-r_in      = 0.1*au   # disk inner radius
-r_out     = 10*au # disk outer radius 
+r_in      = 0.004779*au   # disk inner radius
+r_out     = 0.93*au # disk outer radius 
 theta_up  = np.pi*0.5 - 0.7e0  # mighr need to be adjusted
 
         # Coordinate array
