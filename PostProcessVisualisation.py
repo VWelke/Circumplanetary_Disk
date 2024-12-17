@@ -27,7 +27,7 @@ except ImportError as e:
 # Load the data from the .out files
 # If there are multiple .out files, load them all in a list
 
-out_path = 'C:/Users/LHEM/radmc3d-2.0-master/radmc3d-2.0-master/examples/run_simple_1/image.out'  # Specify the path to the directory containing the .out files
+out_path = 'C:/Users/LHEM/radmc3d-2.0-master/radmc3d-2.0-master/examples/run_ppdisk_simple_1/image.out'  # Specify the path to the directory containing the .out files
 
 
 # Check if the file exists in the specified directory

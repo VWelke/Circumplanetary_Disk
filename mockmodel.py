@@ -138,9 +138,13 @@ with open('dust_density.inp','w+') as f:
 
     # Stars and Planets
 with open('stars.inp','w+') as f:
-    f.write('2\n')
-    f.write('1 %d\n\n'%(nlam))
-    f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n'%(rstar,mstar,pstar[0],pstar[1],pstar[2]))
+    f.write('2\n')  #2: lambda in microns, 1: freq in hz
+    f.write('2 %d\n\n'%(nlam)) # number of stars, number of wavelengths  #%d\n\n'%(nlam): placeholder for nlam
+    f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n'%(rstar,mstar,pstar[0],pstar[1],pstar[2])) # write the star's r,M,pos(x,y,z) in 6 dec places,  each value separated by a space, and line ends with 2 new lines
+    f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n'%(rplanet,mplanet,pplanet[0],pplanet[1],pplanet[2]))
     for value in lam:
         f.write('%13.6e\n'%(value))
     f.write('\n%13.6e\n'%(-tstar))
+    f.write('\n%13.6e\n'%(-tplanet))
+
+    
