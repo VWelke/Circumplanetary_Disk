@@ -54,6 +54,12 @@ data_values = lines[5:]  # Numerical data
 # Convert the data into a numpy array and reshape
 data_values = np.array([float(value.strip()) for value in data_values if value.strip()]) # Convert to float and remove empty strings
 reshaped_data = data_values.reshape(grid_size)  # Reshape the 1d array into a 2d array based
+
+# Print the reshaped data's size and dimensions
+print(f"Reshaped data dimensions: {reshaped_data.shape}")
+print(reshaped_data)
+
+
 # Call the image function
 #image:image(ff,x=None,y=None,aspect='equal',cmap=None,range=None)
 fig, ax = image(reshaped_data, cmap='inferno')
@@ -63,5 +69,8 @@ plt.colorbar(label='Intensity')  # Add colorbar for context
 plt.xlabel('X (pixels)')
 plt.ylabel('Y (pixels)')
 plt.title('RADMC-3D Image')
-plt.show()
 
+# Save the image to a directorya as png file
+plt.savefig('C:/Users/LHEM/Desktop/MSci Project/Images_RADMC_3D_png/image.png')  # Save the plot as a .png file
+
+plt.show()
