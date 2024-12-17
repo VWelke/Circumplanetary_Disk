@@ -98,98 +98,81 @@ pplanet  = np.array([0.,0.,0.])
     # https://www.eso.org/public/teles-instr/alma/receiver-bands/
 alma_bands = {
     "Band 1": (6e3, 8.6e3),  # 6–8.6 mm converted to microns
-    "Band 2": (2.6e3, 4.5e3),  # 2.6–4.5 mm converted to microns
-    "Band 3": (2.6e3, 3.6e3),  # 2.6–3.6 mm converted to microns
-    "Band 4": (1.8e3, 2.4e3),  # 1.8–2.4 mm converted to microns
-    "Band 5": (1.4e3, 1.8e3),  # 1.4–1.8 mm converted to microns
-    "Band 6": (1.1e3, 1.4e3),  # 1.1–1.4 mm converted to microns
-    "Band 7": (0.8e3, 1.1e3),  # 0.8–1.1 mm converted to microns
-    "Band 8": (0.6e3, 0.8e3),  # 0.6–0.8 mm converted to microns
-    "Band 9": (0.4e3, 0.5e3),  # 0.4–0.5 mm converted to microns
-    "Band 10": (0.3e3, 0.4e3),  # 0.3–0.4 mm converted to microns
+    "Band 2": (2.6e3, 4.5e3),
+    "Band 3": (2.6e3, 3.6e3),
+    "Band 4": (1.8e3, 2.4e3),
+    "Band 5": (1.4e3, 1.8e3),
+    "Band 6": (1.1e3, 1.4e3),
+    "Band 7": (0.8e3, 1.1e3),
+    "Band 8": (0.6e3, 0.8e3),
+    "Band 9": (0.4e3, 0.5e3),
+    "Band 10": (0.3e3, 0.4e3),
 }
 
-# Generate logarithmically spaced wavelength arrays for each band
-wavelengths = []
-for band, (lam_start, lam_end) in alma_bands.items():
-    n_points = 50  # Number of points in each band
-    lam_band = np.logspace(np.log10(lam_start), np.log10(lam_end), n_points, endpoint=False)
-    wavelengths.append(lam_band)
-
-# Concatenate all wavelength arrays
+# Generate logarithmically spaced wavelengths
+n_points = 50
+wavelengths = [np.logspace(np.log10(start), np.log10(end), n_points, endpoint=False) for start, end in alma_bands.values()]
 lam = np.concatenate(wavelengths)
 nlam = lam.size
 
+# Ensure lam is numerical
+lam = lam.astype(float)  # Explicitly convert to float if needed
+
+
+
 # Write to .inp files
 
+# Main setting
+with open('radmc3d.inp', 'w+') as f:  # Open the file in write-plus (can both read and write the file) mode
+    f.write('nphot = %d\n' % (nphot))  # means nphot = <value of nphot>, %d is placeholder later replaced by value of nphot, \n is new line 
+    f.write('scattering_mode_max = 1\n')  # if scattering opacity is included anywhere
+    f.write('iranfreqmode = 1\n')  # frequency grid is based on input files
 
-    # Main setting
-
-with open('radmc3d.inp','w+') as f: # Open the file in write-plus (can both read and write the file) mode
-# with: ensures file is properly closed after the function is executed even if error occurs
-    f.write('nphot = %d\n' %(nphot))  # means nphot = <value of nphot>, %d is placeholder later replaced by value of nphot, \n is new line 
-    f.write('scattering_mode_max = 1\n') # if scattering opacity is included anywhere
-    f.write('iranfreqmode = 1\n') # frequency grid is based on input files
-
-
-    # Grid
-
-with open('amr_grid.inp','w+') as f:
-    f.write('1\n')                       # iformat
-    f.write('0\n')                       # AMR grid style  (0=regular grid, no AMR)
-    f.write('100\n')                     # Coordinate system: spherical
-    f.write('0\n')                       # gridinfo
-    f.write('1 1 0\n')                   # Include r,theta coordinates, phi not included 
-    f.write('%d %d %d\n'%(nr,ntheta,1))  # Size of grid
+# Grid
+with open('amr_grid.inp', 'w+') as f:
+    f.write('1\n')  # iformat
+    f.write('0\n')  # AMR grid style  (0=regular grid, no AMR)
+    f.write('100\n')  # Coordinate system: spherical
+    f.write('0\n')  # gridinfo
+    f.write('1 1 0\n')  # Include r,theta coordinates, phi not included 
+    f.write('%d %d %d\n' % (nr, ntheta, 1))  # Size of grid
     for value in r_i:
-        f.write('%13.6e\n'%(value))      # X coordinates (cell walls position)
+        f.write('%13.6e\n' % (value))  # X coordinates (cell walls position)
     for value in theta_i:
-        f.write('%13.6e\n'%(value))      # Y coordinates (cell walls)
+        f.write('%13.6e\n' % (value))  # Y coordinates (cell walls)
     for value in phi_i:
-        f.write('%13.6e\n'%(value))      # Z coordinates (cell walls)
+        f.write('%13.6e\n' % (value))  # Z coordinates (cell walls)
 
+# Flatten the density structure to 1D
+data = rho_D.ravel(order='F')  # Fortran-like index ordering
 
+# Open the file to write the data
+with open('density.inp', 'w+') as f:
+    # Write the data values to the file
+    data.value.tofile(f, sep='\n', format="%13.6e")  # 13 characters long, include integer and decider, 6 decimal long
+    f.write('\n')  # new line at the end of the file
 
-    # Density
+# Stars and Planets
+with open('stars.inp', 'w+') as f:
+    f.write('2\n')  # 2: lambda in microns, 1: freq in hz
+    f.write('2 %d\n\n' % (nlam))  # number of stars, number of wavelengths
+    f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n' % (rstar, mstar, pstar[0], pstar[1], pstar[2]))  # star's r, M, pos(x, y, z)
+    f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n' % (rplanet, mplanet, pplanet[0], pplanet[1], pplanet[2]))  # planet's r, M, pos(x, y, z)
+    f.writelines('%13.6e\n' % val for val in lam)  # write each value in lam array
+    f.write('\n%13.6e\n' % (-tstar))  # write negative tstar
+    f.write('\n%13.6e\n' % (-tplanet))  # write negative tplanet
 
-with open('dust_density.inp','w+') as f:
-    f.write('1\n')                       # Format number -> it has format so dont need labels like nphot
-    f.write('%d\n'%(nr*ntheta*nphi))     # number of cells in the grid
-    f.write('%d\n'%(ndustspec))          # how many species of dust 
-
-    # WHy flatten even if grid is 3D? 
-    data = rho_D.ravel(order='F')         # Fortran-like index ordering, flatten density structure to 1D
-    data.tofile(f, sep='\n', format="%13.6e")  # 13 characters long, include integer and decider, 6 decimal long
-    # sep = '\n' means each value is separated by a new line
-    f.write('\n') # new line at the end of the file
-        
-
-    # Stars and Planets
-with open('stars.inp','w+') as f:
-    f.write('2\n')  #2: lambda in microns, 1: freq in hz
-    f.write('2 %d\n\n'%(nlam)) # number of stars, number of wavelengths  #%d\n\n'%(nlam): placeholder for nlam
-    f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n'%(rstar,mstar,pstar[0],pstar[1],pstar[2])) # write the star's r,M,pos(x,y,z) in 6 dec places,  each value separated by a space, and line ends with 2 new lines
-    f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n'%(rplanet,mplanet,pplanet[0],pplanet[1],pplanet[2]))
-    # Iterate over the lam array and write each value
-    for value in lam:
-        f.write('%13.6e\n' % value)  # Directly write values (no need for .value here as lam should already be a numerical array)
-    
-    # Write tstar and tplanet, ensuring they are just numbers
-    f.write('\n%13.6e\n' % (-tstar))
-    f.write('\n%13.6e\n' % (-tplanet))
-
-    # Dust opacity
-with open('dustopac.inp','w+') as f:
+# Dust opacity
+with open('dustopac.inp', 'w+') as f:
     f.write('2               Format number of this file\n')
     f.write('1               Nr of dust species\n')
     f.write('============================================================================\n')
-    f.write('1               Way in which this dust species is read\n')  #input style 1 or 10
-    f.write('0               0=Thermal grain\n')   # quantum heated grain
-    f.write('silicate        Extension of name of dustkappa_***.inp file\n')  #name of dust species, combo with inputstyle tells which file to read
+    f.write('1               Way in which this dust species is read\n')  # input style 1 or 10
+    f.write('0               0=Thermal grain\n')  # quantum heated grain
+    f.write('silicate        Extension of name of dustkappa_***.inp file\n')  # name of dust species
     f.write('----------------------------------------------------------------------------\n')
 
 # Write the wavelength file
 with open('wavelength_micron.inp', 'w+') as f:
-    f.write('%d\n' % (nlam))
-    for value in lam:
-        f.write('%13.6e\n' % (value))
+    f.write('%d\n' % nlam)
+    f.writelines('%13.6e\n' % val for val in lam)
