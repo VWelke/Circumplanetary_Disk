@@ -78,7 +78,7 @@ rho_D     = ( sigma_D / (np.sqrt(2.e0*np.pi)*hh) ) * np.exp(-(zr**2/hh_r**2)/2.e
 
 
     # Star and planet parameters  
-# Star parameters
+        # Star parameters
 #
 mstar    = 1.65*M_sun
 rstar    = 1.6*R_sun
@@ -86,11 +86,39 @@ tstar    = 7650*K
 pstar    = np.array([37.2*au,0.,0.])
 
 
-# Planet parameters
+        # Planet parameters
 mplanet  = 3*M_jup
 rplanet  = 1.17*R_jup
 tplanet  = 1000
 pplanet  = np.array([0.,0.,0.])
+
+
+    # Wavelengths
+    # ALMA wavelength range for different bands in microns
+    # https://www.eso.org/public/teles-instr/alma/receiver-bands/
+alma_bands = {
+    "Band 1": (6e3, 8.6e3),  # 6–8.6 mm converted to microns
+    "Band 2": (2.6e3, 4.5e3),  # 2.6–4.5 mm converted to microns
+    "Band 3": (2.6e3, 3.6e3),  # 2.6–3.6 mm converted to microns
+    "Band 4": (1.8e3, 2.4e3),  # 1.8–2.4 mm converted to microns
+    "Band 5": (1.4e3, 1.8e3),  # 1.4–1.8 mm converted to microns
+    "Band 6": (1.1e3, 1.4e3),  # 1.1–1.4 mm converted to microns
+    "Band 7": (0.8e3, 1.1e3),  # 0.8–1.1 mm converted to microns
+    "Band 8": (0.6e3, 0.8e3),  # 0.6–0.8 mm converted to microns
+    "Band 9": (0.4e3, 0.5e3),  # 0.4–0.5 mm converted to microns
+    "Band 10": (0.3e3, 0.4e3),  # 0.3–0.4 mm converted to microns
+}
+
+# Generate logarithmically spaced wavelength arrays for each band
+wavelengths = []
+for band, (lam_start, lam_end) in alma_bands.items():
+    n_points = 50  # Number of points in each band
+    lam_band = np.logspace(np.log10(lam_start), np.log10(lam_end), n_points, endpoint=False)
+    wavelengths.append(lam_band)
+
+# Concatenate all wavelength arrays
+lam = np.concatenate(wavelengths)
+nlam = lam.size
 
 # Write to .inp files
 
@@ -142,9 +170,26 @@ with open('stars.inp','w+') as f:
     f.write('2 %d\n\n'%(nlam)) # number of stars, number of wavelengths  #%d\n\n'%(nlam): placeholder for nlam
     f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n'%(rstar,mstar,pstar[0],pstar[1],pstar[2])) # write the star's r,M,pos(x,y,z) in 6 dec places,  each value separated by a space, and line ends with 2 new lines
     f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n'%(rplanet,mplanet,pplanet[0],pplanet[1],pplanet[2]))
+    # Iterate over the lam array and write each value
     for value in lam:
-        f.write('%13.6e\n'%(value))
-    f.write('\n%13.6e\n'%(-tstar))
-    f.write('\n%13.6e\n'%(-tplanet))
-
+        f.write('%13.6e\n' % value)  # Directly write values (no need for .value here as lam should already be a numerical array)
     
+    # Write tstar and tplanet, ensuring they are just numbers
+    f.write('\n%13.6e\n' % (-tstar))
+    f.write('\n%13.6e\n' % (-tplanet))
+
+    # Dust opacity
+with open('dustopac.inp','w+') as f:
+    f.write('2               Format number of this file\n')
+    f.write('1               Nr of dust species\n')
+    f.write('============================================================================\n')
+    f.write('1               Way in which this dust species is read\n')  #input style 1 or 10
+    f.write('0               0=Thermal grain\n')   # quantum heated grain
+    f.write('silicate        Extension of name of dustkappa_***.inp file\n')  #name of dust species, combo with inputstyle tells which file to read
+    f.write('----------------------------------------------------------------------------\n')
+
+# Write the wavelength file
+with open('wavelength_micron.inp', 'w+') as f:
+    f.write('%d\n' % (nlam))
+    for value in lam:
+        f.write('%13.6e\n' % (value))
