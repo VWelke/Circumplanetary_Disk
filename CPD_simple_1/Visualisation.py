@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from mockmodel import r_i, theta_i, phi_i, r_c, theta_c, phi_c, rr, tt, zr
+from CPD_simple_1.mockmodel import r_i, theta_i, phi_i, r_c, theta_c, phi_c, rr, tt, zr
 
 # Plot radial coordinates
 plt.figure()
