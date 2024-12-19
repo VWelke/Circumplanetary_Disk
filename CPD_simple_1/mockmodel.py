@@ -80,15 +80,15 @@ rho_D     = ( sigma_D / (np.sqrt(2.e0*np.pi)*hh) ) * np.exp(-(zr**2/hh_r**2)/2.e
     # Star and planet parameters  
         # Star parameters
 #
-mstar    = 1.65*M_sun
-rstar    = 1.6*R_sun
-tstar    = 7650*K
-pstar    = np.array([37.2*au,0.,0.])
+mstar    = 1.65  #Msun
+rstar    = 1.6  #Rsun
+tstar    = 7650 #K
+pstar    = np.array([37.2,0.,0.])  #au
 
 
         # Planet parameters
-mplanet  = 3*M_jup
-rplanet  = 1.17*R_jup
+mplanet  = 3  #Mjup
+rplanet  = 1.17 #R_jup
 tplanet  = 1000
 pplanet  = np.array([0.,0.,0.])
 
