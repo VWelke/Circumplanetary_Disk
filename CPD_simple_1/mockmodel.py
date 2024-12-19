@@ -63,9 +63,9 @@ zr       = np.pi/2.e0 - qq[1]    # z = pi/2 - theta, essentially frame rotated b
 ndustspec = 1
 
         # Disk parameters   (Science) - ( to be referenced/lorna?)
-sigma_g0 =  10**3*(g/cm**2)   # gas surface density at 1 au
-sigma_D0 = 0.01*10**3*(g/cm**2) #g/cm^2 # dust surface density at 1 au
-h_r0 = 0.1*au # dust scale height at 1 au
+sigma_g0 =  10**3 #(g/cm**2)   # gas surface density at 1 au
+sigma_D0 = 0.01*10**3 #(g/cm**2) #g/cm^2 # dust surface density at 1 au
+h_r0 = 0.1 #au # dust scale height at 1 au
 pl_sig = -1.5# power law index for the dust surface density
 pl_h  = 1.15 # power law index for the dust scale height
 
@@ -83,7 +83,7 @@ rho_D     = ( sigma_D / (np.sqrt(2.e0*np.pi)*hh) ) * np.exp(-(zr**2/hh_r**2)/2.e
 mstar    = 1.65  #Msun
 rstar    = 1.6  #Rsun
 tstar    = 7650 #K
-pstar    = np.array([37.2,0.,0.])  #au
+pstar    = np.array([0.,0.,0.])  # 37.2 au at R later
 
 
         # Planet parameters
@@ -138,20 +138,23 @@ with open('amr_grid.inp', 'w+') as f:
 data = rho_D.ravel(order='F')  # Fortran-like index ordering
 
 # Open the file to write the data
-with open('density.inp', 'w+') as f:
-    # Write the data values to the file
-    data.value.tofile(f, sep='\n', format="%13.6e")  # 13 characters long, include integer and decider, 6 decimal long
-    f.write('\n')  # new line at the end of the file
+with open('dust_density.inp','w+') as f:
+    f.write('1\n')                       # Format number
+    f.write('%d\n'%(nr*ntheta*nphi))     # Nr of cells
+    f.write('1\n')                       # Nr of dust species
+    data = rho_D.ravel(order='F')         # Create a 1-D view, fortran-style indexing
+    data.tofile(f, sep='\n', format="%13.6e")
+    f.write('\n')
 
 # Stars and Planets
 with open('stars.inp', 'w+') as f:
     f.write('2\n')  # 2: lambda in microns, 1: freq in hz
-    f.write('2 %d\n\n' % (nlam))  # number of stars, number of wavelengths
-    f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n' % (rstar, mstar, pstar[0], pstar[1], pstar[2]))  # star's r, M, pos(x, y, z)
+    f.write('1 %d\n\n' % (nlam))  # number of stars, number of wavelengths
+    #f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n' % (rstar, mstar, pstar[0], pstar[1], pstar[2]))  # star's r, M, pos(x, y, z)
     f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n' % (rplanet, mplanet, pplanet[0], pplanet[1], pplanet[2]))  # planet's r, M, pos(x, y, z)
     f.writelines('%13.6e\n' % val for val in lam)  # write each value in lam array
     f.write('\n%13.6e\n' % (-tstar))  # write negative tstar
-    f.write('\n%13.6e\n' % (-tplanet))  # write negative tplanet
+    #f.write('\n%13.6e\n' % (-tplanet))  # write negative tplanet
 
 # Dust opacity
 with open('dustopac.inp', 'w+') as f:
