@@ -96,27 +96,18 @@ pplanet  = np.array([0.,0.,0.])
     # Wavelengths
     # ALMA wavelength range for different bands in microns
     # https://www.eso.org/public/teles-instr/alma/receiver-bands/
-alma_bands = {
-    "Band 1": (6e3, 8.6e3),  # 6–8.6 mm converted to microns
-    "Band 2": (2.6e3, 4.5e3),
-    "Band 3": (2.6e3, 3.6e3),
-    "Band 4": (1.8e3, 2.4e3),
-    "Band 5": (1.4e3, 1.8e3),
-    "Band 6": (1.1e3, 1.4e3),
-    "Band 7": (0.8e3, 1.1e3),
-    "Band 8": (0.6e3, 0.8e3),
-    "Band 9": (0.4e3, 0.5e3),
-    "Band 10": (0.3e3, 0.4e3),
-}
-
-# Generate logarithmically spaced wavelengths
-n_points = 50
-wavelengths = [np.logspace(np.log10(start), np.log10(end), n_points, endpoint=False) for start, end in alma_bands.values()]
-lam = np.concatenate(wavelengths)
-nlam = lam.size
-
-# Ensure lam is numerical
-lam = lam.astype(float)  # Explicitly convert to float if needed
+lam1     = 0.1e0
+lam2     = 7.0e0
+lam3     = 25.e0
+lam4     = 1.0e4
+n12      = 20
+n23      = 100
+n34      = 30
+lam12    = np.logspace(np.log10(lam1),np.log10(lam2),n12,endpoint=False)
+lam23    = np.logspace(np.log10(lam2),np.log10(lam3),n23,endpoint=False)
+lam34    = np.logspace(np.log10(lam3),np.log10(lam4),n34,endpoint=True)
+lam      = np.concatenate([lam12,lam23,lam34])
+nlam     = lam.size
 
 
 
@@ -172,7 +163,7 @@ with open('dustopac.inp', 'w+') as f:
     f.write('silicate        Extension of name of dustkappa_***.inp file\n')  # name of dust species
     f.write('----------------------------------------------------------------------------\n')
 
-# Write the wavelength file
-with open('wavelength_micron.inp', 'w+') as f:
-    f.write('%d\n' % nlam)
-    f.writelines('%13.6e\n' % val for val in lam)
+with open('wavelength_micron.inp','w+') as f:
+    f.write('%d\n'%(nlam))
+    for value in lam:
+        f.write('%13.6e\n'%(value))
