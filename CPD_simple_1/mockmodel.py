@@ -30,9 +30,17 @@ nphot    = 1000000  #for the thermal monte carto simulation
 
 nr       = 32 
 ntheta   = 32
-nphi     = 1 #axisymmetric for each r and theta 
-r_in      = 0.004779*au   # disk inner radius
-r_out     = 0.93*au # disk outer radius 
+nphi     = 32
+
+
+# Radius for PPD not CPD
+# r:  inner CPD (0.2 au to 2.2 au) , gap (2.2 au to 26 au) , outer dust ring (26 au to 90 au)
+# (Poblette et al 2022), but doesnt include the inner CPD rim, prob need calculagte truncation radius from star mass
+# CPD locates 37.2 au away from star (r = 37.2 )
+r_in      = 0.2*au   # disk inner radius  # prob 3 times Jupyter radius
+r_out     = 0.90*au # disk outer radius 
+
+print(r_in, r_out)
 theta_up  = np.pi*0.5 - 0.7e0  # mighr need to be adjusted
 
         # Coordinate array
@@ -62,12 +70,18 @@ zr       = np.pi/2.e0 - qq[1]    # z = pi/2 - theta, essentially frame rotated b
         # number of dust species
 ndustspec = 1
 
-        # Disk parameters   (Science) - ( to be referenced/lorna?)
-sigma_g0 =  10**3 #(g/cm**2)   # gas surface density at 1 au
-sigma_D0 = 0.01*10**3 #(g/cm**2) #g/cm^2 # dust surface density at 1 au
-h_r0 = 0.1 #au # dust scale height at 1 au
-pl_sig = -1.5# power law index for the dust surface density
-pl_h  = 1.15 # power law index for the dust scale height
+        # CPD Disk parameters   (Science) - ( to be referenced/lorna?)
+#sigma_g0 =  10**3 #(g/cm**2)   # gas surface density at 1 au
+#sigma_D0 = 0.01*10**3 #(g/cm**2) #g/cm^2 # dust surface density at 1 au
+#h_r0 = 0.1 #au # dust scale height at 1 au
+#pl_sig = -1.5# power law index for the dust surface density
+#pl_h  = 1.15 # power law index for the dust scale height
+
+sigma_g0 =  1 #(g/cm**2)   # gas surface density at 1 au
+sigma_D0 = 0.01 #(g/cm**2) #g/cm^2 # dust surface density at 1 au
+h_r0 = 0.05 #au # dust scale height at 1 au
+pl_sig = -1# power law index for the dust surface density
+pl_h  = 0.1 # power law index for the dust scale height
 
         # dust density function
 
@@ -79,12 +93,12 @@ rho_D     = ( sigma_D / (np.sqrt(2.e0*np.pi)*hh) ) * np.exp(-(zr**2/hh_r**2)/2.e
 
     # Star and planet parameters  
         # Star parameters
-#
-mstar    = 1.65  #Msun
-rstar    = 1.6  #Rsun
+
+mstar    = 1.65*M_sun  #Msun
+rstar    = 1.6*R_sun  #Rsun
 tstar    = 7650 #K
 pstar    = np.array([0.,0.,0.])  # 37.2 au at R later
-
+print(mstar,rstar)
 
         # Planet parameters
 mplanet  = 3  #Mjup
@@ -125,8 +139,8 @@ with open('amr_grid.inp', 'w+') as f:
     f.write('0\n')  # AMR grid style  (0=regular grid, no AMR)
     f.write('100\n')  # Coordinate system: spherical
     f.write('0\n')  # gridinfo
-    f.write('1 1 0\n')  # Include r,theta coordinates, phi not included 
-    f.write('%d %d %d\n' % (nr, ntheta, 1))  # Size of grid
+    f.write('1 1 1\n')  # Include r,theta coordinates, phi not included 
+    f.write('%d %d %d\n' % (nr, ntheta, nphi))  # Size of grid
     for value in r_i:
         f.write('%13.6e\n' % (value))  # X coordinates (cell walls position)
     for value in theta_i:
@@ -150,11 +164,14 @@ with open('dust_density.inp','w+') as f:
 with open('stars.inp', 'w+') as f:
     f.write('2\n')  # 2: lambda in microns, 1: freq in hz
     f.write('1 %d\n\n' % (nlam))  # number of stars, number of wavelengths
-    #f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n' % (rstar, mstar, pstar[0], pstar[1], pstar[2]))  # star's r, M, pos(x, y, z)
-    f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n' % (rplanet, mplanet, pplanet[0], pplanet[1], pplanet[2]))  # planet's r, M, pos(x, y, z)
-    f.writelines('%13.6e\n' % val for val in lam)  # write each value in lam array
-    f.write('\n%13.6e\n' % (-tstar))  # write negative tstar
+    f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n'%(rstar, mstar, pstar[0], pstar[1], pstar[2]))  # star's r, M, pos(x, y, z)
+    #f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n' % (rplanet, mplanet, pplanet[0], pplanet[1], pplanet[2]))  # planet's r, M, pos(x, y, z)
+    for value in lam:
+        f.write('%13.6e\n'%(value))
+    f.write('\n%13.6e\n'%(-tstar))  # write negative tstar
     #f.write('\n%13.6e\n' % (-tplanet))  # write negative tplanet
+
+
 
 # Dust opacity
 with open('dustopac.inp', 'w+') as f:

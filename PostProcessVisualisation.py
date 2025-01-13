@@ -27,7 +27,7 @@ except ImportError as e:
 # Load the data from the .out files
 # If there are multiple .out files, load them all in a list
 
-out_path = 'C:/Users/LHEM/radmc3d-2.0-master/radmc3d-2.0-master/examples/run_ppdisk_simple_1/image.out'  # Specify the path to the directory containing the .out files
+out_path = 'C:/Users/LHEM/Desktop/Van_Code_Projects/Circumplanetary_Disk/CPD_simple_1/image.out'  # Specify the path to the directory containing the .out files
 
 
 # Check if the file exists in the specified directory
@@ -46,9 +46,15 @@ with open(out_path, 'r') as file: # opens the file in read mode
 
 # Parse header information
 grid_size = list(map(int, lines[1].strip().split())) # Grid size in x and y directions
-# split: split tbe line into a list of strings, strip: remove leading and trailing whitespaces
-# map: apply int function to each element of the list->make them integer of a list 
-# this applies for lines[1] which is the number of pixels in x and y directions
+pixel_size_cm = float(lines[3].strip().split()[0])  # Pixel size in cm
+
+# Convert pixel size to au
+pixel_size_au = pixel_size_cm / 1.496e13
+
+# Generate x and y coordinates in au
+x_coords = np.linspace(0, grid_size[0] * pixel_size_au, grid_size[0])
+y_coords = np.linspace(0, grid_size[1] * pixel_size_au, grid_size[1])
+
 data_values = lines[5:]  # Numerical data
 
 # Convert the data into a numpy array and reshape
@@ -60,17 +66,17 @@ print(f"Reshaped data dimensions: {reshaped_data.shape}")
 print(reshaped_data)
 
 
-# Call the image function
-#image:image(ff,x=None,y=None,aspect='equal',cmap=None,range=None)
-fig, ax = image(reshaped_data, cmap='inferno')
+# Plot the image
+fig, ax = plt.subplots()
+cax = ax.imshow(reshaped_data, extent=[x_coords.min(), x_coords.max(), y_coords.min(), y_coords.max()], cmap='inferno', aspect='equal')
 
 # Add labels and title
-plt.colorbar(label='Intensity')  # Add colorbar for context
-plt.xlabel('X (pixels)')
-plt.ylabel('Y (pixels)')
+plt.colorbar(cax, label='Intensity')  # Add colorbar for context
+plt.xlabel('X (au)')
+plt.ylabel('Y (au)')
 plt.title('RADMC-3D Image')
 
-# Save the image to a directorya as png file
-plt.savefig('C:/Users/LHEM/Desktop/MSci Project/Images_RADMC_3D_png/image.png')  # Save the plot as a .png file
+# Save the image to a directory as png file
+# plt.savefig('C:/Users/LHEM/Desktop/MSci Project/Images_RADMC_3D_png/image.png')  # Save the plot as a .png file
 
 plt.show()
