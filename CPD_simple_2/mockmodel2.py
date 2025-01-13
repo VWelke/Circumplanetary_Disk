@@ -54,9 +54,9 @@ hrbigsett= 0.02              # The big grains are settled a bit more than the sm
 #
 # Star parameters
 #
-mstar    = 2.4*ms
-rstar    = 2.4*rs
-tstar    = 1e4
+mstar    = 1.65*ms
+rstar    = 1.6*rs
+tstar    = 7650 #K
 pstar    = np.array([0.,0.,0.])
 #
 # Make the coordinates
@@ -88,6 +88,98 @@ hhsm     = hhrsm * rr
 hhbg     = hhrbg * rr
 rhodsm   = ( sigmadsm / (np.sqrt(2.e0*np.pi)*hhsm) ) * np.exp(-(zr**2/hhrsm**2)/2.e0)
 rhodbg   = ( sigmadbg / (np.sqrt(2.e0*np.pi)*hhbg) ) * np.exp(-(zr**2/hhrbg**2)/2.e0)
+
+
+# Mask the CPD region 
+
+
+
+#CPD parameters
+sigmad02 = 0.01*10**3 #(g/cm**2) #g/cm^2 # dust surface density at 1 au
+plsig2 = -1.5# power law index for the dust surface density
+plh2  = 1.15 # power law index for the dust scale height
+hr02 = 0.1
+hrbigsett2 =0.05
+
+# Make the dust density model for CPD
+#
+sigmad2  = sigmad02 * (rr/au)**plsig2
+sigmadsm2 = sigmad2*(1.-fracbig)
+sigmadbg2 = sigmad2*fracbig
+hhrsm2    = hr02 * (rr/au)**plh2
+hhrbg2    = hrbigsett2 * (rr/au)**plh2
+hhsm2     = hhrsm2 * rr
+hhbg2     = hhrbg2 * rr
+rhodsm2   = ( sigmadsm2 / (np.sqrt(2.e0*np.pi)*hhsm2) ) * np.exp(-(zr**2/hhrsm2**2)/2.e0)
+rhodbg2   = ( sigmadbg2 / (np.sqrt(2.e0*np.pi)*hhbg2) ) * np.exp(-(zr**2/hhrbg2**2)/2.e0)
+
+# Define the radial range for the CPD
+r_min = 30 * au  # Inner radius of the CPD region
+r_max = 39.7 * au  # Outer radius of the CPD region
+
+# Create a mask for the specified range of rr
+mask = (rr >= r_min) & (rr <= r_max)
+
+# Extract the masked radial values
+r_masked = rr[mask]
+
+# Define the midpoint of the CPD region
+r_mid = 37.2 * au  # Midpoint of the radial range
+
+# Shift the radial array by the midpoint and take the positive values
+
+r_shifted = np.abs(r_masked - r_mid)
+
+# Update the density model within the specified range
+# Apply the shifted and positive radial values
+sigmad[mask] += sigmad02 * (r_shifted / au) ** plsig2
+sigmadsm[mask] = sigmad[mask] * (1. - fracbig)
+sigmadbg[mask] = sigmad[mask] * fracbig
+hhrsm[mask] += hr02 * (r_shifted / au) ** plh2
+hhrbg[mask] += hrbigsett2 * (r_shifted / au) ** plh2
+hhsm[mask] = hhrsm[mask] * r_shifted
+hhbg[mask] = hhrbg[mask] * r_shifted
+rhodsm[mask] = (sigmadsm[mask] / (np.sqrt(2.e0 * np.pi) * hhsm[mask])) * np.exp(-(zr[mask] ** 2 / hhrsm[mask] ** 2) / 2.e0)
+rhodbg[mask] = (sigmadbg[mask] / (np.sqrt(2.e0 * np.pi) * hhbg[mask])) * np.exp(-(zr[mask] ** 2 / hhrbg[mask] ** 2) / 2.e0)
+
+# Add a gap between r = 2.2au to r = 26 au 
+# Add a gap between r = 2.2au to r = 26 au
+#gap_min = 2.2 * au
+#gap_max = 26.0 * au
+#gap_mask = (rr >= gap_min) & (rr <= gap_max)
+#rhodsm[gap_mask] = 0.0
+#rhodbg[gap_mask] = 0.0
+
+import matplotlib.pyplot as plt
+
+# Function to plot the small dust density profile
+def plot_small_dust_density(rr, rhodsm):
+    plt.figure(figsize=(10, 6))
+    plt.plot(rr.flatten() / au, rhodsm.flatten(), label='Small Dust Density (rhodsm)')
+    plt.xlabel('Radius (au)')
+    plt.ylabel('Dust Density')
+    plt.title('Small Dust Density Profile')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+# Function to plot the big dust density profile
+def plot_big_dust_density(rr, rhodbg):
+    plt.figure(figsize=(10, 6))
+    plt.plot(rr.flatten() / au, rhodbg.flatten(), label='Big Dust Density (rhodbg)')
+    plt.xlabel('Radius (au)')
+    plt.ylabel('Dust Density')
+    plt.title('Big Dust Density Profile')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+# Call the functions to plot the dust density profiles
+plot_small_dust_density(rr, rhodsm)
+plot_big_dust_density(rr, rhodbg)
+
+
+
 #
 # Write the wavelength_micron.inp file
 #
