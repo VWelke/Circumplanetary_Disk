@@ -24,7 +24,7 @@ R_sun = R_sun.cgs.value  # Solar radius            [cm]
 
     # radmc3d.inp parameter : main settings for RADMC-3D
 nphot    = 1000000  #for the thermal monte carto simulation
-
+#multiple CPU cores, may need cluster
 
     # Grid : defines layout of space
 
@@ -37,12 +37,10 @@ nphi     = 32
 # r:  inner CPD (0.2 au to 2.2 au) , gap (2.2 au to 26 au) , outer dust ring (26 au to 90 au)
 # (Poblette et al 2022), but doesnt include the inner CPD rim, prob need calculagte truncation radius from star mass
 # CPD locates 37.2 au away from star (r = 37.2 )
-r_in      = 0.2*au   # disk inner radius  # prob 3 times Jupyter radius
-r_out     = 0.90*au # disk outer radius 
+r_in      = 0.2*au   # 3 times Jupyter radius
+r_out     = 90*au 
 
-print(r_in, r_out)
-theta_up  = np.pi*0.5 - 0.7e0  # mighr need to be adjusted
-
+theta_up  = np.pi*0.5 - 0.7e0  
         # Coordinate array
 
 r_i       = np.logspace(np.log10(r_in),np.log10(r_out),nr+1)  #+1 because it is not counting cell centers, but the walls
@@ -62,49 +60,139 @@ qq       = np.meshgrid(r_c,theta_c,phi_c,indexing='ij')
             # Extract the coordinates (r,theta, z) from the 3D matrix
 rr       = qq[0]  # final r coor defined by cell center
 tt       = qq[1] # final theta coor defined by cell center, just for defining zr
+pp       = qq[2]
 zr       = np.pi/2.e0 - qq[1]    # z = pi/2 - theta, essentially frame rotated by 90 degrees, and z is from 0 to 0.7 radians
 
 
     # Density: dust values (for each species) for each cell in the grid
                                                                                                                                                              
         # number of dust species
-ndustspec = 1
+ndustspec = 2
 
-        # CPD Disk parameters   (Science) - ( to be referenced/lorna?)
-#sigma_g0 =  10**3 #(g/cm**2)   # gas surface density at 1 au
-#sigma_D0 = 0.01*10**3 #(g/cm**2) #g/cm^2 # dust surface density at 1 au
-#h_r0 = 0.1 #au # dust scale height at 1 au
-#pl_sig = -1.5# power law index for the dust surface density
-#pl_h  = 1.15 # power law index for the dust scale height
 
-sigma_g0 =  1 #(g/cm**2)   # gas surface density at 1 au
-sigma_D0 = 0.01 #(g/cm**2) #g/cm^2 # dust surface density at 1 au
-h_r0 = 0.05 #au # dust scale height at 1 au
-pl_sig = -1# power law index for the dust surface density
-pl_h  = 0.1 # power law index for the dust scale height
-
+sigmag0  = 1e3               # Sigma gas at 1 AU
+sigmad0  = sigmag0 * 0.01    # Sigma dust at 1 AU
+fracbig  = 0.99              # Fraction of dust that is the big grain dust
+plsig    = -1.0e0            # Powerlaw of the surface density
+hr0      = 0.05              # H_p/r at 1 AU
+plh      = 0.1               # Powerlaw of flaring
+hrbigsett= 0.02              # The big grains are settled a bit more than the small grains
         # dust density function
 
-sigma_D   = sigma_D0 * (rr/au)**pl_sig         # surface density : power law function of r
-hh_r      = h_r0 * (rr/au)**pl_h       # scale height : power law function of r, dimensionless
-hh       = hh_r * rr         # physical scale height
-rho_D     = ( sigma_D / (np.sqrt(2.e0*np.pi)*hh) ) * np.exp(-(zr**2/hh_r**2)/2.e0)  # vertical Gaussian density profile
+sigmad   = sigmad0 * (rr/au)**plsig
+sigmadsm = sigmad*(1.-fracbig)
+sigmadbg = sigmad*fracbig
+hhrsm    = hr0 * (rr/au)**plh
+hhrbg    = hrbigsett * (rr/au)**plh
+hhsm     = hhrsm * rr
+hhbg     = hhrbg * rr
+rhodsm   = ( sigmadsm / (np.sqrt(2.e0*np.pi)*hhsm) ) * np.exp(-(zr**2/hhrsm**2)/2.e0)
+rhodbg   = ( sigmadbg / (np.sqrt(2.e0*np.pi)*hhbg) ) * np.exp(-(zr**2/hhrbg**2)/2.e0)
 
 
+
+
+#CPD parameters
+#sigma_g0 =  10**3 #(g/cm**2)   # gas surface density at 1 au
+sigmad02 = 0.01*10**3 #(g/cm**2) #g/cm^2 # dust surface density at 1 au
+plsig2 = -1.5# power law index for the dust surface density
+plh2  = 1.15 # power law index for the dust scale height
+hr02 = 0.1
+hrbigsett2 =0.05
+
+# Make the dust density model for CPD
+#
+sigmad2  = sigmad02 * (rr/au)**plsig2
+sigmadsm2 = sigmad2*(1.-fracbig)
+sigmadbg2 = sigmad2*fracbig
+hhrsm2    = hr02 *(rr/au)**plh2
+hhrbg2    = hrbigsett2 * (rr/au)**plh2
+hhsm2     = hhrsm2 * rr
+hhbg2     = hhrbg2 * rr
+rhodsm2   = ( sigmadsm2 / (np.sqrt(2.e0*np.pi)*hhsm2) ) * np.exp(-(zr**2/hhrsm2**2)/2.e0)
+rhodbg2   = ( sigmadbg2 / (np.sqrt(2.e0*np.pi)*hhbg2) ) * np.exp(-(zr**2/hhrbg2**2)/2.e0)
+
+# Define the radial range for the CPD
+r_min = 35 * au  # Inner radius of the CPD region
+r_max = 39.7 * au  # Outer radius of the CPD region
+
+
+# Create a mask for the specified range of rr
+mask = (rr >= r_min) & (rr <= r_max)
+
+
+
+# Extract the masked radial values
+r_masked = rr[mask]
+
+# Define the midpoint of the CPD region
+r_mid = ((r_max+r_min)/2) # Midpoint of the radial range
+
+# Shift the radial array by the midpoint and take the positive values
+
+r_shifted = np.abs(r_masked - r_mid)
+
+# Update the density model within the specified range
+# Apply the shifted and positive radial values
+# ongoing discussion about shape (Sun etal 2024)
+sigmad[mask] += sigmad02 * (r_shifted / au) ** plsig2
+sigmadsm[mask] = sigmad[mask] * (1. - fracbig)
+sigmadbg[mask] = sigmad[mask] * fracbig
+hhrsm[mask] += hr02 * (r_shifted / au) ** plh2
+hhrbg[mask] += hrbigsett2 * (r_shifted / au) ** plh2
+hhsm[mask] = hhrsm[mask] * r_shifted
+hhbg[mask] = hhrbg[mask] * r_shifted
+rhodsm[mask] = (sigmadsm[mask] / (np.sqrt(2.e0 * np.pi) * hhsm[mask])) * np.exp(-(zr[mask] ** 2 / hhrsm[mask] ** 2) / 2.e0)
+rhodbg[mask] = (sigmadbg[mask] / (np.sqrt(2.e0 * np.pi) * hhbg[mask])) * np.exp(-(zr[mask] ** 2 / hhrbg[mask] ** 2) / 2.e0)
+
+# add azimuthal averaging
+azav  = True                  # Switch on the azimuthal averaging
+
+if azav:
+    rho_dust_3d_av = []
+    for rho in rhodsm,rhodbg:
+        rhoav = rho.mean(axis=2)
+        rho_dust_3d_av.append(rhoav)
+    rhodsm,rhodbg = rho_dust_3d_av
+    phi_i = [phi_i[0],phi_i[-1]]
+    nphi = 1
+
+import matplotlib.pyplot as plt
+def plot_small_dust_density_CPD(r_shifted, rhodsm):
+    plt.figure(figsize=(10, 6))
+    plt.plot(r_shifted.flatten(), np.log10(sigmad[mask]), label='Small Dust Density (rhodsm)')
+    plt.xlabel('Radius (au)')
+    plt.ylabel('Dust Density')
+    plt.title('Small Dust Density Profile')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+#plot_small_dust_density_CPD(r_shifted, rhodsm)
+
+def plot_small_dust_density(rr, rhodsm):
+    plt.figure(figsize=(10, 6))
+    plt.plot(rr.flatten() / au, np.log10(rhodsm.flatten()), label='Small Dust Density (rhodsm)')
+    plt.xlabel('Radius (au)')
+    plt.ylabel('Dust Density')
+    plt.title('Small Dust Density Profile')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+#plot_small_dust_density(rr, rhodsm)
     # Star and planet parameters  
         # Star parameters
 
-mstar    = 1.65*M_sun  #Msun
+mstar    = 20*M_sun  #1.65 Msun
 rstar    = 1.6*R_sun  #Rsun
-tstar    = 7650 #K
-pstar    = np.array([0.,0.,0.])  # 37.2 au at R later
+tstar    = 20000 #7650 #K
+pstar    = np.array([0,0.,0.])  # 37.2 au at R later
 print(mstar,rstar)
 
         # Planet parameters
 mplanet  = 3  #Mjup
 rplanet  = 1.17 #R_jup
 tplanet  = 1000
-pplanet  = np.array([0.,0.,0.])
+pplanet  = np.array([37.2*au,0.,0.])
 
 
     # Wavelengths
@@ -132,55 +220,61 @@ with open('radmc3d.inp', 'w+') as f:  # Open the file in write-plus (can both re
     f.write('nphot = %d\n' % (nphot))  # means nphot = <value of nphot>, %d is placeholder later replaced by value of nphot, \n is new line 
     f.write('scattering_mode_max = 1\n')  # if scattering opacity is included anywhere
     f.write('iranfreqmode = 1\n')  # frequency grid is based on input files
+    f.write('modified_random_walk =1\n') #for optically thick
 
 # Grid
-with open('amr_grid.inp', 'w+') as f:
-    f.write('1\n')  # iformat
-    f.write('0\n')  # AMR grid style  (0=regular grid, no AMR)
-    f.write('100\n')  # Coordinate system: spherical
-    f.write('0\n')  # gridinfo
-    f.write('1 1 1\n')  # Include r,theta coordinates, phi not included 
-    f.write('%d %d %d\n' % (nr, ntheta, nphi))  # Size of grid
+with open('amr_grid.inp','w+') as f:
+    f.write('1\n')                       # iformat
+    f.write('0\n')                       # AMR grid style  (0=regular grid, no AMR)
+    f.write('100\n')                     # Coordinate system: spherical
+    f.write('0\n')                       # gridinfo
+    if nphi>1:
+        f.write('1 1 1\n')                  # Include r,theta,phi coordinates
+    else:
+        f.write('1 1 0\n')                  # Include r,theta coordinates
+    f.write('%d %d %d\n'%(nr,ntheta,nphi))  # Size of grid
     for value in r_i:
-        f.write('%13.6e\n' % (value))  # X coordinates (cell walls position)
+        f.write('%13.6e\n'%(value))      # X coordinates (cell walls)
     for value in theta_i:
-        f.write('%13.6e\n' % (value))  # Y coordinates (cell walls)
+        f.write('%17.10e\n'%(value))     # Y coordinates (cell walls) (use higher precision here)
     for value in phi_i:
-        f.write('%13.6e\n' % (value))  # Z coordinates (cell walls)
+        f.write('%13.6e\n'%(value))      # Z coordinates (cell walls)
+#
 
-# Flatten the density structure to 1D
-data = rho_D.ravel(order='F')  # Fortran-like index ordering
-
-# Open the file to write the data
 with open('dust_density.inp','w+') as f:
     f.write('1\n')                       # Format number
     f.write('%d\n'%(nr*ntheta*nphi))     # Nr of cells
-    f.write('1\n')                       # Nr of dust species
-    data = rho_D.ravel(order='F')         # Create a 1-D view, fortran-style indexing
-    data.tofile(f, sep='\n', format="%13.6e")
-    f.write('\n')
+    f.write('2\n')                       # Nr of dust species
+    data = rhodsm.ravel(order='F')         # Create a 1-D view, fortran-style indexing
+    np.savetxt(f,data.T,fmt=['%13.6e'])  # The data
+    data = rhodbg.ravel(order='F')         # Create a 1-D view, fortran-style indexing
+    np.savetxt(f,data.T,fmt=['%13.6e'])  # The data
 
 # Stars and Planets
 with open('stars.inp', 'w+') as f:
     f.write('2\n')  # 2: lambda in microns, 1: freq in hz
     f.write('1 %d\n\n' % (nlam))  # number of stars, number of wavelengths
     f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n'%(rstar, mstar, pstar[0], pstar[1], pstar[2]))  # star's r, M, pos(x, y, z)
-    #f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n' % (rplanet, mplanet, pplanet[0], pplanet[1], pplanet[2]))  # planet's r, M, pos(x, y, z)
+    f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n' % (rplanet, mplanet, pplanet[0], pplanet[1], pplanet[2]))  # planet's r, M, pos(x, y, z)
     for value in lam:
         f.write('%13.6e\n'%(value))
     f.write('\n%13.6e\n'%(-tstar))  # write negative tstar
-    #f.write('\n%13.6e\n' % (-tplanet))  # write negative tplanet
+    f.write('\n%13.6e\n' % (-tplanet))  # write negative tplanet
 
 
 
 # Dust opacity
-with open('dustopac.inp', 'w+') as f:
+with open('dustopac.inp','w+') as f:
     f.write('2               Format number of this file\n')
-    f.write('1               Nr of dust species\n')
+    f.write('2               Nr of dust species\n')
     f.write('============================================================================\n')
-    f.write('1               Way in which this dust species is read\n')  # input style 1 or 10
-    f.write('0               0=Thermal grain\n')  # quantum heated grain
-    f.write('silicate        Extension of name of dustkappa_***.inp file\n')  # name of dust species
+    f.write('1               Way in which this dust species is read\n')
+    f.write('0               0=Thermal grain\n')
+    f.write('0.1_micron      Extension of name of dustkappa_***.inp file\n')
+    f.write('----------------------------------------------------------------------------\n')
+    f.write('1               Way in which this dust species is read\n')
+    f.write('0               0=Thermal grain\n')
+    f.write('100_micron      Extension of name of dustkappa_***.inp file\n')
     f.write('----------------------------------------------------------------------------\n')
 
 with open('wavelength_micron.inp','w+') as f:

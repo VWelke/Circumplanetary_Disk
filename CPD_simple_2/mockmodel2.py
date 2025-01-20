@@ -38,7 +38,7 @@ ntheta   = 32
 nphi     = 1
 rin      = 0.5*au
 rout     = 100*au
-thetaup  = np.pi*0.5 - 0.7e0
+thetaup  = np.pi/2-0.7
 nlev_rin = 8
 nspan_rin= 3
 #
@@ -63,7 +63,7 @@ pstar    = np.array([0.,0.,0.])
 #
 ri       = np.logspace(np.log10(rin),np.log10(rout),nr+1)
 ri       = grid_refine_inner_edge(ri,nlev_rin,nspan_rin)
-thetai   = np.linspace(thetaup,0.5e0*np.pi,ntheta+1)
+thetai   = np.linspace(thetaup,np.pi/2,ntheta+1)
 phii     = np.linspace(0.e0,np.pi*2.e0,nphi+1)
 rc       = 0.5 * ( ri[:-1] + ri[1:] )
 thetac   = 0.5 * ( thetai[0:ntheta] + thetai[1:ntheta+1] )
@@ -76,6 +76,7 @@ qq       = np.meshgrid(rc,thetac,phic,indexing='ij')
 rr       = qq[0]
 tt       = qq[1]
 zr       = np.pi/2.e0 - qq[1]
+pp       = qq[2]
 #
 # Make the dust density model
 #
@@ -162,7 +163,7 @@ def plot_small_dust_density(rr, rhodsm):
     plt.legend()
     plt.grid(True)
     plt.show()
-
+plot_small_dust_density(rr, rhodsm)
 # Function to plot the big dust density profile
 def plot_big_dust_density(rr, rhodbg):
     plt.figure(figsize=(10, 6))
@@ -173,12 +174,6 @@ def plot_big_dust_density(rr, rhodbg):
     plt.legend()
     plt.grid(True)
     plt.show()
-
-# Call the functions to plot the dust density profiles
-plot_small_dust_density(rr, rhodsm)
-plot_big_dust_density(rr, rhodbg)
-
-
 
 #
 # Write the wavelength_micron.inp file
