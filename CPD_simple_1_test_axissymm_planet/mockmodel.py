@@ -1,3 +1,6 @@
+# This model adds a ring of dust at the CPD region by azimuthally averaging, did not include planet as radiation source
+
+
 import numpy as np
 # Reference files from radmc3d-2.0/examples/run_ppdisk_simple_1/problem_setup.py
 
