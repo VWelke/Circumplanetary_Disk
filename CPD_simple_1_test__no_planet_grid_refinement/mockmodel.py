@@ -30,7 +30,8 @@ def grid_refine_mid_plane(theta_orig, nlev, nspan):
     theta = theta_orig.copy()
     rev = theta[0] > theta[1]
     for ilev in range(nlev):
-        theta_new = 0.5 * (theta[nspan-1:-1] + theta[nspan:])  # create new points
+        theta_new = 0.5 * (theta[nspan-1:-1] + theta[nspan:])  #for last few indices-> small z, refine midplane
+        #theta_new = 0.5 * (theta[1:nspan+1] + theta[:nspan])   # #refine disk surface
         theta_ref = np.hstack((theta, theta_new))
         theta_ref.sort()
         theta = theta_ref
@@ -39,7 +40,8 @@ def grid_refine_mid_plane(theta_orig, nlev, nspan):
     return theta
 
 
-nlev_thetain = 8 
+
+nlev_thetain = 4 
 nspan_thetain= 3  
 
 # Define the parameters of the model
@@ -51,7 +53,7 @@ nphot    = 1000000  #for the thermal monte carto simulation
     # Grid : defines layout of space
 
 nr       = 100 
-ntheta   = 32
+ntheta   = 80
 nphi     = 200
 
 
@@ -66,16 +68,22 @@ theta_up  = np.pi*0.5 - 0.7e0
         # Coordinate array
 
 r_i       = np.logspace(np.log10(r_in),np.log10(r_out),nr+1)  #+1 because it is not counting cell centers, but the walls
+
+
 theta_i   = np.linspace(theta_up,0.5e0*np.pi,ntheta+1)  # theta goes to pi/2 lets z starts from zero 
+
 theta_i   = grid_refine_mid_plane(theta_i, nlev_thetain, nspan_thetain)
+
 phi_i     = np.linspace(0.e0,np.pi*2.e0,nphi+1)
 
         # Cell center position array
-r_c = 0.5*(r_i[0:nr]+r_i[1:nr+1])  # average of the cell wall x-pos and cell wall x+1 pos for each cell in the array
-theta_c = 0.5*(theta_i[0:ntheta]+theta_i[1:ntheta+1])
-phi_c = 0.5*(phi_i[0:nphi]+phi_i[1:nphi+1])
+
+r_c       = 0.5 * ( r_i[:-1] + r_i[1:] )
+theta_c   = 0.5 * ( theta_i[:-1] + theta_i[1:] )
+phi_c     = 0.5 * ( phi_i[:-1] + phi_i[1:] )
 ntheta       = len(theta_c)  
 
+print(f'The number of theta grid cells are {ntheta}')
         # Make the grid
             # takes in the center positions of the cells and returns a 3D matrix of the grid
             # indexing='ij' means that the first two indices of the 3D matrix are the r and theta coordinates
@@ -286,13 +294,13 @@ with open('dust_density.inp','w+') as f:
 # Stars and Planets
 with open('stars.inp', 'w+') as f:
     f.write('2\n')  # 2: lambda in microns, 1: freq in hz
-    f.write('2 %d\n\n' % (nlam))  # number of stars, number of wavelengths
+    f.write('1 %d\n\n' % (nlam))  # number of stars, number of wavelengths
     f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n'%(rstar, mstar, pstar[0], pstar[1], pstar[2]))  # star's r, M, pos(x, y, z)
-    f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n' % (rplanet, mplanet, pplanet[0], pplanet[1], pplanet[2]))  # planet's r, M, pos(x, y, z)
+    #f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n' % (rplanet, mplanet, pplanet[0], pplanet[1], pplanet[2]))  # planet's r, M, pos(x, y, z)
     for value in lam:
         f.write('%13.6e\n'%(value))
     f.write('\n%13.6e\n'%(-tstar))  # write negative tstar
-    f.write('\n%13.6e\n' % (-tplanet))  # write negative tplanet
+    #f.write('\n%13.6e\n' % (-tplanet))  # write negative tplanet
 
 
 
