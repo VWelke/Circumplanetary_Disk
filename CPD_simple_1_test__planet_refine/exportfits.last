@@ -1,0 +1,13 @@
+imagename  = 'casatrial1/casatrial1.alma_1.0arcsec.noisy.image'
+fitsimage  = 'casatrial1.fits'
+velocity   = False
+optical    = False
+bitpix     = -32
+minpix     = 0
+maxpix     = -1
+overwrite  = False
+dropstokes = False
+stokeslast = True
+history    = True
+dropdeg    = False
+#exportfits( imagename='casatrial1/casatrial1.alma_1.0arcsec.noisy.image',fitsimage='casatrial1.fits',velocity=False,optical=False,bitpix=-32,minpix=0,maxpix=-1,overwrite=False,dropstokes=False,stokeslast=True,history=True,dropdeg=False )
