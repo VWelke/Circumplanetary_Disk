@@ -1,0 +1,21 @@
+# This logs the script and paramters for each individal observation from ALMA in this directory
+
+
+# I start with observing the model in ALMA band 5 (1621 microns/185 GHz) from the Cycle 11 configuration number 10 
+# Variables to be changed everytime will be: incenter, antennalist, totaltime, 
+# in simanalyse, change: vis
+# Change project name for each wavelength/band
+
+# Decide on if I want to observe for all bands really - I think depend on ratio of CPD radiation to PPD radiation
+
+# Band 5
+1. ALMA_1621.6/alma.cycle11.10.cfg
+2. ALMA_1621.6/alma.cycle11.9.cfg
+3. ALMA_1621.6/alma.cycle11.8.cfg
+4. ALMA_1621.6/alma.cycle11.7.cfg
+----------------------------------------------------------------------------------------------------
+# Band 10
+5. ALMA_344.8/alma.cycle11.10.cfg
+6. ALMA_344.8/alma.cycle11.9.cfg
+7. ALMA_344.8/alma.cycle11.8.cfg
+8. ALMA_344.8/alma.cycle11.7.cfg
