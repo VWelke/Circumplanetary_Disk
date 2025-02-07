@@ -1,7 +1,5 @@
-# This model goes from CPD_simple_1_test__no_planet_refine/mockmodel.py
-# This model includes the planet and refines the grid around the planet, coupled with increase number of photon 
-# Also, let CPD radius be 1 au, Star temperature decrease to hd169142 value from 20000k
-# Define new inp:  color_inus.inp for ALMA wavelengths
+# This model goes from CPD_simple_1_test__planet_refine/mockmodel.py
+# but decrease T_sun to 4000K and increase number of python to 1e9
 
 import numpy as np
 # Reference files from radmc3d-2.0/examples/run_ppdisk_simple_1/problem_setup.py
@@ -63,7 +61,7 @@ nspan_thetain= 3
 # Define the parameters of the model
 
     # radmc3d.inp parameter : main settings for RADMC-3D
-nphot    = 1e7  #for the thermal monte carto simulation
+nphot    = 1e9  #for the thermal monte carto simulation
 #multiple CPU cores, may need cluster
 
     # Grid : defines layout of space
@@ -244,7 +242,7 @@ def plot_small_dust_density(rr, rhodsm):
 
 mstar    = 20*M_sun  #1.65 Msun
 rstar    = 1.6*R_sun  #Rsun
-tstar    = 7650 #7650 #K
+tstar    = 4000  #K
 pstar    = np.array([0,0.,0.])  # 37.2 au at R later
 
 
