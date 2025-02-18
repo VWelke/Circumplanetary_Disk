@@ -41,36 +41,45 @@ def grid_refine_mid_plane(theta_orig, nlev, nspan):
             theta = theta[::-1]
     return theta
 
-#def grid_refine_inner_edge(x_orig,nlev,nspan):
- #   x     = x_orig.copy()
-   # rev   = x[0]>x[1]
-    #for ilev in range(nlev):
-      #  x_new = 0.5 * ( x[1:nspan+1] + x[:nspan] )
-      #  x_ref = np.hstack((x,x_new))
-       # x_ref.sort()
-       # x     = x_ref
-       # if rev:
-        #    x = x[::-1]
-    #return x
 
-#nlev_rin = 5
-# nspan_rin= 6
+# phi_max = np.arctan(1/37.2) # Azimuthal range of the CPD region
+# phi_min = 2*np.pi - phi_max
+
+# increase phi grid cell for range (pp >= 0) & (pp <= phi_max) | (pp >= phi_min) & (pp <= 2*np.pi)
+
+def grid_refine_phi(phi_orig, nlev, phi_max, phi_min):
+
+    phi = phi_orig.copy()
+    for ilev in range(nlev):
+        # Identify the indices within the specified range
+        mask = (phi >= 0) & (phi <= phi_max) | (phi >= phi_min) & (phi <= 2 * np.pi)
+        phi_to_refine = phi[mask]
+        # Refine the grid within the specified range
+    
+        phi_new = 0.5 * (phi_to_refine[:-1] + phi_to_refine[1:])
+        phi_ref = np.hstack((phi, phi_new))
+        phi_ref.sort()
+        phi = phi_ref
+
+    return phi
 
 
 nlev_thetain = 4 
 nspan_thetain= 3  
+nlev_phiin = 4
 
 # Define the parameters of the model
 
     # radmc3d.inp parameter : main settings for RADMC-3D
 nphot    = 1e7  #for the thermal monte carto simulation
+nphot_scat = 1e6  #for the scattering monte carto simulation
 #multiple CPU cores, may need cluster
 
     # Grid : defines layout of space
 
 nr       = 100 
-ntheta   = 80
-nphi     = 200
+ntheta   = 40
+nphi     = 40
 
 
 # Radius for PPD not CPD
@@ -94,13 +103,22 @@ theta_i   = grid_refine_mid_plane(theta_i, nlev_thetain, nspan_thetain)
 print(np.pi/2.e0-theta_i)
 phi_i     = np.linspace(0.e0,np.pi*2.e0,nphi+1)
 
+phi_i = grid_refine_phi(phi_i, nlev_phiin, 0.2, 2*np.pi - 0.2)
+
+
+
         # Cell center position array
 
 r_c       = 0.5 * ( r_i[:-1] + r_i[1:] )
 theta_c   = 0.5 * ( theta_i[:-1] + theta_i[1:] )
 phi_c     = 0.5 * ( phi_i[:-1] + phi_i[1:] )
-ntheta       = len(theta_c)  
 
+print(phi_i)
+print(phi_c)
+ntheta       = len(theta_c)  
+nphi         = len(phi_c)
+
+print( f'the number of phi grid cells are {nphi}')
 print(f'The number of theta grid cells are {ntheta}')
         # Make the grid
             # takes in the center positions of the cells and returns a 3D matrix of the grid
@@ -278,6 +296,7 @@ nlam     = lam.size
 # Main setting
 with open('radmc3d.inp', 'w+') as f:  # Open the file in write-plus (can both read and write the file) mode
     f.write('nphot = %d\n' % (nphot))  # means nphot = <value of nphot>, %d is placeholder later replaced by value of nphot, \n is new line 
+    f.write('nphot_scat = %d\n' % (nphot_scat))  
     f.write('scattering_mode_max = 1\n')  # if scattering opacity is included anywhere
     f.write('iranfreqmode = 1\n')  # frequency grid is based on input files
     f.write('modified_random_walk =1\n') #for optically thick

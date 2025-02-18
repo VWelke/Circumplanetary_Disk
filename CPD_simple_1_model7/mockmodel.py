@@ -39,6 +39,18 @@ def grid_refine_mid_plane(theta_orig, nlev, nspan):
             theta = theta[::-1]
     return theta
 
+def grid_refine_phi(phi_orig, nlev, nspan):
+
+    phi = phi_orig.copy()
+    for ilev in range(nlev):
+        # Merge adjacent points by averaging them
+        phi_new = 0.5 * (phi[:nspan] + phi[1:nspan+1])
+        phi_ref = np.hstack((phi[nspan:], phi_new))
+        phi_ref.sort()
+        phi = phi_ref
+
+    return phi
+
 #def grid_refine_inner_edge(x_orig,nlev,nspan):
  #   x     = x_orig.copy()
    # rev   = x[0]>x[1]
@@ -67,8 +79,8 @@ nphot    = 1e9  #for the thermal monte carto simulation
     # Grid : defines layout of space
 
 nr       = 100 
-ntheta   = 80
-nphi     = 200
+ntheta   = 40
+nphi     = 100
 
 
 # Radius for PPD not CPD
