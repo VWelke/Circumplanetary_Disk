@@ -1,0 +1,18 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"OPENMpi"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore-cache load "OPENMpi"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+srun: Job step aborted: Waiting up to 62 seconds for job step to finish.
+srun: got SIGCONT
+slurmstepd: error: *** JOB 30559 ON compute-0-0 CANCELLED AT 2025-02-20T14:00:15 ***
+srun: forcing job termination
+slurmstepd: error: *** STEP 30559.1 ON compute-0-0 CANCELLED AT 2025-02-20T14:00:15 ***
+srun: error: compute-0-0: task 0: Terminated

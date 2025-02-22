@@ -1,0 +1,6 @@
+srun: Job step aborted: Waiting up to 62 seconds for job step to finish.
+srun: got SIGCONT
+slurmstepd: error: *** JOB 30581 ON compute-0-3 CANCELLED AT 2025-02-21T12:00:56 ***
+srun: forcing job termination
+slurmstepd: error: *** STEP 30581.1 ON compute-0-3 CANCELLED AT 2025-02-21T12:00:56 ***
+srun: error: compute-0-3: task 0: Terminated
