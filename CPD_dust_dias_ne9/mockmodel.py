@@ -48,16 +48,16 @@ nspan_thetain= 3
 # Define the parameters of the model
 
     # radmc3d.inp parameter : main settings for RADMC-3D
-nphot    = 1e9  #for the thermal monte carto simulation
-nphot_scat = 1e8  #for the scattering monte carto simulation
+nphot    = 1e7  #for the thermal monte carto simulation
+nphot_scat = 1e7  #for the scattering monte carto simulation
 #multiple CPU cores, may need cluster
 
     # Grid : defines layout of space
 
 # number go back to CPD_simple_1_test_no_planet_grid_refinement
-nr       = 100 
-ntheta   = 80
-nphi     = 200
+nr       = 100  #100
+ntheta   = 80  #80
+nphi     = 200  #200
 
 
 # Radius for PPD not CPD
@@ -234,9 +234,9 @@ def plot_small_dust_density(rr, rhodsm):
     # Star and planet parameters  
         # Star parameters
 
-mstar    = 20*M_sun  #1.65 Msun
+mstar    = 1.65*M_sun  #1.65 Msun
 rstar    = 1.6*R_sun  #Rsun
-tstar    = 7650 #7650 #K
+tstar    = 4000 #7650 #K
 pstar    = np.array([0,0.,0.])  # 37.2 au at R later
 
 
@@ -263,8 +263,8 @@ lam34    = np.logspace(np.log10(lam3),np.log10(lam4),n34,endpoint=True)
 lam      = np.concatenate([lam12,lam23,lam34])
 nlam     = lam.size
 
-
-
+print(nr*ntheta*nphi)
+print(100*200*80)
 # Write to .inp files
 
 # Main setting
