@@ -1,5 +1,4 @@
 # This model goes from CPD_simple_1_test_model_8
-# I have messed up the CPD_simple_1_test__planet_refine image.out files and the intermediate .temp files
 # remove the phi grid refinement, and increase number of total grid cells , check the strucutres, increase photon to 10^9
 
 import numpy as np
