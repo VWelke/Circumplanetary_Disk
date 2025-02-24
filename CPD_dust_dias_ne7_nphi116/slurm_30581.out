@@ -1,0 +1,184 @@
+Checking the number of processors available...
+32
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                128
+On-line CPU(s) list:   0-127
+Thread(s) per core:    2
+Core(s) per socket:    32
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 106
+Model name:            Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+Stepping:              6
+CPU MHz:               800.000
+CPU max MHz:           3400.0000
+CPU min MHz:           800.0000
+BogoMIPS:              5200.00
+Virtualization:        VT-x
+L1d cache:             48K
+L1i cache:             32K
+L2 cache:              1280K
+L3 cache:              49152K
+NUMA node0 CPU(s):     0-31,64-95
+NUMA node1 CPU(s):     32-63,96-127
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 intel_pt tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts avx512vbmi avx512_vpopcntdq
+[0.7        0.69985417 0.69970833 0.6995625  0.69941667 0.69927083
+ 0.699125   0.69883333 0.69854167 0.69825    0.69766667 0.69708333
+ 0.6965     0.69533333 0.69416667 0.693      0.69066667 0.68833333
+ 0.686      0.68366667 0.68133333 0.679      0.67666667 0.67433333
+ 0.672      0.66966667 0.66733333 0.665      0.66266667 0.66033333
+ 0.658      0.65566667 0.65333333 0.651      0.64866667 0.64633333
+ 0.644      0.64166667 0.63933333 0.637      0.63466667 0.63233333
+ 0.63       0.62766667 0.62533333 0.623      0.62066667 0.61833333
+ 0.616      0.61366667 0.61133333 0.609      0.60666667 0.60433333
+ 0.602      0.59966667 0.59733333 0.595      0.59266667 0.59033333
+ 0.588      0.58566667 0.58333333 0.581      0.57866667 0.57633333
+ 0.574      0.57166667 0.56933333 0.567      0.56466667 0.56233333
+ 0.56       0.55766667 0.55533333 0.553      0.55066667 0.54833333
+ 0.546      0.54366667 0.54133333 0.539      0.53666667 0.53433333
+ 0.532      0.52966667 0.52733333 0.525      0.52266667 0.52033333
+ 0.518      0.51566667 0.51333333 0.511      0.50866667 0.50633333
+ 0.504      0.50166667 0.49933333 0.497      0.49466667 0.49233333
+ 0.49       0.48766667 0.48533333 0.483      0.48066667 0.47833333
+ 0.476      0.47366667 0.47133333 0.469      0.46666667 0.46433333
+ 0.462      0.45966667 0.45733333 0.455      0.45266667 0.45033333
+ 0.448      0.44566667 0.44333333 0.441      0.43866667 0.43633333
+ 0.434      0.43166667 0.42933333 0.427      0.42466667 0.42233333
+ 0.42       0.41766667 0.41533333 0.413      0.41066667 0.40833333
+ 0.406      0.40366667 0.40133333 0.399      0.39666667 0.39433333
+ 0.392      0.38966667 0.38733333 0.385      0.38266667 0.38033333
+ 0.378      0.37566667 0.37333333 0.371      0.36866667 0.36633333
+ 0.364      0.36166667 0.35933333 0.357      0.35466667 0.35233333
+ 0.35       0.34766667 0.34533333 0.343      0.34066667 0.33833333
+ 0.336      0.33366667 0.33133333 0.329      0.32666667 0.32433333
+ 0.322      0.31966667 0.31733333 0.315      0.31266667 0.31033333
+ 0.308      0.30566667 0.30333333 0.301      0.29866667 0.29633333
+ 0.294      0.29166667 0.28933333 0.287      0.28466667 0.28233333
+ 0.28       0.27766667 0.27533333 0.273      0.27066667 0.26833333
+ 0.266      0.26366667 0.26133333 0.259      0.25666667 0.25433333
+ 0.252      0.24966667 0.24733333 0.245      0.24266667 0.24033333
+ 0.238      0.23566667 0.23333333 0.231      0.22866667 0.22633333
+ 0.224      0.22166667 0.21933333 0.217      0.21466667 0.21233333
+ 0.21       0.20766667 0.20533333 0.203      0.20066667 0.19833333
+ 0.196      0.19366667 0.19133333 0.189      0.18666667 0.18433333
+ 0.182      0.17966667 0.17733333 0.175      0.17266667 0.17033333
+ 0.168      0.16566667 0.16333333 0.161      0.15866667 0.15633333
+ 0.154      0.15166667 0.14933333 0.147      0.14466667 0.14233333
+ 0.14       0.13766667 0.13533333 0.133      0.13066667 0.12833333
+ 0.126      0.12366667 0.12133333 0.119      0.11666667 0.11433333
+ 0.112      0.10966667 0.10733333 0.105      0.10266667 0.10033333
+ 0.098      0.09566667 0.09333333 0.091      0.08866667 0.08633333
+ 0.084      0.08166667 0.07933333 0.077      0.07466667 0.07233333
+ 0.07       0.06766667 0.06533333 0.063      0.06066667 0.05833333
+ 0.056      0.05366667 0.05133333 0.049      0.04666667 0.04433333
+ 0.042      0.03966667 0.03733333 0.035      0.03266667 0.03033333
+ 0.028      0.02566667 0.02333333 0.021      0.01866667 0.01633333
+ 0.014      0.01166667 0.00933333 0.007      0.00466667 0.00233333
+ 0.        ]
+the number of phi grid cells are 300
+The number of theta grid cells are 312
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Number of processors:           32
+ Number of threads in use:           32
+ Reading global frequencies/wavelengths...
+ Reading grid file and prepare grid tree...
+    Adjusting theta(ny+1) to exactly pi/2...
+    Adjusting phi(nz+1) to exactly 2*pi...
+ Reading star data...
+ Notice: Found a star inside the spherical coordinate grid.
+         That is perfectly fine, just be aware of this.
+ Note: Please be aware that you treat the star(s) as
+       point source(s) while using spherical coordinate mode.
+       Since R_*<<R_in this is probably OK, but if you want
+       to play safe, then set istar_sphere = 1 in radmc3d.inp.
+ Note: Star 1 is taken to be a blackbody star
+       at a temperature T = 7650. Kelvin
+ Note: Star 2 is taken to be a blackbody star
+       at a temperature T = 1200. Kelvin
+ Grid information (current status):
+   We have 28080000 branches, of which 28080000 are actual grid cells.
+   ---> -52.955% mem use for branches, and -52.955% mem use for actual cells.
+   No grid refinement is active. The AMR tree is not allocated (this saves memory).
+ Reading the heat source spatial distribution...
+ Using mirror symmetry in equatorial plane, because max(theta)==pi/2.
+ Beware: The OpenMP-parallel acceleration of RADMC-3D has 
+         not yet been tested with all of the modes and
+         features that RADMC-3D offers. Please check 
+         your parallel results against the serial version
+         (i.e. compiling without -fopenmp). 
+ Reading dust data...
+ Reading dust densities...
+ Dust mass in species            1  =    1.2774627267210855E-005  Msun
+ Dust mass in species            2  =    1.2697127862202682E-003  Msun
+ Dust mass total =    1.2824874134874792E-003  Msun
+ Using dust scattering mode            1
+ Computing emissivity database...
+ Computing total input luminosities...
+ Modified Random Walk mode is switched ON
+  
+ Starting the thermal Monte Carlo simulation....
+ Thread Nr          20 of          32 threads in total
+ Thread Nr           5 of          32 threads in total
+ Thread Nr          22 of          32 threads in total
+ Thread Nr           0 of          32 threads in total
+ Thread Nr          28 of          32 threads in total
+ Thread Nr           2 of          32 threads in total
+ Thread Nr          30 of          32 threads in total
+ Thread Nr          23 of          32 threads in total
+ Thread Nr           9 of          32 threads in total
+ Thread Nr          17 of          32 threads in total
+ Thread Nr          16 of          32 threads in total
+ Thread Nr          13 of          32 threads in total
+ Thread Nr          15 of          32 threads in total
+ Thread Nr          25 of          32 threads in total
+ Thread Nr           6 of          32 threads in total
+ Thread Nr          19 of          32 threads in total
+ Thread Nr          26 of          32 threads in total
+ Thread Nr          10 of          32 threads in total
+ Thread Nr           1 of          32 threads in total
+ Thread Nr          24 of          32 threads in total
+ Thread Nr          21 of          32 threads in total
+ Thread Nr          31 of          32 threads in total
+ Thread Nr           3 of          32 threads in total
+ Thread Nr          18 of          32 threads in total
+ Thread Nr          27 of          32 threads in total
+ Thread Nr          29 of          32 threads in total
+ Thread Nr          12 of          32 threads in total
+ Thread Nr          11 of          32 threads in total
+ Thread Nr           7 of          32 threads in total
+ Thread Nr           8 of          32 threads in total
+ Thread Nr           4 of          32 threads in total
+ Thread Nr          14 of          32 threads in total
+ Thread:          19 Photon nr:                 1000
+ Thread:           2 Photon nr:                 2000
+ Thread:          22 Photon nr:                 3000
+ Thread:           5 Photon nr:                 4000
+ Thread:           6 Photon nr:                 5000
+ Thread:           2 Photon nr:                 6000
+ Thread:          26 Photon nr:                 7000
+ Thread:          20 Photon nr:                 8000
+ Thread:          12 Photon nr:                 9000
