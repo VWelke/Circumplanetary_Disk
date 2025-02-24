@@ -1,0 +1,1601 @@
+[0.7        0.69945313 0.69890625 0.69835937 0.6978125  0.69726562
+ 0.69671875 0.695625   0.69453125 0.6934375  0.69125    0.6890625
+ 0.686875   0.6825     0.678125   0.67375    0.665      0.65625
+ 0.6475     0.63875    0.63       0.62125    0.6125     0.60375
+ 0.595      0.58625    0.5775     0.56875    0.56       0.55125
+ 0.5425     0.53375    0.525      0.51625    0.5075     0.49875
+ 0.49       0.48125    0.4725     0.46375    0.455      0.44625
+ 0.4375     0.42875    0.42       0.41125    0.4025     0.39375
+ 0.385      0.37625    0.3675     0.35875    0.35       0.34125
+ 0.3325     0.32375    0.315      0.30625    0.2975     0.28875
+ 0.28       0.27125    0.2625     0.25375    0.245      0.23625
+ 0.2275     0.21875    0.21       0.20125    0.1925     0.18375
+ 0.175      0.16625    0.1575     0.14875    0.14       0.13125
+ 0.1225     0.11375    0.105      0.09625    0.0875     0.07875
+ 0.07       0.06125    0.0525     0.04375    0.035      0.02625
+ 0.0175     0.00875    0.        ]
+the number of phi grid cells are 200
+The number of theta grid cells are 92
+[0.7        0.69945313 0.69890625 0.69835937 0.6978125  0.69726562
+ 0.69671875 0.695625   0.69453125 0.6934375  0.69125    0.6890625
+ 0.686875   0.6825     0.678125   0.67375    0.665      0.65625
+ 0.6475     0.63875    0.63       0.62125    0.6125     0.60375
+ 0.595      0.58625    0.5775     0.56875    0.56       0.55125
+ 0.5425     0.53375    0.525      0.51625    0.5075     0.49875
+ 0.49       0.48125    0.4725     0.46375    0.455      0.44625
+ 0.4375     0.42875    0.42       0.41125    0.4025     0.39375
+ 0.385      0.37625    0.3675     0.35875    0.35       0.34125
+ 0.3325     0.32375    0.315      0.30625    0.2975     0.28875
+ 0.28       0.27125    0.2625     0.25375    0.245      0.23625
+ 0.2275     0.21875    0.21       0.20125    0.1925     0.18375
+ 0.175      0.16625    0.1575     0.14875    0.14       0.13125
+ 0.1225     0.11375    0.105      0.09625    0.0875     0.07875
+ 0.07       0.06125    0.0525     0.04375    0.035      0.02625
+ 0.0175     0.00875    0.        ]
+the number of phi grid cells are 200
+The number of theta grid cells are 92
+[0.7        0.69945313 0.69890625 0.69835937 0.6978125  0.69726562
+ 0.69671875 0.695625   0.69453125 0.6934375  0.69125    0.6890625
+ 0.686875   0.6825     0.678125   0.67375    0.665      0.65625
+ 0.6475     0.63875    0.63       0.62125    0.6125     0.60375
+ 0.595      0.58625    0.5775     0.56875    0.56       0.55125
+ 0.5425     0.53375    0.525      0.51625    0.5075     0.49875
+ 0.49       0.48125    0.4725     0.46375    0.455      0.44625
+ 0.4375     0.42875    0.42       0.41125    0.4025     0.39375
+ 0.385      0.37625    0.3675     0.35875    0.35       0.34125
+ 0.3325     0.32375    0.315      0.30625    0.2975     0.28875
+ 0.28       0.27125    0.2625     0.25375    0.245      0.23625
+ 0.2275     0.21875    0.21       0.20125    0.1925     0.18375
+ 0.175      0.16625    0.1575     0.14875    0.14       0.13125
+ 0.1225     0.11375    0.105      0.09625    0.0875     0.07875
+ 0.07       0.06125    0.0525     0.04375    0.035      0.02625
+ 0.0175     0.00875    0.        ]
+the number of phi grid cells are 200
+The number of theta grid cells are 92
+[0.7        0.69945313 0.69890625 0.69835937 0.6978125  0.69726562
+ 0.69671875 0.695625   0.69453125 0.6934375  0.69125    0.6890625
+ 0.686875   0.6825     0.678125   0.67375    0.665      0.65625
+ 0.6475     0.63875    0.63       0.62125    0.6125     0.60375
+ 0.595      0.58625    0.5775     0.56875    0.56       0.55125
+ 0.5425     0.53375    0.525      0.51625    0.5075     0.49875
+ 0.49       0.48125    0.4725     0.46375    0.455      0.44625
+ 0.4375     0.42875    0.42       0.41125    0.4025     0.39375
+ 0.385      0.37625    0.3675     0.35875    0.35       0.34125
+ 0.3325     0.32375    0.315      0.30625    0.2975     0.28875
+ 0.28       0.27125    0.2625     0.25375    0.245      0.23625
+ 0.2275     0.21875    0.21       0.20125    0.1925     0.18375
+ 0.175      0.16625    0.1575     0.14875    0.14       0.13125
+ 0.1225     0.11375    0.105      0.09625    0.0875     0.07875
+ 0.07       0.06125    0.0525     0.04375    0.035      0.02625
+ 0.0175     0.00875    0.        ]
+the number of phi grid cells are 200
+The number of theta grid cells are 92
+[0.7        0.69945313 0.69890625 0.69835937 0.6978125  0.69726562
+ 0.69671875 0.695625   0.69453125 0.6934375  0.69125    0.6890625
+ 0.686875   0.6825     0.678125   0.67375    0.665      0.65625
+ 0.6475     0.63875    0.63       0.62125    0.6125     0.60375
+ 0.595      0.58625    0.5775     0.56875    0.56       0.55125
+ 0.5425     0.53375    0.525      0.51625    0.5075     0.49875
+ 0.49       0.48125    0.4725     0.46375    0.455      0.44625
+ 0.4375     0.42875    0.42       0.41125    0.4025     0.39375
+ 0.385      0.37625    0.3675     0.35875    0.35       0.34125
+ 0.3325     0.32375    0.315      0.30625    0.2975     0.28875
+ 0.28       0.27125    0.2625     0.25375    0.245      0.23625
+ 0.2275     0.21875    0.21       0.20125    0.1925     0.18375
+ 0.175      0.16625    0.1575     0.14875    0.14       0.13125
+ 0.1225     0.11375    0.105      0.09625    0.0875     0.07875
+ 0.07       0.06125    0.0525     0.04375    0.035      0.02625
+ 0.0175     0.00875    0.        ]
+the number of phi grid cells are 200
+The number of theta grid cells are 92
+[0.7        0.69945313 0.69890625 0.69835937 0.6978125  0.69726562
+ 0.69671875 0.695625   0.69453125 0.6934375  0.69125    0.6890625
+ 0.686875   0.6825     0.678125   0.67375    0.665      0.65625
+ 0.6475     0.63875    0.63       0.62125    0.6125     0.60375
+ 0.595      0.58625    0.5775     0.56875    0.56       0.55125
+ 0.5425     0.53375    0.525      0.51625    0.5075     0.49875
+ 0.49       0.48125    0.4725     0.46375    0.455      0.44625
+ 0.4375     0.42875    0.42       0.41125    0.4025     0.39375
+ 0.385      0.37625    0.3675     0.35875    0.35       0.34125
+ 0.3325     0.32375    0.315      0.30625    0.2975     0.28875
+ 0.28       0.27125    0.2625     0.25375    0.245      0.23625
+ 0.2275     0.21875    0.21       0.20125    0.1925     0.18375
+ 0.175      0.16625    0.1575     0.14875    0.14       0.13125
+ 0.1225     0.11375    0.105      0.09625    0.0875     0.07875
+ 0.07       0.06125    0.0525     0.04375    0.035      0.02625
+ 0.0175     0.00875    0.        ]
+the number of phi grid cells are 200
+The number of theta grid cells are 92
+[0.7        0.69945313 0.69890625 0.69835937 0.6978125  0.69726562
+ 0.69671875 0.695625   0.69453125 0.6934375  0.69125    0.6890625
+ 0.686875   0.6825     0.678125   0.67375    0.665      0.65625
+ 0.6475     0.63875    0.63       0.62125    0.6125     0.60375
+ 0.595      0.58625    0.5775     0.56875    0.56       0.55125
+ 0.5425     0.53375    0.525      0.51625    0.5075     0.49875
+ 0.49       0.48125    0.4725     0.46375    0.455      0.44625
+ 0.4375     0.42875    0.42       0.41125    0.4025     0.39375
+ 0.385      0.37625    0.3675     0.35875    0.35       0.34125
+ 0.3325     0.32375    0.315      0.30625    0.2975     0.28875
+ 0.28       0.27125    0.2625     0.25375    0.245      0.23625
+ 0.2275     0.21875    0.21       0.20125    0.1925     0.18375
+ 0.175      0.16625    0.1575     0.14875    0.14       0.13125
+ 0.1225     0.11375    0.105      0.09625    0.0875     0.07875
+ 0.07       0.06125    0.0525     0.04375    0.035      0.02625
+ 0.0175     0.00875    0.        ]
+the number of phi grid cells are 200
+The number of theta grid cells are 92
+[0.7        0.69945313 0.69890625 0.69835937 0.6978125  0.69726562
+ 0.69671875 0.695625   0.69453125 0.6934375  0.69125    0.6890625
+ 0.686875   0.6825     0.678125   0.67375    0.665      0.65625
+ 0.6475     0.63875    0.63       0.62125    0.6125     0.60375
+ 0.595      0.58625    0.5775     0.56875    0.56       0.55125
+ 0.5425     0.53375    0.525      0.51625    0.5075     0.49875
+ 0.49       0.48125    0.4725     0.46375    0.455      0.44625
+ 0.4375     0.42875    0.42       0.41125    0.4025     0.39375
+ 0.385      0.37625    0.3675     0.35875    0.35       0.34125
+ 0.3325     0.32375    0.315      0.30625    0.2975     0.28875
+ 0.28       0.27125    0.2625     0.25375    0.245      0.23625
+ 0.2275     0.21875    0.21       0.20125    0.1925     0.18375
+ 0.175      0.16625    0.1575     0.14875    0.14       0.13125
+ 0.1225     0.11375    0.105      0.09625    0.0875     0.07875
+ 0.07       0.06125    0.0525     0.04375    0.035      0.02625
+ 0.0175     0.00875    0.        ]
+the number of phi grid cells are 200
+The number of theta grid cells are 92
+[0.7        0.69945313 0.69890625 0.69835937 0.6978125  0.69726562
+ 0.69671875 0.695625   0.69453125 0.6934375  0.69125    0.6890625
+ 0.686875   0.6825     0.678125   0.67375    0.665      0.65625
+ 0.6475     0.63875    0.63       0.62125    0.6125     0.60375
+ 0.595      0.58625    0.5775     0.56875    0.56       0.55125
+ 0.5425     0.53375    0.525      0.51625    0.5075     0.49875
+ 0.49       0.48125    0.4725     0.46375    0.455      0.44625
+ 0.4375     0.42875    0.42       0.41125    0.4025     0.39375
+ 0.385      0.37625    0.3675     0.35875    0.35       0.34125
+ 0.3325     0.32375    0.315      0.30625    0.2975     0.28875
+ 0.28       0.27125    0.2625     0.25375    0.245      0.23625
+ 0.2275     0.21875    0.21       0.20125    0.1925     0.18375
+ 0.175      0.16625    0.1575     0.14875    0.14       0.13125
+ 0.1225     0.11375    0.105      0.09625    0.0875     0.07875
+ 0.07       0.06125    0.0525     0.04375    0.035      0.02625
+ 0.0175     0.00875    0.        ]
+the number of phi grid cells are 200
+The number of theta grid cells are 92
+[0.7        0.69945313 0.69890625 0.69835937 0.6978125  0.69726562
+ 0.69671875 0.695625   0.69453125 0.6934375  0.69125    0.6890625
+ 0.686875   0.6825     0.678125   0.67375    0.665      0.65625
+ 0.6475     0.63875    0.63       0.62125    0.6125     0.60375
+ 0.595      0.58625    0.5775     0.56875    0.56       0.55125
+ 0.5425     0.53375    0.525      0.51625    0.5075     0.49875
+ 0.49       0.48125    0.4725     0.46375    0.455      0.44625
+ 0.4375     0.42875    0.42       0.41125    0.4025     0.39375
+ 0.385      0.37625    0.3675     0.35875    0.35       0.34125
+ 0.3325     0.32375    0.315      0.30625    0.2975     0.28875
+ 0.28       0.27125    0.2625     0.25375    0.245      0.23625
+ 0.2275     0.21875    0.21       0.20125    0.1925     0.18375
+ 0.175      0.16625    0.1575     0.14875    0.14       0.13125
+ 0.1225     0.11375    0.105      0.09625    0.0875     0.07875
+ 0.07       0.06125    0.0525     0.04375    0.035      0.02625
+ 0.0175     0.00875    0.        ]
+the number of phi grid cells are 200
+The number of theta grid cells are 92
+[0.7        0.69945313 0.69890625 0.69835937 0.6978125  0.69726562
+ 0.69671875 0.695625   0.69453125 0.6934375  0.69125    0.6890625
+ 0.686875   0.6825     0.678125   0.67375    0.665      0.65625
+ 0.6475     0.63875    0.63       0.62125    0.6125     0.60375
+ 0.595      0.58625    0.5775     0.56875    0.56       0.55125
+ 0.5425     0.53375    0.525      0.51625    0.5075     0.49875
+ 0.49       0.48125    0.4725     0.46375    0.455      0.44625
+ 0.4375     0.42875    0.42       0.41125    0.4025     0.39375
+ 0.385      0.37625    0.3675     0.35875    0.35       0.34125
+ 0.3325     0.32375    0.315      0.30625    0.2975     0.28875
+ 0.28       0.27125    0.2625     0.25375    0.245      0.23625
+ 0.2275     0.21875    0.21       0.20125    0.1925     0.18375
+ 0.175      0.16625    0.1575     0.14875    0.14       0.13125
+ 0.1225     0.11375    0.105      0.09625    0.0875     0.07875
+ 0.07       0.06125    0.0525     0.04375    0.035      0.02625
+ 0.0175     0.00875    0.        ]
+the number of phi grid cells are 200
+The number of theta grid cells are 92
+[0.7        0.69945313 0.69890625 0.69835937 0.6978125  0.69726562
+ 0.69671875 0.695625   0.69453125 0.6934375  0.69125    0.6890625
+ 0.686875   0.6825     0.678125   0.67375    0.665      0.65625
+ 0.6475     0.63875    0.63       0.62125    0.6125     0.60375
+ 0.595      0.58625    0.5775     0.56875    0.56       0.55125
+ 0.5425     0.53375    0.525      0.51625    0.5075     0.49875
+ 0.49       0.48125    0.4725     0.46375    0.455      0.44625
+ 0.4375     0.42875    0.42       0.41125    0.4025     0.39375
+ 0.385      0.37625    0.3675     0.35875    0.35       0.34125
+ 0.3325     0.32375    0.315      0.30625    0.2975     0.28875
+ 0.28       0.27125    0.2625     0.25375    0.245      0.23625
+ 0.2275     0.21875    0.21       0.20125    0.1925     0.18375
+ 0.175      0.16625    0.1575     0.14875    0.14       0.13125
+ 0.1225     0.11375    0.105      0.09625    0.0875     0.07875
+ 0.07       0.06125    0.0525     0.04375    0.035      0.02625
+ 0.0175     0.00875    0.        ]
+the number of phi grid cells are 200
+The number of theta grid cells are 92
+[0.7        0.69945313 0.69890625 0.69835937 0.6978125  0.69726562
+ 0.69671875 0.695625   0.69453125 0.6934375  0.69125    0.6890625
+ 0.686875   0.6825     0.678125   0.67375    0.665      0.65625
+ 0.6475     0.63875    0.63       0.62125    0.6125     0.60375
+ 0.595      0.58625    0.5775     0.56875    0.56       0.55125
+ 0.5425     0.53375    0.525      0.51625    0.5075     0.49875
+ 0.49       0.48125    0.4725     0.46375    0.455      0.44625
+ 0.4375     0.42875    0.42       0.41125    0.4025     0.39375
+ 0.385      0.37625    0.3675     0.35875    0.35       0.34125
+ 0.3325     0.32375    0.315      0.30625    0.2975     0.28875
+ 0.28       0.27125    0.2625     0.25375    0.245      0.23625
+ 0.2275     0.21875    0.21       0.20125    0.1925     0.18375
+ 0.175      0.16625    0.1575     0.14875    0.14       0.13125
+ 0.1225     0.11375    0.105      0.09625    0.0875     0.07875
+ 0.07       0.06125    0.0525     0.04375    0.035      0.02625
+ 0.0175     0.00875    0.        ]
+the number of phi grid cells are 200
+The number of theta grid cells are 92
+[0.7        0.69945313 0.69890625 0.69835937 0.6978125  0.69726562
+ 0.69671875 0.695625   0.69453125 0.6934375  0.69125    0.6890625
+ 0.686875   0.6825     0.678125   0.67375    0.665      0.65625
+ 0.6475     0.63875    0.63       0.62125    0.6125     0.60375
+ 0.595      0.58625    0.5775     0.56875    0.56       0.55125
+ 0.5425     0.53375    0.525      0.51625    0.5075     0.49875
+ 0.49       0.48125    0.4725     0.46375    0.455      0.44625
+ 0.4375     0.42875    0.42       0.41125    0.4025     0.39375
+ 0.385      0.37625    0.3675     0.35875    0.35       0.34125
+ 0.3325     0.32375    0.315      0.30625    0.2975     0.28875
+ 0.28       0.27125    0.2625     0.25375    0.245      0.23625
+ 0.2275     0.21875    0.21       0.20125    0.1925     0.18375
+ 0.175      0.16625    0.1575     0.14875    0.14       0.13125
+ 0.1225     0.11375    0.105      0.09625    0.0875     0.07875
+ 0.07       0.06125    0.0525     0.04375    0.035      0.02625
+ 0.0175     0.00875    0.        ]
+the number of phi grid cells are 200
+The number of theta grid cells are 92
+[0.7        0.69945313 0.69890625 0.69835937 0.6978125  0.69726562
+ 0.69671875 0.695625   0.69453125 0.6934375  0.69125    0.6890625
+ 0.686875   0.6825     0.678125   0.67375    0.665      0.65625
+ 0.6475     0.63875    0.63       0.62125    0.6125     0.60375
+ 0.595      0.58625    0.5775     0.56875    0.56       0.55125
+ 0.5425     0.53375    0.525      0.51625    0.5075     0.49875
+ 0.49       0.48125    0.4725     0.46375    0.455      0.44625
+ 0.4375     0.42875    0.42       0.41125    0.4025     0.39375
+ 0.385      0.37625    0.3675     0.35875    0.35       0.34125
+ 0.3325     0.32375    0.315      0.30625    0.2975     0.28875
+ 0.28       0.27125    0.2625     0.25375    0.245      0.23625
+ 0.2275     0.21875    0.21       0.20125    0.1925     0.18375
+ 0.175      0.16625    0.1575     0.14875    0.14       0.13125
+ 0.1225     0.11375    0.105      0.09625    0.0875     0.07875
+ 0.07       0.06125    0.0525     0.04375    0.035      0.02625
+ 0.0175     0.00875    0.        ]
+the number of phi grid cells are 200
+The number of theta grid cells are 92
+[0.7        0.69945313 0.69890625 0.69835937 0.6978125  0.69726562
+ 0.69671875 0.695625   0.69453125 0.6934375  0.69125    0.6890625
+ 0.686875   0.6825     0.678125   0.67375    0.665      0.65625
+ 0.6475     0.63875    0.63       0.62125    0.6125     0.60375
+ 0.595      0.58625    0.5775     0.56875    0.56       0.55125
+ 0.5425     0.53375    0.525      0.51625    0.5075     0.49875
+ 0.49       0.48125    0.4725     0.46375    0.455      0.44625
+ 0.4375     0.42875    0.42       0.41125    0.4025     0.39375
+ 0.385      0.37625    0.3675     0.35875    0.35       0.34125
+ 0.3325     0.32375    0.315      0.30625    0.2975     0.28875
+ 0.28       0.27125    0.2625     0.25375    0.245      0.23625
+ 0.2275     0.21875    0.21       0.20125    0.1925     0.18375
+ 0.175      0.16625    0.1575     0.14875    0.14       0.13125
+ 0.1225     0.11375    0.105      0.09625    0.0875     0.07875
+ 0.07       0.06125    0.0525     0.04375    0.035      0.02625
+ 0.0175     0.00875    0.        ]
+the number of phi grid cells are 200
+The number of theta grid cells are 92
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Number of processors:            1
+ Number of threads in use:           16
+ Number of threads exceeds the number of processors which are available.
+ Please reduce the value of the "setthreads" argument.
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Number of processors:            1
+ Number of threads in use:           16
+ Number of threads exceeds the number of processors which are available.
+ Please reduce the value of the "setthreads" argument.
+ Number of processors:            1
+ Number of threads in use:           16
+ Number of threads exceeds the number of processors which are available.
+ Please reduce the value of the "setthreads" argument.
+ Number of processors:            1
+ Number of threads in use:           16
+ Number of threads exceeds the number of processors which are available.
+ Please reduce the value of the "setthreads" argument.
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Number of processors:            1
+ Number of threads in use:           16
+ Number of threads exceeds the number of processors which are available.
+ Please reduce the value of the "setthreads" argument.
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+ Number of processors:            1
+ Number of threads in use:           16
+ Number of threads exceeds the number of processors which are available.
+ Please reduce the value of the "setthreads" argument.
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Number of processors:            1
+ Number of threads in use:           16
+ Number of threads exceeds the number of processors which are available.
+ Please reduce the value of the "setthreads" argument.
+ Number of processors:            1
+ Number of threads in use:           16
+ Number of threads exceeds the number of processors which are available.
+ Please reduce the value of the "setthreads" argument.
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Number of processors:            1
+ Number of threads in use:           16
+ Number of threads exceeds the number of processors which are available.
+ Please reduce the value of the "setthreads" argument.
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Number of processors:            1
+ Number of threads in use:           16
+ Number of threads exceeds the number of processors which are available.
+ Please reduce the value of the "setthreads" argument.
+ Number of processors:            1
+ Number of threads in use:           16
+ Number of threads exceeds the number of processors which are available.
+ Please reduce the value of the "setthreads" argument.
+ Number of processors:            1
+ Number of threads in use:           16
+ Number of threads exceeds the number of processors which are available.
+ Please reduce the value of the "setthreads" argument.
+ Number of processors:            1
+ Number of threads in use:           16
+ Number of threads exceeds the number of processors which are available.
+ Please reduce the value of the "setthreads" argument.
+ Number of processors:            1
+ Number of threads in use:           16
+ Number of threads exceeds the number of processors which are available.
+ Please reduce the value of the "setthreads" argument.
+ Number of processors:            1
+ Number of threads in use:           16
+ Number of threads exceeds the number of processors which are available.
+ Please reduce the value of the "setthreads" argument.
+ Number of processors:            1
+ Number of threads in use:           16
+ Number of threads exceeds the number of processors which are available.
+ Please reduce the value of the "setthreads" argument.
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Number of processors:            1
+ Number of threads in use:            1
+ Number of processors:            1
+ Number of threads in use:            1
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Reading global frequencies/wavelengths...
+ Reading global frequencies/wavelengths...
+ Reading grid file and prepare grid tree...
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+ Reading grid file and prepare grid tree...
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Number of processors:            1
+ Number of threads in use:            1
+ Reading global frequencies/wavelengths...
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Reading grid file and prepare grid tree...
+ Number of processors:            1
+ Number of threads in use:            1
+ Reading global frequencies/wavelengths...
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Reading grid file and prepare grid tree...
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Number of processors:            1
+ Number of threads in use:            1
+ Reading global frequencies/wavelengths...
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Number of processors:            1
+ Number of threads in use:            1
+ Reading global frequencies/wavelengths...
+ Reading grid file and prepare grid tree...
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Reading grid file and prepare grid tree...
+ Number of processors:            1
+ Number of threads in use:            1
+ Reading global frequencies/wavelengths...
+ Number of processors:            1
+ Number of threads in use:            1
+ Reading global frequencies/wavelengths...
+ Number of processors:            1
+ Number of threads in use:            1
+ Reading global frequencies/wavelengths...
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Reading grid file and prepare grid tree...
+ Reading grid file and prepare grid tree...
+ Number of processors:            1
+ Number of threads in use:            1
+ Number of processors:            1
+ Number of threads in use:            1
+ Reading global frequencies/wavelengths...
+ Reading global frequencies/wavelengths...
+ Reading grid file and prepare grid tree...
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+  
+ ================================================================
+      WELCOME TO RADMC-3D: A 3-D CONTINUUM AND LINE RT SOLVER    
+                                                                 
+                          VERSION 2.0                            
+                                                                 
+                (c) 2008-2023 Cornelis Dullemond                 
+                                                                 
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Reading grid file and prepare grid tree...
+ Reading grid file and prepare grid tree...
+       Please feel free to ask questions. Also please report     
+        bugs and/or suspicious behavior without hestitation.     
+      The reliability of this code depends on your vigilance!    
+                    dullemond@uni-heidelberg.de                  
+                                                                 
+   To keep up-to-date with bug-alarms and bugfixes, follow the   
+                     RADMC-3D code on github                     
+             https://github.com/dullemond/radmc3d-2.0            
+                                                                 
+              Please visit the RADMC-3D home page at             
+  http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/ 
+ ================================================================
+  
+ Number of processors:            1
+ Number of threads in use:            1
+ Reading global frequencies/wavelengths...
+ Number of processors:            1
+ Number of threads in use:            1
+ Reading global frequencies/wavelengths...
+ Number of processors:            1
+ Number of threads in use:            1
+ Reading global frequencies/wavelengths...
+ Reading grid file and prepare grid tree...
+    Adjusting theta(ny+1) to exactly pi/2...
+    Adjusting phi(nz+1) to exactly 2*pi...
+    Adjusting theta(ny+1) to exactly pi/2...
+    Adjusting phi(nz+1) to exactly 2*pi...
+    Adjusting theta(ny+1) to exactly pi/2...
+    Adjusting phi(nz+1) to exactly 2*pi...
+ Number of processors:            1
+ Number of threads in use:            1
+ Reading global frequencies/wavelengths...
+    Adjusting theta(ny+1) to exactly pi/2...
+    Adjusting phi(nz+1) to exactly 2*pi...
+ Reading grid file and prepare grid tree...
+    Adjusting theta(ny+1) to exactly pi/2...
+    Adjusting phi(nz+1) to exactly 2*pi...
+    Adjusting theta(ny+1) to exactly pi/2...
+    Adjusting phi(nz+1) to exactly 2*pi...
+ Number of processors:            1
+ Number of threads in use:            1
+ Reading global frequencies/wavelengths...
+ Reading grid file and prepare grid tree...
+    Adjusting theta(ny+1) to exactly pi/2...
+    Adjusting phi(nz+1) to exactly 2*pi...
+    Adjusting theta(ny+1) to exactly pi/2...
+    Adjusting phi(nz+1) to exactly 2*pi...
+    Adjusting theta(ny+1) to exactly pi/2...
+    Adjusting phi(nz+1) to exactly 2*pi...
+ Reading grid file and prepare grid tree...
+    Adjusting theta(ny+1) to exactly pi/2...
+    Adjusting phi(nz+1) to exactly 2*pi...
+    Adjusting theta(ny+1) to exactly pi/2...
+    Adjusting phi(nz+1) to exactly 2*pi...
+    Adjusting theta(ny+1) to exactly pi/2...
+    Adjusting phi(nz+1) to exactly 2*pi...
+ Reading grid file and prepare grid tree...
+    Adjusting theta(ny+1) to exactly pi/2...
+    Adjusting phi(nz+1) to exactly 2*pi...
+    Adjusting theta(ny+1) to exactly pi/2...
+    Adjusting phi(nz+1) to exactly 2*pi...
+    Adjusting theta(ny+1) to exactly pi/2...
+    Adjusting phi(nz+1) to exactly 2*pi...
+    Adjusting theta(ny+1) to exactly pi/2...
+    Adjusting phi(nz+1) to exactly 2*pi...
+ Reading star data...
+ Reading star data...
+ Reading star data...
+ Reading star data...
+ Reading star data...
+ Reading star data...
+ Reading star data...
+ Reading star data...
+ Reading star data...
+ Reading star data...
+ Reading star data...
+ Reading star data...
+ Reading star data...
+ Reading star data...
+ Reading star data...
+ Reading star data...
+ Notice: Found a star inside the spherical coordinate grid.
+         That is perfectly fine, just be aware of this.
+ Note: Please be aware that you treat the star(s) as
+       point source(s) while using spherical coordinate mode.
+       Since R_*<<R_in this is probably OK, but if you want
+       to play safe, then set istar_sphere = 1 in radmc3d.inp.
+ Notice: Found a star inside the spherical coordinate grid.
+         That is perfectly fine, just be aware of this.
+ Note: Please be aware that you treat the star(s) as
+       point source(s) while using spherical coordinate mode.
+       Since R_*<<R_in this is probably OK, but if you want
+       to play safe, then set istar_sphere = 1 in radmc3d.inp.
+ Notice: Found a star inside the spherical coordinate grid.
+         That is perfectly fine, just be aware of this.
+ Note: Please be aware that you treat the star(s) as
+       point source(s) while using spherical coordinate mode.
+       Since R_*<<R_in this is probably OK, but if you want
+       to play safe, then set istar_sphere = 1 in radmc3d.inp.
+ Note: Star 1 is taken to be a blackbody star
+       at a temperature T = 7650. Kelvin
+ Notice: Found a star inside the spherical coordinate grid.
+         That is perfectly fine, just be aware of this.
+ Note: Please be aware that you treat the star(s) as
+       point source(s) while using spherical coordinate mode.
+       Since R_*<<R_in this is probably OK, but if you want
+       to play safe, then set istar_sphere = 1 in radmc3d.inp.
+ Note: Star 2 is taken to be a blackbody star
+       at a temperature T = 1200. Kelvin
+ Notice: Found a star inside the spherical coordinate grid.
+         That is perfectly fine, just be aware of this.
+ Note: Please be aware that you treat the star(s) as
+       point source(s) while using spherical coordinate mode.
+       Since R_*<<R_in this is probably OK, but if you want
+       to play safe, then set istar_sphere = 1 in radmc3d.inp.
+ Note: Star 1 is taken to be a blackbody star
+ Notice: Found a star inside the spherical coordinate grid.
+         That is perfectly fine, just be aware of this.
+ Note: Please be aware that you treat the star(s) as
+       point source(s) while using spherical coordinate mode.
+       Since R_*<<R_in this is probably OK, but if you want
+       to play safe, then set istar_sphere = 1 in radmc3d.inp.
+       at a temperature T = 7650. Kelvin
+ Note: Star 1 is taken to be a blackbody star
+ Notice: Found a star inside the spherical coordinate grid.
+         That is perfectly fine, just be aware of this.
+ Note: Please be aware that you treat the star(s) as
+       point source(s) while using spherical coordinate mode.
+       Since R_*<<R_in this is probably OK, but if you want
+       to play safe, then set istar_sphere = 1 in radmc3d.inp.
+ Note: Star 2 is taken to be a blackbody star
+       at a temperature T = 1200. Kelvin
+ Note: Star 1 is taken to be a blackbody star
+ Notice: Found a star inside the spherical coordinate grid.
+         That is perfectly fine, just be aware of this.
+ Note: Please be aware that you treat the star(s) as
+       point source(s) while using spherical coordinate mode.
+       Since R_*<<R_in this is probably OK, but if you want
+       to play safe, then set istar_sphere = 1 in radmc3d.inp.
+       at a temperature T = 7650. Kelvin
+ Note: Star 1 is taken to be a blackbody star
+       at a temperature T = 7650. Kelvin
+ Note: Star 2 is taken to be a blackbody star
+       at a temperature T = 1200. Kelvin
+ Notice: Found a star inside the spherical coordinate grid.
+         That is perfectly fine, just be aware of this.
+ Note: Please be aware that you treat the star(s) as
+       point source(s) while using spherical coordinate mode.
+ Note: Star 2 is taken to be a blackbody star
+       at a temperature T = 1200. Kelvin
+       Since R_*<<R_in this is probably OK, but if you want
+       to play safe, then set istar_sphere = 1 in radmc3d.inp.
+       at a temperature T = 7650. Kelvin
+ Note: Star 2 is taken to be a blackbody star
+       at a temperature T = 1200. Kelvin
+ Note: Star 1 is taken to be a blackbody star
+ Notice: Found a star inside the spherical coordinate grid.
+         That is perfectly fine, just be aware of this.
+ Note: Please be aware that you treat the star(s) as
+       point source(s) while using spherical coordinate mode.
+       Since R_*<<R_in this is probably OK, but if you want
+       to play safe, then set istar_sphere = 1 in radmc3d.inp.
+ Note: Star 1 is taken to be a blackbody star
+       at a temperature T = 7650. Kelvin
+ Note: Star 2 is taken to be a blackbody star
+       at a temperature T = 1200. Kelvin
+ Notice: Found a star inside the spherical coordinate grid.
+         That is perfectly fine, just be aware of this.
+ Note: Please be aware that you treat the star(s) as
+       point source(s) while using spherical coordinate mode.
+       Since R_*<<R_in this is probably OK, but if you want
+       to play safe, then set istar_sphere = 1 in radmc3d.inp.
+ Note: Star 1 is taken to be a blackbody star
+       at a temperature T = 7650. Kelvin
+ Note: Star 2 is taken to be a blackbody star
+       at a temperature T = 1200. Kelvin
+ Notice: Found a star inside the spherical coordinate grid.
+         That is perfectly fine, just be aware of this.
+ Note: Please be aware that you treat the star(s) as
+       point source(s) while using spherical coordinate mode.
+       Since R_*<<R_in this is probably OK, but if you want
+       to play safe, then set istar_sphere = 1 in radmc3d.inp.
+       at a temperature T = 7650. Kelvin
+ Notice: Found a star inside the spherical coordinate grid.
+         That is perfectly fine, just be aware of this.
+ Note: Please be aware that you treat the star(s) as
+       point source(s) while using spherical coordinate mode.
+       Since R_*<<R_in this is probably OK, but if you want
+       to play safe, then set istar_sphere = 1 in radmc3d.inp.
+ Note: Star 2 is taken to be a blackbody star
+       at a temperature T = 1200. Kelvin
+ Note: Star 1 is taken to be a blackbody star
+       at a temperature T = 7650. Kelvin
+ Note: Star 1 is taken to be a blackbody star
+ Notice: Found a star inside the spherical coordinate grid.
+         That is perfectly fine, just be aware of this.
+ Note: Please be aware that you treat the star(s) as
+       point source(s) while using spherical coordinate mode.
+       Since R_*<<R_in this is probably OK, but if you want
+       to play safe, then set istar_sphere = 1 in radmc3d.inp.
+ Note: Star 2 is taken to be a blackbody star
+       at a temperature T = 1200. Kelvin
+       at a temperature T = 7650. Kelvin
+ Note: Star 2 is taken to be a blackbody star
+ Notice: Found a star inside the spherical coordinate grid.
+         That is perfectly fine, just be aware of this.
+ Note: Please be aware that you treat the star(s) as
+       point source(s) while using spherical coordinate mode.
+       Since R_*<<R_in this is probably OK, but if you want
+       to play safe, then set istar_sphere = 1 in radmc3d.inp.
+       at a temperature T = 1200. Kelvin
+ Note: Star 1 is taken to be a blackbody star
+ Note: Star 1 is taken to be a blackbody star
+ Notice: Found a star inside the spherical coordinate grid.
+         That is perfectly fine, just be aware of this.
+ Note: Please be aware that you treat the star(s) as
+       point source(s) while using spherical coordinate mode.
+       Since R_*<<R_in this is probably OK, but if you want
+       to play safe, then set istar_sphere = 1 in radmc3d.inp.
+ Note: Star 1 is taken to be a blackbody star
+       at a temperature T = 7650. Kelvin
+ Note: Star 2 is taken to be a blackbody star
+       at a temperature T = 1200. Kelvin
+       at a temperature T = 7650. Kelvin
+ Note: Star 2 is taken to be a blackbody star
+       at a temperature T = 7650. Kelvin
+       at a temperature T = 1200. Kelvin
+ Note: Star 2 is taken to be a blackbody star
+       at a temperature T = 1200. Kelvin
+ Note: Star 1 is taken to be a blackbody star
+       at a temperature T = 7650. Kelvin
+ Note: Star 1 is taken to be a blackbody star
+ Note: Star 2 is taken to be a blackbody star
+       at a temperature T = 1200. Kelvin
+       at a temperature T = 7650. Kelvin
+ Note: Star 1 is taken to be a blackbody star
+ Note: Star 2 is taken to be a blackbody star
+       at a temperature T = 1200. Kelvin
+       at a temperature T = 7650. Kelvin
+ Note: Star 2 is taken to be a blackbody star
+       at a temperature T = 1200. Kelvin
+ Grid information (current status):
+   We have 1840000 branches, of which 1840000 are actual grid cells.
+   ---> 100.000% mem use for branches, and 100.000% mem use for actual cells.
+   No grid refinement is active. The AMR tree is not allocated (this saves memory).
+ Reading the heat source spatial distribution...
+ Grid information (current status):
+   We have 1840000 branches, of which 1840000 are actual grid cells.
+   ---> 100.000% mem use for branches, and 100.000% mem use for actual cells.
+   No grid refinement is active. The AMR tree is not allocated (this saves memory).
+ Reading the heat source spatial distribution...
+ Grid information (current status):
+   We have 1840000 branches, of which 1840000 are actual grid cells.
+   ---> 100.000% mem use for branches, and 100.000% mem use for actual cells.
+   No grid refinement is active. The AMR tree is not allocated (this saves memory).
+ Reading the heat source spatial distribution...
+ Grid information (current status):
+   We have 1840000 branches, of which 1840000 are actual grid cells.
+   ---> 100.000% mem use for branches, and 100.000% mem use for actual cells.
+   No grid refinement is active. The AMR tree is not allocated (this saves memory).
+ Using mirror symmetry in equatorial plane, because max(theta)==pi/2.
+ Starting procedure for rendering image...
+   --> Including dust
+       No lines included...
+ Using mirror symmetry in equatorial plane, because max(theta)==pi/2.
+ Starting procedure for rendering image...
+   --> Including dust
+       No lines included...
+       No gas continuum included...
+ Using mirror symmetry in equatorial plane, because max(theta)==pi/2.
+ Starting procedure for rendering image...
+   --> Including dust
+       No lines included...
+       No gas continuum included...
+ Grid information (current status):
+   We have 1840000 branches, of which 1840000 are actual grid cells.
+   ---> 100.000% mem use for branches, and 100.000% mem use for actual cells.
+   No grid refinement is active. The AMR tree is not allocated (this saves memory).
+ Reading the heat source spatial distribution...
+ Reading the heat source spatial distribution...
+ Using mirror symmetry in equatorial plane, because max(theta)==pi/2.
+ Starting procedure for rendering image...
+   --> Including dust
+       No lines included...
+       No gas continuum included...
+       No gas continuum included...
+ Grid information (current status):
+   We have 1840000 branches, of which 1840000 are actual grid cells.
+   ---> 100.000% mem use for branches, and 100.000% mem use for actual cells.
+   No grid refinement is active. The AMR tree is not allocated (this saves memory).
+ Reading the heat source spatial distribution...
+ Using mirror symmetry in equatorial plane, because max(theta)==pi/2.
+ Using mirror symmetry in equatorial plane, because max(theta)==pi/2.
+ Starting procedure for rendering image...
+   --> Including dust
+       No lines included...
+       No gas continuum included...
+ Grid information (current status):
+   We have 1840000 branches, of which 1840000 are actual grid cells.
+   ---> 100.000% mem use for branches, and 100.000% mem use for actual cells.
+   No grid refinement is active. The AMR tree is not allocated (this saves memory).
+ Reading the heat source spatial distribution...
+ Grid information (current status):
+   We have 1840000 branches, of which 1840000 are actual grid cells.
+   ---> 100.000% mem use for branches, and 100.000% mem use for actual cells.
+   No grid refinement is active. The AMR tree is not allocated (this saves memory).
+ Reading the heat source spatial distribution...
+ Using mirror symmetry in equatorial plane, because max(theta)==pi/2.
+ Starting procedure for rendering image...
+   --> Including dust
+       No lines included...
+       No gas continuum included...
+ Starting procedure for rendering image...
+   --> Including dust
+       No lines included...
+       No gas continuum included...
+ Using mirror symmetry in equatorial plane, because max(theta)==pi/2.
+ Starting procedure for rendering image...
+   --> Including dust
+       No lines included...
+       No gas continuum included...
+ Grid information (current status):
+   We have 1840000 branches, of which 1840000 are actual grid cells.
+ Grid information (current status):
+   We have 1840000 branches, of which 1840000 are actual grid cells.
+   ---> 100.000% mem use for branches, and 100.000% mem use for actual cells.
+   No grid refinement is active. The AMR tree is not allocated (this saves memory).
+ Reading the heat source spatial distribution...
+ Using mirror symmetry in equatorial plane, because max(theta)==pi/2.
+   ---> 100.000% mem use for branches, and 100.000% mem use for actual cells.
+   No grid refinement is active. The AMR tree is not allocated (this saves memory).
+ Reading the heat source spatial distribution...
+ Using mirror symmetry in equatorial plane, because max(theta)==pi/2.
+ Starting procedure for rendering image...
+   --> Including dust
+       No lines included...
+       No gas continuum included...
+ Reading dust data...
+ Reading dust data...
+ Starting procedure for rendering image...
+   --> Including dust
+       No lines included...
+       No gas continuum included...
+ Grid information (current status):
+   We have 1840000 branches, of which 1840000 are actual grid cells.
+   ---> 100.000% mem use for branches, and 100.000% mem use for actual cells.
+   No grid refinement is active. The AMR tree is not allocated (this saves memory).
+ Reading the heat source spatial distribution...
+ Using mirror symmetry in equatorial plane, because max(theta)==pi/2.
+ Reading dust data...
+ Grid information (current status):
+   We have 1840000 branches, of which 1840000 are actual grid cells.
+   ---> 100.000% mem use for branches, and 100.000% mem use for actual cells.
+   No grid refinement is active. The AMR tree is not allocated (this saves memory).
+ Reading the heat source spatial distribution...
+ Using mirror symmetry in equatorial plane, because max(theta)==pi/2.
+ Starting procedure for rendering image...
+   --> Including dust
+       No lines included...
+       No gas continuum included...
+ Reading dust data...
+ Starting procedure for rendering image...
+   --> Including dust
+       No lines included...
+       No gas continuum included...
+ Reading dust data...
+ Grid information (current status):
+   We have 1840000 branches, of which 1840000 are actual grid cells.
+   ---> 100.000% mem use for branches, and 100.000% mem use for actual cells.
+   No grid refinement is active. The AMR tree is not allocated (this saves memory).
+ Reading the heat source spatial distribution...
+ Using mirror symmetry in equatorial plane, because max(theta)==pi/2.
+ Starting procedure for rendering image...
+   --> Including dust
+       No lines included...
+       No gas continuum included...
+ Reading dust data...
+ Reading dust data...
+ Reading dust data...
+ Reading dust data...
+ Reading dust data...
+ Grid information (current status):
+   We have 1840000 branches, of which 1840000 are actual grid cells.
+   ---> 100.000% mem use for branches, and 100.000% mem use for actual cells.
+   No grid refinement is active. The AMR tree is not allocated (this saves memory).
+ Reading the heat source spatial distribution...
+ Using mirror symmetry in equatorial plane, because max(theta)==pi/2.
+ Starting procedure for rendering image...
+   --> Including dust
+       No lines included...
+       No gas continuum included...
+ Reading dust data...
+ Reading dust data...
+ Reading dust data...
+ Reading dust data...
+ Grid information (current status):
+   We have 1840000 branches, of which 1840000 are actual grid cells.
+   ---> 100.000% mem use for branches, and 100.000% mem use for actual cells.
+   No grid refinement is active. The AMR tree is not allocated (this saves memory).
+ Reading the heat source spatial distribution...
+ Using mirror symmetry in equatorial plane, because max(theta)==pi/2.
+ Starting procedure for rendering image...
+   --> Including dust
+       No lines included...
+       No gas continuum included...
+ Reading dust data...
+ Grid information (current status):
+   We have 1840000 branches, of which 1840000 are actual grid cells.
+   ---> 100.000% mem use for branches, and 100.000% mem use for actual cells.
+   No grid refinement is active. The AMR tree is not allocated (this saves memory).
+ Reading the heat source spatial distribution...
+ Using mirror symmetry in equatorial plane, because max(theta)==pi/2.
+ Starting procedure for rendering image...
+   --> Including dust
+       No lines included...
+       No gas continuum included...
+ Reading dust data...
+ Reading dust densities...
+ Reading dust densities...
+ Reading dust densities...
+ Reading dust densities...
+ Reading dust densities...
+ Reading dust densities...
+ Reading dust densities...
+ Reading dust densities...
+ Reading dust densities...
+ Reading dust densities...
+ Reading dust densities...
+ Reading dust densities...
+ Reading dust densities...
+ Reading dust densities...
+ Reading dust densities...
+ Reading dust densities...
+ Dust mass in species            1  =    1.4701755458144509E-005  Msun
+ Dust mass in species            2  =    1.4621357214018289E-003  Msun
+ Dust mass total =    1.4768374768599733E-003  Msun
+ Reading dust temperatures...
+ ERROR: dust_temperature.inp does not have same number
+        of cells as the grid.
+               208000     1840000
+ Dust mass in species            1  =    1.4701755458144509E-005  Msun
+ Dust mass in species            2  =    1.4621357214018289E-003  Msun
+ Dust mass total =    1.4768374768599733E-003  Msun
+ Reading dust temperatures...
+ ERROR: dust_temperature.inp does not have same number
+        of cells as the grid.
+               208000     1840000
+ Dust mass in species            1  =    1.4701755458144509E-005  Msun
+ Dust mass in species            2  =    1.4621357214018289E-003  Msun
+ Dust mass total =    1.4768374768599733E-003  Msun
+ Reading dust temperatures...
+ ERROR: dust_temperature.inp does not have same number
+        of cells as the grid.
+               208000     1840000
+ Dust mass in species            1  =    1.4701755458144509E-005  Msun
+ Dust mass in species            2  =    1.4621357214018289E-003  Msun
+ Dust mass total =    1.4768374768599733E-003  Msun
+ Reading dust temperatures...
+ ERROR: dust_temperature.inp does not have same number
+        of cells as the grid.
+               208000     1840000
+ Dust mass in species            1  =    1.4701755458144509E-005  Msun
+ Dust mass in species            2  =    1.4621357214018289E-003  Msun
+ Dust mass total =    1.4768374768599733E-003  Msun
+ Reading dust temperatures...
+ ERROR: dust_temperature.inp does not have same number
+        of cells as the grid.
+               208000     1840000
+ Dust mass in species            1  =    1.4701755458144509E-005  Msun
+ Dust mass in species            2  =    1.4621357214018289E-003  Msun
+ Dust mass total =    1.4768374768599733E-003  Msun
+ Reading dust temperatures...
+ ERROR: dust_temperature.inp does not have same number
+        of cells as the grid.
+               208000     1840000
+ Dust mass in species            1  =    1.4701755458144509E-005  Msun
+ Dust mass in species            2  =    1.4621357214018289E-003  Msun
+ Dust mass total =    1.4768374768599733E-003  Msun
+ Reading dust temperatures...
+ ERROR: dust_temperature.inp does not have same number
+        of cells as the grid.
+               208000     1840000
+ Dust mass in species            1  =    1.4701755458144509E-005  Msun
+ Dust mass in species            2  =    1.4621357214018289E-003  Msun
+ Dust mass total =    1.4768374768599733E-003  Msun
+ Reading dust temperatures...
+ ERROR: dust_temperature.inp does not have same number
+        of cells as the grid.
+               208000     1840000
+ Dust mass in species            1  =    1.4701755458144509E-005  Msun
+ Dust mass in species            2  =    1.4621357214018289E-003  Msun
+ Dust mass total =    1.4768374768599733E-003  Msun
+ Reading dust temperatures...
+ ERROR: dust_temperature.inp does not have same number
+        of cells as the grid.
+               208000     1840000
+ Dust mass in species            1  =    1.4701755458144509E-005  Msun
+ Dust mass in species            2  =    1.4621357214018289E-003  Msun
+ Dust mass total =    1.4768374768599733E-003  Msun
+ Reading dust temperatures...
+ ERROR: dust_temperature.inp does not have same number
+        of cells as the grid.
+               208000     1840000
+ Dust mass in species            1  =    1.4701755458144509E-005  Msun
+ Dust mass in species            2  =    1.4621357214018289E-003  Msun
+ Dust mass total =    1.4768374768599733E-003  Msun
+ Reading dust temperatures...
+ ERROR: dust_temperature.inp does not have same number
+        of cells as the grid.
+               208000     1840000
+ Dust mass in species            1  =    1.4701755458144509E-005  Msun
+ Dust mass in species            2  =    1.4621357214018289E-003  Msun
+ Dust mass total =    1.4768374768599733E-003  Msun
+ Reading dust temperatures...
+ ERROR: dust_temperature.inp does not have same number
+        of cells as the grid.
+               208000     1840000
+ Dust mass in species            1  =    1.4701755458144509E-005  Msun
+ Dust mass in species            2  =    1.4621357214018289E-003  Msun
+ Dust mass total =    1.4768374768599733E-003  Msun
+ Reading dust temperatures...
+ ERROR: dust_temperature.inp does not have same number
+        of cells as the grid.
+               208000     1840000
+ Dust mass in species            1  =    1.4701755458144509E-005  Msun
+ Dust mass in species            2  =    1.4621357214018289E-003  Msun
+ Dust mass total =    1.4768374768599733E-003  Msun
+ Reading dust temperatures...
+ ERROR: dust_temperature.inp does not have same number
+        of cells as the grid.
+               208000     1840000
+ Dust mass in species            1  =    1.4701755458144509E-005  Msun
+ Dust mass in species            2  =    1.4621357214018289E-003  Msun
+ Dust mass total =    1.4768374768599733E-003  Msun
+ Reading dust temperatures...
+ ERROR: dust_temperature.inp does not have same number
+        of cells as the grid.
+               208000     1840000
+ Dust mass in species            1  =    1.4701755458144509E-005  Msun
+ Dust mass in species            2  =    1.4621357214018289E-003  Msun
+ Dust mass total =    1.4768374768599733E-003  Msun
+ Reading dust temperatures...
+ ERROR: dust_temperature.inp does not have same number
+        of cells as the grid.
+               208000     1840000
+Job finished successfully at Wed 19 Feb 17:19:20 GMT 2025
