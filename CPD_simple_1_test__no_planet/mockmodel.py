@@ -189,9 +189,9 @@ def plot_small_dust_density(rr, rhodsm):
     # Star and planet parameters  
         # Star parameters
 
-mstar    = 20*M_sun  #1.65 Msun
+mstar    = 1.65*M_sun  #1.65 Msun
 rstar    = 1.6*R_sun  #Rsun
-tstar    = 20000 #7650 #K
+tstar    = 4000 #7650 #K
 pstar    = np.array([0,0.,0.])  # 37.2 au at R later
 print(mstar,rstar)
 

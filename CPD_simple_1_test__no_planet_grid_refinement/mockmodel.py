@@ -30,8 +30,9 @@ def grid_refine_mid_plane(theta_orig, nlev, nspan):
     theta = theta_orig.copy()
     rev = theta[0] > theta[1]
     for ilev in range(nlev):
-        theta_new = 0.5 * (theta[nspan-1:-1] + theta[nspan:])  #for last few indices-> small z, refine midplane
+        #theta_new = 0.5 * (theta[nspan-1:-1] + theta[nspan:])  #for last few indices-> small z, refine midplane
         #theta_new = 0.5 * (theta[1:nspan+1] + theta[:nspan])   # #refine disk surface
+        theta_new = 0.5 * (theta[1:nspan+1] + theta[:nspan]) 
         theta_ref = np.hstack((theta, theta_new))
         theta_ref.sort()
         theta = theta_ref
@@ -47,7 +48,7 @@ nspan_thetain= 3
 # Define the parameters of the model
 
     # radmc3d.inp parameter : main settings for RADMC-3D
-nphot    = 1000000  #for the thermal monte carto simulation
+nphot    = 1e7  #for the thermal monte carto simulation
 #multiple CPU cores, may need cluster
 
     # Grid : defines layout of space
@@ -223,16 +224,16 @@ def plot_small_dust_density(rr, rhodsm):
     # Star and planet parameters  
         # Star parameters
 
-mstar    = 20*M_sun  #1.65 Msun
+mstar    = 1.65*M_sun  #1.65 Msun
 rstar    = 1.6*R_sun  #Rsun
-tstar    = 20000 #7650 #K
+tstar    = 4000 #7650 #K
 pstar    = np.array([0,0.,0.])  # 37.2 au at R later
 print(mstar,rstar)
 
         # Planet parameters
 mplanet  = 3*M_jup
 rplanet  = 1.17*R_jup
-tplanet  = 1000
+tplanet  = 1200
 pplanet  = np.array([37.2*au,0.,0.])
 
 
@@ -294,13 +295,13 @@ with open('dust_density.inp','w+') as f:
 # Stars and Planets
 with open('stars.inp', 'w+') as f:
     f.write('2\n')  # 2: lambda in microns, 1: freq in hz
-    f.write('1 %d\n\n' % (nlam))  # number of stars, number of wavelengths
+    f.write('2 %d\n\n' % (nlam))  # number of stars, number of wavelengths
     f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n'%(rstar, mstar, pstar[0], pstar[1], pstar[2]))  # star's r, M, pos(x, y, z)
-    #f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n' % (rplanet, mplanet, pplanet[0], pplanet[1], pplanet[2]))  # planet's r, M, pos(x, y, z)
+    f.write('%13.6e %13.6e %13.6e %13.6e %13.6e\n\n' % (rplanet, mplanet, pplanet[0], pplanet[1], pplanet[2]))  # planet's r, M, pos(x, y, z)
     for value in lam:
         f.write('%13.6e\n'%(value))
     f.write('\n%13.6e\n'%(-tstar))  # write negative tstar
-    #f.write('\n%13.6e\n' % (-tplanet))  # write negative tplanet
+    f.write('\n%13.6e\n' % (-tplanet))  # write negative tplanet
 
 
 
