@@ -47,26 +47,11 @@ def grid_refine_mid_plane(theta_orig, nlev, nspan):
 
 # increase phi grid cell for range (pp >= 0) & (pp <= phi_max) | (pp >= phi_min) & (pp <= 2*np.pi)
 
-def grid_refine_phi(phi_orig, nlev, phi_max, phi_min):
 
-    phi = phi_orig.copy()
-    for ilev in range(nlev):
-        # Identify the indices within the specified range
-        mask = (phi >= 0) & (phi <= phi_max) | (phi >= phi_min) & (phi <= 2 * np.pi)
-        phi_to_refine = phi[mask]
-        # Refine the grid within the specified range
-    
-        phi_new = 0.5 * (phi_to_refine[:-1] + phi_to_refine[1:])
-        phi_ref = np.hstack((phi, phi_new))
-        phi_ref.sort()
-        phi = phi_ref
-
-    return phi
 
 
 nlev_thetain = 4 
 nspan_thetain= 3  
-nlev_phiin = 4
 
 # Define the parameters of the model
 
@@ -78,8 +63,8 @@ nphot_scat = 1e6  #for the scattering monte carto simulation
     # Grid : defines layout of space
 
 nr       = 100 
-ntheta   = 40
-nphi     = 40
+ntheta   = 80
+nphi     = 200
 
 
 # Radius for PPD not CPD
@@ -260,9 +245,9 @@ def plot_small_dust_density(rr, rhodsm):
     # Star and planet parameters  
         # Star parameters
 
-mstar    = 20*M_sun  #1.65 Msun
+mstar    = 1.65*M_sun  #1.65 Msun
 rstar    = 1.6*R_sun  #Rsun
-tstar    = 7650 #7650 #K
+tstar    = 4000 #7650 #K
 pstar    = np.array([0,0.,0.])  # 37.2 au at R later
 
 
