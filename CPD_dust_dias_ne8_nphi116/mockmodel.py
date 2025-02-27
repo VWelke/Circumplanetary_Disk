@@ -113,7 +113,7 @@ ndustspec = 2
 
 
 sigmag0  = 1e3               # Sigma gas at 1 AU
-sigmad0  = sigmag0 * 0.01    # Sigma dust at 1 AU
+sigmad0  = sigmag0 * 0.01    # Sigma dust at 1 AU  10 g cm^2
 fracbig  = 0.99              # Fraction of dust that is the big grain dust
 plsig    = -1.0e0            # Powerlaw of the surface density
 hr0      = 0.05              # H_p/r at 1 AU
@@ -135,7 +135,7 @@ rhodbg   = ( sigmadbg / (np.sqrt(2.e0*np.pi)*hhbg) ) * np.exp(-(zr**2/hhrbg**2)/
 
 #CPD parameters
 #sigma_g0 =  10**3 #(g/cm**2)   # gas surface density at 1 au
-sigmad02 = 0.01*10**3 #(g/cm**2) #g/cm^2 # dust surface density at 1 au
+sigmad02 = 0.01*10**3 #(g/cm**2) #g/cm^2 # dust surface density at 1 au  10 g cm^2
 plsig2 = -1.5# power law index for the dust surface density
 plh2  = 1.15 # power law index for the dust scale height
 hr02 = 0.1
