@@ -75,7 +75,7 @@ r_i       = np.linspace(r_in,r_out,nr+1)
 
 theta_i   = np.linspace(theta_up,0.5e0*np.pi,ntheta+1)  # theta goes to pi/2 lets z starts from zero 
 
-theta_i   = grid_refine_mid_plane(theta_i, nlev_thetain, nspan_thetain)
+#theta_i   = grid_refine_mid_plane(theta_i, nlev_thetain, nspan_thetain)
 
 
 print(np.pi/2.e0-theta_i)
@@ -188,7 +188,7 @@ hhrbg[mask] += hrbigsett2 * (r_shifted / au) ** plh2
 hhsm[mask] = hhrsm[mask] * r_shifted
 hhbg[mask] = hhrbg[mask] * r_shifted
 rhodsm[mask] = (sigmadsm[mask] / (np.sqrt(2.e0 * np.pi) * hhsm[mask])) * np.exp(-(zr[mask] ** 2 / hhrsm[mask] ** 2) / 2.e0)
-#rhodbg[mask] = (sigmadbg[mask] / (np.sqrt(2.e0 * np.pi) * hhbg[mask])) * np.exp(-(zr[mask] ** 2 / hhrbg[mask] ** 2) / 2.e0)
+rhodbg[mask] = (sigmadbg[mask] / (np.sqrt(2.e0 * np.pi) * hhbg[mask])) * np.exp(-(zr[mask] ** 2 / hhrbg[mask] ** 2) / 2.e0)
 
 # add azimuthal averaging
 azav  = False                  # Switch on the azimuthal averaging

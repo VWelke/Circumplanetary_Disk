@@ -8,6 +8,8 @@
 # Import NumPy for array handling
 
 
+# This model goes from CPD_simple_1_test_model_8
+
 import numpy as np
 
 
@@ -46,44 +48,24 @@ def grid_refine_mid_plane(theta_orig, nlev, nspan):
 
 # if want to find gird_refinement in phi, go back to model 8
 
-def grid_refine_phi(phi_orig, nlev, phi_max, phi_min):
-
-    phi = phi_orig.copy()
-    
-    for ilev in range(nlev):
-        mask_sm = (phi >= 0) & (phi <= phi_max) 
-        mask_bg = (phi >= phi_min) & (phi <= 2 * np.pi)
-        phi_to_refine_sm = phi[mask_sm]
-        phi_to_refine_bg = phi[mask_bg]
-        # Identify the indices within the specified range
-        # Refine the grid within the specified range
-        phi_new_sm = 0.5 * (phi_to_refine_sm[:-1] + phi_to_refine_sm[1:])
-        phi_new_bg = 0.5 * (phi_to_refine_bg[:-1] + phi_to_refine_bg[1:])
-        #print(phi_new)
-        phi_ref = np.hstack((phi, phi_new_sm, phi_new_bg))
-        phi_ref.sort()
-        phi = phi_ref
-
-    return phi
-
 
 nlev_thetain = 4 
 nspan_thetain= 3  
-nlev_phiin = 3 
+
 
 # Define the parameters of the model
 
     # radmc3d.inp parameter : main settings for RADMC-3D
-nphot    = 1e5  #for the thermal monte carto simulation
-nphot_scat = 1e5  #for the scattering monte carto simulation
+nphot    = 1e8  #for the thermal monte carto simulation
+nphot_scat = 1e7  #for the scattering monte carto simulation
 #multiple CPU cores, may need cluster
 
     # Grid : defines layout of space
 
 # number go back to CPD_simple_1_test_no_planet_grid_refinement
-nr       = 50  #100
-ntheta   = 50  #80
-nphi     = 50  #200
+nr       = 150 
+ntheta   = 80
+nphi     = 116
 
 
 # Radius for PPD not CPD
@@ -95,8 +77,8 @@ r_out     = 90*au
 
 theta_up  = np.pi*0.5 - 0.7e0  
         # Coordinate array
-
-r_i       = np.logspace(np.log10(r_in),np.log10(r_out),nr+1)  #+1 because it is not counting cell centers, but the walls
+r_i       = np.linspace(r_in,r_out,nr+1)
+#r_i       = np.logspace(np.log10(r_in),np.log10(r_out),nr+1)  #+1 because it is not counting cell centers, but the walls
 #r_i       = grid_refine_inner_edge(r_i,nlev_rin,nspan_rin)
 
 theta_i   = np.linspace(theta_up,0.5e0*np.pi,ntheta+1)  # theta goes to pi/2 lets z starts from zero 
@@ -108,7 +90,6 @@ print(np.pi/2.e0-theta_i)
 phi_i     = np.linspace(0.e0,np.pi*2.e0,nphi+1)
 
 
-phi_i = grid_refine_phi(phi_i, nlev_phiin, 0.2, 2*np.pi - 0.2)
 
         # Cell center position array
 
@@ -161,9 +142,9 @@ rhodbg   = ( sigmadbg / (np.sqrt(2.e0*np.pi)*hhbg) ) * np.exp(-(zr**2/hhrbg**2)/
 
 
 #CPD parameters
-#sigma_g0 =  10**3 #(g/cm**2)   # gas surface density at 1 au
-sigmad02 = 0.01*10**3 #(g/cm**2) #g/cm^2 # dust surface density at 1 au
-plsig2 = -1.5# power law index for the dust surface density
+sigmag02 =  2127*10**3 #(g/cm**2)   # gas surface density at 1 au
+sigmad02 = 2127 #(g/cm**2) #g/cm^2 # dust surface density at 1 au
+plsig2 = -1.2# power law index for the dust surface density
 plh2  = 1.15 # power law index for the dust scale height
 hr02 = 0.1
 hrbigsett2 =0.05
@@ -253,7 +234,7 @@ nlam     = lam.size
 #
 vr       = np.zeros_like(rr)
 vtheta   = np.zeros_like(rr)
-vphi     = np.sqrt(GG*mstar/rr)  # Keplerian velocity at each radial distance
+vphi     = np.sqrt(G*mstar/rr)  # Keplerian velocity at each radial distance
 #vturb    = 0.1*vphi
 vturb    = 0.001*vphi
 #
