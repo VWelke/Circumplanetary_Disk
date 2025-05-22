@@ -1,0 +1,57 @@
+# This logs the script and paramters for each individal observation from ALMA in this directory
+
+#Open Ubuntu
+
+#locate to model directory: cd /mnt/c/Users/LHEM//Desktop/Van_Code_Projects/Circumplanetary_Disk/CPD_CPDphipi_ne8_copy
+
+#Open casa: /usr/local/bin/CASA/casa-6.6.1-17-pipeline-2024.1.0.8/bin/casa
+
+exec(open('simobserve_simanalyze_example.py').read())
+
+
+
+
+
+
+
+# exec(open('CASA_set_obs_C10.py').read())
+
+# I start with observing the model in ALMA band 5 (1621 microns/185 GHz) from the Cycle 11 configuration number 10 
+# Variables to be changed everytime will be: incenter, antennalist, totaltime, 
+# in simanalyse, change: vis
+# Change project name for each wavelength/band
+
+# Decide on if I want to observe for all bands really - I think depend on ratio of CPD radiation to PPD radiation
+
+# Band 5
+1. ALMA_1621.6/alma.cycle11.10.cfg
+2. ALMA_1621.6/alma.cycle11.9.cfg
+3. ALMA_1621.6/alma.cycle11.8.cfg
+4. ALMA_1621.6/alma.cycle11.7.cfg
+----------------------------------------------------------------------------------------------------
+# Band 10
+5. ALMA_344.8/alma.cycle11.10.cfg
+6. ALMA_344.8/alma.cycle11.9.cfg
+7. ALMA_344.8/alma.cycle11.8.cfg
+8. ALMA_344.8/alma.cycle11.7.cfg
+
+
+exec(open('simobserve_simanalyze_example.py').read())
+
+
+
+
+
+
+
+
+# Open  Carta：  ./carta-4.0-x86_64.AppImage   
+
+
+###################################
+
+
+
+radmc3d image incl 0 phi 0 npix 1000 loadlambda
+
+  

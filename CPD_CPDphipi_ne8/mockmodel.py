@@ -49,7 +49,7 @@ nspan_thetain= 3
 
     # radmc3d.inp parameter : main settings for RADMC-3D
 nphot    = 1e8  #for the thermal monte carto simulation
-nphot_scat = 1e7  #for the scattering monte carto simulation
+nphot_scat = 1e8  #for the scattering monte carto simulation
 #multiple CPU cores, may need cluster
 
     # Grid : defines layout of space
@@ -136,7 +136,7 @@ rhodbg   = ( sigmadbg / (np.sqrt(2.e0*np.pi)*hhbg) ) * np.exp(-(zr**2/hhrbg**2)/
 
 #CPD parameters
 #sigma_g0 =  10**3 #(g/cm**2)   # gas surface density at 1 au
-sigmad02 = 2127 #(g/cm**2) #g/cm^2 # dust surface density at 1 au
+sigmad02 = 0.016 #(g/cm**2) #g/cm^2 # dust surface density at 1 au
 plsig2 = -1.2# power law index for the dust surface density
 plh2  = 1.15 # power law index for the dust scale height
 hr02 = 0.1
@@ -356,15 +356,20 @@ with open('camera_wavelength_micron.inp','w+') as f:
         f.write('%13.6e\n'%(value))
 
 
-rr_slice = rr[:, 0, iphi-1]
+# Plot the 2D slice of sigmad
+rr_slice = rr[:, 0, 0]
 pp_slice = pp[:, 0, :]
 sigmad_slice = sigmad[:, 0, :]
 
-
 plt.figure(figsize=(10, 6))
-plt.plot(np.log10(rr_slice/au), np.log10(sigmad_slice[:,iphi-1]))
+plt.plot(np.log10(rr_slice / au), np.log10(sigmad_slice[:, 0]), label='phi = 0')
+plt.plot(np.log10(rr_slice / au), np.log10(sigmad_slice[:, -1]), label='phi = 2pi')
+plt.plot(np.log10(rr_slice / au), np.log10(sigmad_slice[:, iphi]), label='phi = pi')
+plt.legend()
+#plt.xlim(np.log10(r_min / au), np.log10(r_max / au))
 plt.xlabel('log(r(au))')
-plt.ylabel('log(sigmad) (g/cm^3))')
+plt.ylabel('log(sigmad) (g/cm^3)')
 plt.title('2D Plot of sigmad')
 plt.grid(True)
 plt.show()
+

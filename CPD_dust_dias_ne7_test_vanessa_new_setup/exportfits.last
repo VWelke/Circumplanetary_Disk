@@ -1,0 +1,13 @@
+imagename  = 'Cycle11_9000s_C10_Band5/Cycle11_9000s_C10_Band5.alma.cycle11.10.noisy.image'
+fitsimage  = 'Cycle11_9000s_C10_Band5_2.fits'
+velocity   = False
+optical    = False
+bitpix     = -32
+minpix     = 0
+maxpix     = -1
+overwrite  = False
+dropstokes = False
+stokeslast = True
+history    = True
+dropdeg    = False
+#exportfits( imagename='Cycle11_9000s_C10_Band5/Cycle11_9000s_C10_Band5.alma.cycle11.10.noisy.image',fitsimage='Cycle11_9000s_C10_Band5_2.fits',velocity=False,optical=False,bitpix=-32,minpix=0,maxpix=-1,overwrite=False,dropstokes=False,stokeslast=True,history=True,dropdeg=False )

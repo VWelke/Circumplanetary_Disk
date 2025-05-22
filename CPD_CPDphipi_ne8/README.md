@@ -15,8 +15,14 @@ cd /c/Users/LHEM/Desktop/Van_Code_Projects/Circumplanetary_Disk/CPD_dust_dias_ne
 Path: C:\Users\LHEM\Desktop\Van_Code_Projects\Circumplanetary_Disk\CPD_CPDphipi_ne8
 
 
-scp xzcapvwe@dias.hpc.phys.ucl.ac.uk:~/MSci_project/models/CPD_Kees/dust_temperature.dat "C:/Users/LHEM/Desktop/Van_Code_Projects/Circumplanetary_Disk/CPD_CPDphipi_ne8"
+scp xzcapvwe@dias.hpc.phys.ucl.ac.uk:~/MSci_project/models/CPD_Kees_lowsig/dust_temperature.dat "C:/Users/LHEM/Desktop/Van_Code_Projects/Circumplanetary_Disk/CPD_CPDphipi_ne8"
 
-scp xzcapvwe@dias.hpc.phys.ucl.ac.uk:~/MSci_project/models/CPD_Kees/radmc3d.out "C:/Users/LHEM/Desktop/Van_Code_Projects/Circumplanetary_Disk/CPD_CPDphipi_ne8"
+scp xzcapvwe@dias.hpc.phys.ucl.ac.uk:~/MSci_project/models/CPD_Kees_lowsig/radmc3d.out "C:/Users/LHEM/Desktop/Van_Code_Projects/Circumplanetary_Disk/CPD_CPDphipi_ne8"
+
+scp xzcapvwe@dias.hpc.phys.ucl.ac.uk:~/MSci_project/models/CPD_Kees_lowsig/image.out "C:/Users/LHEM/Desktop/Van_Code_Projects/Circumplanetary_Disk/CPD_CPDphipi_ne8"
 
 Password: Oowei5ohbiSh
+
+to check: 
+surface density
+loc

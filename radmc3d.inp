@@ -1,4 +1,4 @@
-nphot = 100000000
+nphot = 10000000
 nphot_scat = 10000000
 scattering_mode_max = 1
 iranfreqmode = 1

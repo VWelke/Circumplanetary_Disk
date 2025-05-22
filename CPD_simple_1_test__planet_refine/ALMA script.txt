@@ -2,11 +2,11 @@
 
 #Open Ubuntu
 
-#locate to model directory: cd /mnt/c/Users/LHEM//Desktop/Van_Code_Projects/Circumplanetary_Disk/CPD_simple_1_test__planet_refine
+#locate to model directory: cd /mnt/c/Users/LHEM//Desktop/Van_Code_Projects/Circumplanetary_Disk/CPD_CPDphipi_ne8
 
 #Open casa: /usr/local/bin/CASA/casa-6.6.1-17-pipeline-2024.1.0.8/bin/casa
 
-
+# exec(open('CASA_set_obs_C10.py').read())
 
 # I start with observing the model in ALMA band 5 (1621 microns/185 GHz) from the Cycle 11 configuration number 10 
 # Variables to be changed everytime will be: incenter, antennalist, totaltime, 
@@ -26,3 +26,15 @@
 6. ALMA_344.8/alma.cycle11.9.cfg
 7. ALMA_344.8/alma.cycle11.8.cfg
 8. ALMA_344.8/alma.cycle11.7.cfg
+
+
+exec(open('simobserve_simanalyze_example.py').read())
+
+
+
+
+
+
+
+
+# Open  Carta：  ./carta-4.0-x86_64.AppImage   

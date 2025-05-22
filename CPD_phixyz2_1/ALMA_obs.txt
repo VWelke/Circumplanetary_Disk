@@ -1,0 +1,5 @@
+cd  /mnt/d/Circumplanetary_Disk/CPD_phixyz2_1
+
+/usr/local/bin/CASA/casa-6.6.1-17-pipeline-2024.1.0.8/bin/casa --pipeline
+
+execfile('C10_obs_set.py')

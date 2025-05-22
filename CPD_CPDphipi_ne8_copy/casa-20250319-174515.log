@@ -1,0 +1,330 @@
+2025-03-19 17:45:18	INFO	::casa	
+2025-03-19 17:45:18	INFO	::casa	
+2025-03-19 17:45:18	INFO	::casa	
+2025-03-19 17:45:18	INFO	::casa	
+2025-03-19 17:45:20	INFO	::casa	Python version 3.8.10
+2025-03-19 17:45:20	INFO	::casa	CASA Version PIPELINE 6.6.1.17
+2025-03-19 17:45:20	INFO	::casa	
+2025-03-19 17:45:20	INFO	::casa	optional configuration file config.py not found, continuing CASA startup without it
+2025-03-19 17:45:20	INFO	::casa	
+2025-03-19 17:45:20	INFO	::casa	Checking Measures tables in data repository sub-directory /usr/local/bin/CASA/casa-6.6.1-17-pipeline-2024.1.0.8/lib/py/lib/python3.8/site-packages/casadata/__data__/geodetic
+2025-03-19 17:45:20	INFO	::casa	  IERSeop2000 (version date, last date in table (UTC)): 2024/06/22/15:00, 2024/05/23/00:00:00
+2025-03-19 17:45:20	INFO	::casa	  IERSeop97 (version date, last date in table (UTC)): 2024/06/22/15:00, 2024/05/23/00:00:00
+2025-03-19 17:45:20	INFO	::casa	  IERSpredict (version date, last date in table (UTC)): 2024/06/23/15:00, 2024/09/21/00:00:00
+2025-03-19 17:45:20	INFO	::casa	  TAI_UTC (version date, last date in table (UTC)): 2024/05/24/15:00, 2017/01/01/00:00:00
+2025-03-19 17:50:18	SEVERE	simobserve::::casa	Exception Reported: Error in simobserve: {'thermalnoise': ['must be of cStr type']}
+2025-03-19 17:50:18	INFO	simobserve::::casa	Traceback (most recent call last):
+2025-03-19 17:50:18	INFO	simobserve::::casa+	  File "/usr/local/bin/CASA/casa-6.6.1-17-pipeline-2024.1.0.8/lib/py/lib/python3.8/site-packages/casashell/private/simobserve.py", line 1403, in __call__
+2025-03-19 17:50:18	INFO	simobserve::::casa+	    assert _pc.validate(_invocation_parameters,self.__schema), create_error_string(_pc.errors)
+2025-03-19 17:50:18	INFO	simobserve::::casa+	AssertionError: {'thermalnoise': ['must be of cStr type']}
+2025-03-19 17:50:18	INFO	simanalyze::::casa	##########################################
+2025-03-19 17:50:18	INFO	simanalyze::::casa	##### Begin Task: simanalyze         #####
+2025-03-19 17:50:18	INFO	simanalyze::::casa	simanalyze( project='C10_10_36000s', image=True, imagename='default', skymodel='', vis='C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.ms', modelimage='', imsize=[], imdirection='', cell='0.002arcsec', interactive=False, niter=0, threshold='0.1mJy', weighting='natural', mask=[], outertaper=[], pbcor=True, stokes='I', featherimage='', analyze=True, showuv=True, showpsf=True, showmodel=True, showconvolved=False, showclean=True, showresidual=False, showdifference=True, showfidelity=True, graphics='both', verbose=False, overwrite=True, dryrun=False, logfile='' )
+2025-03-19 17:50:18	SEVERE	simanalyze::::casa	Exception Reported: Error in simanalyze: C10_10_36000s directory doesn't exist - the task expects to find results from creating the datasets there, like the skymodel.
+2025-03-19 17:50:18	INFO	simanalyze::::casa	Traceback (most recent call last):
+2025-03-19 17:50:18	INFO	simanalyze::::casa+	  File "/usr/local/bin/CASA/casa-6.6.1-17-pipeline-2024.1.0.8/lib/py/lib/python3.8/site-packages/casashell/private/simanalyze.py", line 1065, in __call__
+2025-03-19 17:50:18	INFO	simanalyze::::casa+	    task_result = _simanalyze_t( _pc.document['project'],_pc.document['image'],_pc.document['imagename'],_pc.document['skymodel'],_pc.document['vis'],_pc.document['modelimage'],_pc.document['imsize'],_pc.document['imdirection'],_pc.document['cell'],_pc.document['interactive'],_pc.document['niter'],_pc.document['threshold'],_pc.document['weighting'],_pc.document['mask'],_pc.document['outertaper'],_pc.document['pbcor'],_pc.document['stokes'],_pc.document['featherimage'],_pc.document['analyze'],_pc.document['showuv'],_pc.document['showpsf'],_pc.document['showmodel'],_pc.document['showconvolved'],_pc.document['showclean'],_pc.document['showresidual'],_pc.document['showdifference'],_pc.document['showfidelity'],_pc.document['graphics'],_pc.document['verbose'],_pc.document['overwrite'],_pc.document['dryrun'],_pc.document['logfile'] )
+2025-03-19 17:50:18	INFO	simanalyze::::casa+	  File "/usr/local/bin/CASA/casa-6.6.1-17-pipeline-2024.1.0.8/lib/py/lib/python3.8/site-packages/casatasks/private/task_simanalyze.py", line 76, in simanalyze
+2025-03-19 17:50:18	INFO	simanalyze::::casa+	    msg(fileroot+" directory doesn't exist - the task expects to find results from creating the datasets there, like the skymodel.",priority="error")
+2025-03-19 17:50:18	INFO	simanalyze::::casa+	  File "/usr/local/bin/CASA/casa-6.6.1-17-pipeline-2024.1.0.8/lib/py/lib/python3.8/site-packages/casatasks/private/simutil.py", line 254, in msg
+2025-03-19 17:50:18	INFO	simanalyze::::casa+	    raise Exception(s)
+2025-03-19 17:50:18	INFO	simanalyze::::casa+	Exception: C10_10_36000s directory doesn't exist - the task expects to find results from creating the datasets there, like the skymodel.
+2025-03-19 17:50:18	INFO	simanalyze::::casa	Task simanalyze complete. Start time: 2025-03-19 17:50:18.309406 End time: 2025-03-19 17:50:18.322611
+2025-03-19 17:50:18	INFO	simanalyze::::casa	##### End Task: simanalyze           #####
+2025-03-19 17:50:18	INFO	simanalyze::::casa	##########################################
+2025-03-19 17:50:18	SEVERE	exportfits::::casa	Exception Reported: Error in exportfits: the imagename parameter must be a path that exists ('C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.image' does not exist)
+2025-03-19 17:50:18	INFO	exportfits::::casa	Traceback (most recent call last):
+2025-03-19 17:50:18	INFO	exportfits::::casa+	  File "/usr/local/bin/CASA/casa-6.6.1-17-pipeline-2024.1.0.8/lib/py/lib/python3.8/site-packages/casashell/private/exportfits.py", line 527, in __call__
+2025-03-19 17:50:18	INFO	exportfits::::casa+	    assert _pc.validate(_invocation_parameters,self.__schema), create_error_string(_pc.errors)
+2025-03-19 17:50:18	INFO	exportfits::::casa+	AssertionError: the imagename parameter must be a path that exists ('C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.image' does not exist)
+2025-03-19 18:09:54	INFO	simobserve::::casa	##########################################
+2025-03-19 18:09:54	INFO	simobserve::::casa	##### Begin Task: simobserve         #####
+2025-03-19 18:09:54	INFO	simobserve::::casa	simobserve( project='C10_10_36000s', skymodel='RADMC3d_fits/CPD_PPD_PDS70_344.59.fits', inbright='', indirection='J2000 14h08m10.11s -41d23m52.95s', incell='0.002arcsec', incenter='870 GHz', inwidth='', complist='', compwidth='"8GHz"', comp_nchan=1, setpointings=True, ptgfile='$project.ptg.txt', integration='30s', direction=[], mapsize=["''", "''"], maptype='ALMA', pointingspacing='', caldirection='', calflux='1Jy', obsmode='int', refdate='2025/01/01', hourangle='transit', totaltime='36000s', antennalist='alma.cycle11.10.cfg', sdantlist='aca.tp.cfg', sdant=0, outframe='LSRK', thermalnoise='tsys-atm', user_pwv=0.412, t_ground=269.0, t_sky=260.0, tau0=0.1, seed=11111, leakage=0.0, graphics='none', verbose=False, overwrite=True )
+2025-03-19 18:09:54	INFO	simobserve::FITSCoordinateUtil::fromFITSHeader	The WCS for this image contains 1 degenerate axes.
+2025-03-19 18:09:54	INFO	simobserve::FITSImage::getImageAttributes 	Image dimension appears to be less than number of pixel axes in CoordinateSystem
+2025-03-19 18:09:54	INFO	simobserve::FITSImage::getImageAttributes +	Adding 1 degenerate trailing axes
+2025-03-19 18:09:54	INFO	simobserve::ImageFactory::createImage	Created Paged image 'C10_10_36000s/C10_10_36000s.alma.cycle11.10.skymodel' of shape [100, 100, 1, 1] with float valued pixels.
+2025-03-19 18:09:55	INFO	simobserve::ImageFactory::fromImage	Created Paged image 'C10_10_36000s/C10_10_36000s.alma.cycle11.10.skymodel.flat' of shape [100, 100] with float valued pixels.
+2025-03-19 18:09:55	INFO	simobserve::image::_adddegaxes 	Creating image 'C10_10_36000s/C10_10_36000s.alma.cycle11.10.skymodel.flat' of shape [100, 100, 1]
+2025-03-19 18:09:55	INFO	simobserve::readantenna::casa	Reading antenna positions from '/usr/local/bin/CASA/casa-6.6.1-17-pipeline-2024.1.0.8/lib/py/lib/python3.8/site-packages/casadata/__data__/alma/simmos/alma.cycle11.10.cfg'
+2025-03-19 18:09:55	INFO	simobserve::readantenna::casa	Reading antenna positions from '/usr/local/bin/CASA/casa-6.6.1-17-pipeline-2024.1.0.8/lib/py/lib/python3.8/site-packages/casadata/__data__/alma/simmos/alma.cycle11.10.cfg'
+2025-03-19 18:09:55	INFO	simobserve::simobserve::casa	calculating map pointings centered at J2000 14:08:10.11000 -041.23.52.950000
+2025-03-19 18:09:55	INFO	simobserve::calc_pointings::casa	using 1 generated pointing(s)
+2025-03-19 18:09:55	INFO	simobserve::simobserve::casa	center = J2000 14:08:10.11000 -041.23.52.950000
+2025-03-19 18:09:55	INFO	simobserve::simobserve::casa	preparing empty measurement set
+2025-03-19 18:09:55	INFO	simobserve::simobserve::casa	You desire an hour angle of 0.0 hours
+2025-03-19 18:09:57	INFO	simobserve::NewMSSimulator::initAnt() 	Using global coordinates for the antennas
+2025-03-19 18:09:57	INFO	simobserve::NewMSSimulator::initAnt() 	Added rows to ANTENNA table
+2025-03-19 18:09:57	INFO	simobserve::MSsimulator::initSpWindows() 	Creating new spectral window band9, ID 1
+2025-03-19 18:09:57	INFO	simobserve::MSsimulator::initFeeds() 	Added rows to FEED table
+2025-03-19 18:09:57	INFO	simobserve::simulator::settimes()	Times 
+2025-03-19 18:09:57	INFO	simobserve::simulator::settimes()+	     Integration time 30s
+2025-03-19 18:09:57	INFO	simobserve::simulator::settimes()	     Times will be interpreted as hour angles for first source
+2025-03-19 18:09:57	SEVERE	simobserve::MeasTable::dUTC(Double) (file /source/casa6/casatools/casacore/measures/Measures/MeasTable.cc, line 4290)	Leap second table TAI_UTC seems out-of-date.
+2025-03-19 18:09:57	SEVERE	simobserve::MeasTable::dUTC(Double) (file /source/casa6/casatools/casacore/measures/Measures/MeasTable.cc, line 4290)+	Until the table is updated (see the CASA documentation or your system admin),
+2025-03-19 18:09:57	SEVERE	simobserve::MeasTable::dUTC(Double) (file /source/casa6/casatools/casacore/measures/Measures/MeasTable.cc, line 4290)+	times and coordinates derived from UTC could be wrong by 1s or more.
+2025-03-19 18:09:57	INFO	simobserve::MeasIERS::fillMeas(MeasIERS::Files, Double) 	Requested JD 60676 is outside the range of the IERS (Earth axis data) table.
+2025-03-19 18:09:57	INFO	simobserve::MeasIERS::fillMeas(MeasIERS::Files, Double) +	Calculations will proceed with less precision
+2025-03-19 18:09:57	INFO	simobserve::NewMSSimulator::observe()	First source: C10_10_36000s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000
+2025-03-19 18:09:57	INFO	simobserve::NewMSSimulator::observe()+	Full time range: 01-Jan-2025/06:57:46.6 -- 01-Jan-2025/16:57:46.6 TAI with int = 30
+2025-03-19 18:09:57	INFO	simobserve::NewMSSimulator::observe()	Calculating a total of 1200 integrations
+2025-03-19 18:10:24	INFO	simobserve::Simulator::setdata() 	Selecting data
+2025-03-19 18:10:24	INFO	simobserve::Simulator::setdata() 	Performing selection on MeasurementSet
+2025-03-19 18:10:24	INFO	simobserve::Simulator::setdata() 	Selecting on field and spectral window ids
+2025-03-19 18:10:24	INFO	simobserve::Simulator::setdata() 	No selection string given
+2025-03-19 18:10:24	INFO	simobserve::Simulator::setdata() 	Selection did not drop any rows
+2025-03-19 18:10:27	INFO	simobserve::Simulator::setvp()	Setting voltage pattern parameters
+2025-03-19 18:10:27	INFO	simobserve::Simulator::setvp()	Beam Squint will be included in the VP model
+2025-03-19 18:10:27	INFO	simobserve::Simulator::setvp()	and the parallactic angle increment is 360 degrees
+2025-03-19 18:10:27	INFO	simobserve::simobserve::casa	done setting up observations (blank visibilities)
+2025-03-19 18:10:27	INFO	simobserve::simobserve::casa	predicting from C10_10_36000s/C10_10_36000s.alma.cycle11.10.skymodel
+2025-03-19 18:10:27	INFO	simobserve::Simulator::predict() 	Predicting visibilities using model: [C10_10_36000s/C10_10_36000s.alma.cycle11.10.skymodel] and componentList: 
+2025-03-19 18:10:27	INFO	simobserve::Simulator::predict() 	The data column will be replaced
+2025-03-19 18:10:27	INFO	simobserve::Simulator::createSkyEquation() 	Opening model 0 named C10_10_36000s/C10_10_36000s.alma.cycle11.10.skymodel
+2025-03-19 18:10:31	INFO	simobserve::Simulator::getVPRecord 	Using Voltage Patterns from the VPManager
+2025-03-19 18:10:31	INFO	simobserve::Simulator::createSkyEquation() 	Synthesis gridding 
+2025-03-19 18:10:31	INFO	simobserve::Simulator::createSkyEquation() 	Fourier transforms will use image centers as tangent points
+2025-03-19 18:10:31	INFO	simobserve::VPSkyJones::VPSkyJones	PB used ALMA
+2025-03-19 18:10:31	INFO	simobserve::BeamSkyJones::summary	Beam Summary: 
+2025-03-19 18:10:31	INFO	simobserve::BeamSkyJones::summary	Model 1 for ALMA ant=-1 feed=-1 uses PB: AIRY
+2025-03-19 18:10:31	INFO	simobserve::PBMath1D::summary	Using AIRY PB Class 
+2025-03-19 18:10:31	INFO	simobserve::PBMathInterface::summary	These parameters are for Voltage Pattern
+2025-03-19 18:10:31	INFO	simobserve::PBMathInterface::summary	No Beam Squint
+2025-03-19 18:10:31	INFO	simobserve::PBMath1D::summary	Max Radius at 1 GHz: 107.04 arcmin 
+2025-03-19 18:10:31	INFO	simobserve::PBMath1DAiry::summary	   Dish Diameter: 10.7 m 
+2025-03-19 18:10:31	INFO	simobserve::PBMath1DAiry::summary	Blocked Diameter: 0.75 m 
+2025-03-19 18:11:09	INFO	simobserve::Simulator::reset() 	Resetting all visibility corruption components
+2025-03-19 18:11:09	INFO	simobserve::Simulator::reset() 	Reset all image-plane corruption components
+2025-03-19 18:11:10	INFO	simobserve::simobserve::casa	generation of measurement set C10_10_36000s/C10_10_36000s.alma.cycle11.10.ms complete
+2025-03-19 18:11:12	INFO	simobserve::noise::casa	copying C10_10_36000s/C10_10_36000s.alma.cycle11.10.ms to C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.ms and adding thermal noise
+2025-03-19 18:11:18	INFO	simobserve::noise::casa	interpolated receiver temp=230
+2025-03-19 18:11:19	INFO	noise::NewMSSimulator::NewMSSimulator(MeasurementSet& theMS) 	Opening MeasurementSet /mnt/c/Users/LHEM/Desktop/Van_Code_Projects/Circumplanetary_Disk/CPD_CPDphipi_ne8_copy/C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.ms with 1083600 rows
+2025-03-19 18:11:19	INFO	noise::NewMSSimulator::NewMSSimulator(MeasurementSet& theMS) 	   last spectral window ID = 1
+2025-03-19 18:11:19	INFO	noise::Simulator::setdata() 	Selecting data
+2025-03-19 18:11:19	INFO	noise::Simulator::setdata() 	Performing selection on MeasurementSet
+2025-03-19 18:11:19	INFO	noise::Simulator::setdata() 	Selecting on spectral window id
+2025-03-19 18:11:19	INFO	noise::Simulator::setdata() 	No selection string given
+2025-03-19 18:11:19	INFO	noise::Simulator::setdata() 	Selection did not drop any rows
+2025-03-19 18:11:22	INFO	noise::Simulator::create_corrupt() 	Creating A NOISE Calibration structure for data corruption.
+2025-03-19 18:11:26	INFO	noise::SVC::sizeUpSim() 	For simint = integration, found 1 solution intervals.
+2025-03-19 18:11:27	INFO	noise::SVC[A Noise]::setSimulate() 	calTable name not set - not writing to disk (note: OTF sim - not creating Calset either)
+2025-03-19 18:11:27	INFO	noise::Simulator::setnoise2() 	adding noise with the sensitivity constant of 1/sqrt(2)
+2025-03-19 18:11:27	INFO	noise::Simulator::setnoise2() 	User has not set ground pressure, using 560mb
+2025-03-19 18:11:27	INFO	noise::Simulator::setnoise2() 	User has not set site altitude, using 5000m
+2025-03-19 18:11:27	INFO	noise::Simulator::setnoise2() 	User has not set water scale height, using 2km
+2025-03-19 18:11:27	INFO	noise::Simulator::create_corrupt() 	Creating TF NOISE Calibration structure for data corruption.
+2025-03-19 18:11:34	INFO	noise::SVC::sizeUpSim() 	For simint = integration, found 1200 solution intervals.
+2025-03-19 18:11:34	INFO	noise::AtmCorr::initAtm 	Initializing ATM
+2025-03-19 18:11:34	INFO	noise::AtmCorr::initAtm 	altitude=5000m, Pground=560mb, Tground=269K, humidity= 20%, water scale height=2000m
+2025-03-19 18:11:34	INFO	noise::AtmCorr::initAtm 	Spectral window 870(ch 10/20)
+2025-03-19 18:11:34	INFO	noise::AtmCorr::initAtm 	After setting WH2O to 0.412
+2025-03-19 18:11:34	INFO	noise::AtmCorr::initAtm 	Dry and Wet Opacity from RefractiveIndexProfile = 0.0978967, 0.460343 at 870 GHz (ch0)
+2025-03-19 18:11:34	INFO	noise::AtmCorr::initAtm 	Dry and Wet Opacity from SkyStatus              = 0.0978967, 0.460343
+2025-03-19 18:11:34	INFO	noise::AtmCorr::initAtm 	Sky plus ground and CMB Brightness Temp across Spw 0, for spill=0.95 Tground=269 pwv=0.412
+2025-03-19 18:11:34	INFO	noise::AtmCorr::initAtm 	 Zenith Tebb[869,870,870.9]=[131.063,128.85,128.951]
+2025-03-19 18:11:34	INFO	noise::AtmCorr::init(vi,par,type) 	Zenith Tsys at center of first Spectral Window = 592.592 tground=269 spillover=0.95
+2025-03-19 18:11:34	INFO	noise::AtmCorr::init(vi,par,type) 	 pwv=0.412 tau=0.558239(ch0)
+2025-03-19 18:11:34	INFO	noise::SVC[Tf Jones]::setSimulate() 	Calculating corruption terms for simulated Tf Jones: output table=C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.T.cal simint=integration t=0
+2025-03-19 18:11:42	INFO	noise::SVC[Tf Jones]::setSimulate() 	Writing calTable = C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.T.cal (Tf Jones)
+2025-03-19 18:11:42	INFO	noise::::	Writing solutions to table: C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.T.cal
+2025-03-19 18:11:47	INFO	noise::Simulator::corrupt() 	Doing visibility corruption.
+2025-03-19 18:11:47	INFO	noise::Simulator::corrupt() 	simulated A Noise: output table=<none> simint=integration t=0spwok = [1] in correct mode.
+2025-03-19 18:11:47	INFO	noise::Simulator::corrupt() 	simulated Tf Jones: output table=C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.T.cal simint=integration t=0spwok = [1] in corrupt mode.
+2025-03-19 18:11:47	WARN	noise::CTPatchedInterp::interpolate	In caltable C10_10_36000s.alma.cycle11.10.noisy.T.cal_sim_temp (Tf Jones):
+2025-03-19 18:11:47	WARN	noise::CTPatchedInterp::interpolate+	 Insufficient solution channel sampling (nchan=1) for frequency-dependent LINEAR interpolation 
+2025-03-19 18:11:47	WARN	noise::CTPatchedInterp::interpolate+	 of calibration for MS spw=0; using NEAREST instead.
+2025-03-19 18:12:08	INFO	noise::Simulator::reset() 	Resetting all visibility corruption components
+2025-03-19 18:12:08	INFO	noise::Simulator::reset() 	Reset all image-plane corruption components
+2025-03-19 18:12:08	INFO	simobserve::::casa	Task simobserve complete. Start time: 2025-03-19 18:09:53.999940 End time: 2025-03-19 18:12:07.656446
+2025-03-19 18:12:08	INFO	simobserve::::casa	##### End Task: simobserve           #####
+2025-03-19 18:12:08	INFO	simobserve::::casa	##########################################
+2025-03-19 18:12:08	INFO	simanalyze::::casa	##########################################
+2025-03-19 18:12:08	INFO	simanalyze::::casa	##### Begin Task: simanalyze         #####
+2025-03-19 18:12:08	INFO	simanalyze::::casa	simanalyze( project='C10_10_36000s', image=True, imagename='default', skymodel='', vis='C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.ms', modelimage='', imsize=[], imdirection='', cell='0.002arcsec', interactive=False, niter=0, threshold='0.1mJy', weighting='natural', mask=[], outertaper=[], pbcor=True, stokes='I', featherimage='', analyze=True, showuv=True, showpsf=True, showmodel=True, showconvolved=False, showclean=True, showresidual=False, showdifference=True, showfidelity=True, graphics='both', verbose=False, overwrite=True, dryrun=False, logfile='' )
+2025-03-19 18:12:08	INFO	simanalyze::::casa	saveinputs not available in casatasks, skipping saving simanalyze inputs
+2025-03-19 18:12:08	INFO	simanalyze::simanalyze::casa	Found a synthesis measurement set, C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.ms.
+2025-03-19 18:12:08	INFO	simanalyze::simanalyze::casa	Sky model image C10_10_36000s/C10_10_36000s.alma.cycle11.10.skymodel found.
+2025-03-19 18:12:09	INFO	simanalyze::simutil::casa	tclean( vis='C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.ms',selectdata=False,imagename='C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy',imsize=[100, 100],cell=['0.002arcsec', '0.002arcsec'],phasecenter='J2000 14:08:10.11000 -041.23.52.950000',stokes='I',startmodel='',specmode='mfs',gridder='standard',deconvolver='clark',restoration=True,outlierfile='',weighting='natural',niter=0,usemask='user',fastnoise=True,restart=True,savemodel='none',calcres=True,calcpsf=True,parallel=False,restoringbeam='common',pbcor=True,uvtaper=[],threshold='',interactive=False,mask=[],pbmask=0.0 )
+2025-03-19 18:13:13	INFO	ImageFactory::fromImage	Created Paged image 'C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.image.flat' of shape [100, 100] with float valued pixels.
+2025-03-19 18:13:13	INFO	image::_adddegaxes 	Creating image 'C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.image.flat' of shape [100, 100, 1]
+2025-03-19 18:13:14	INFO	ImageFactory::fromImage	Created Paged image 'C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.residual.flat' of shape [100, 100] with float valued pixels.
+2025-03-19 18:13:14	INFO	image::_adddegaxes 	Creating image 'C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.residual.flat' of shape [100, 100, 1]
+2025-03-19 18:13:14	INFO	tclean::simanalyze::casa	done inverting and cleaning
+2025-03-19 18:13:15	INFO	tclean::simanalyze::casa	synthesized beam area in output pixels = 11.551033
+2025-03-19 18:13:15	INFO	simanalyze::image::_setrestoringbeam 	Will use dictionary specified in beam parameter to set the beam(s)
+2025-03-19 18:13:15	INFO	simanalyze::BeamManipulator::set	Setting (global) restoring beam.
+2025-03-19 18:13:15	INFO	simanalyze::BeamManipulator::set	Beam parameters:  Major          : 0.0071786 arcsec
+2025-03-19 18:13:15	INFO	simanalyze::BeamManipulator::set+	  Minor          : 0.00568032 arcsec
+2025-03-19 18:13:15	INFO	simanalyze::BeamManipulator::set+	  Position Angle : 88.7859 deg
+2025-03-19 18:13:15	INFO	simanalyze::ImageMaskAttacher::makeMask	Created and initialized mask `mask0'
+2025-03-19 18:13:15	INFO	simanalyze::ImageRegrid::_checkAxes 	The Stokes axis cannot be regridded - removing from list
+2025-03-19 18:13:15	WARN	simanalyze::ImageRegrid::regrid	You are regridding an image whose beam is not well sampled by the pixel size.  Total flux can be lost when regridding such images, especially when the new pixel size is larger than the old pixel size. It is recommended to check the total flux of your input and output image, and if necessary rebin the input to have smaller pixels.
+2025-03-19 18:13:15	INFO	simanalyze::ImageRegrid::regrid 	Applying Jy/pixel scale factor of 1
+2025-03-19 18:13:15	INFO	simanalyze::SubImageFactory::createImage	Creating image 'C10_10_36000s/C10_10_36000s.alma.cycle11.10.skymodel.flat.regrid.tmp' of shape [100, 100, 1]
+2025-03-19 18:13:16	INFO	simanalyze::ImageExprCalculator::_imagecalc	Creating image `C10_10_36000s/C10_10_36000s.alma.cycle11.10.skymodel.flat.regrid' of shape [100, 100, 1]
+2025-03-19 18:13:16	INFO	simanalyze::Image2DConvolver::_dealWithRestoringBeam	You are convolving the sky
+2025-03-19 18:13:16	INFO	simanalyze::Image2DConvolver::_dealWithRestoringBeam	Scaling pixel values by 1
+2025-03-19 18:13:17	INFO	simanalyze::Image2DConvolver::_dealWithRestoringBeam	Original /mnt/c/Users/LHEM/Desktop/Van_Code_Projects/Circumplanetary_Disk/CPD_CPDphipi_ne8_copy/C10_10_36000s/C10_10_36000s.alma.cycle11.10.skymodel.flat.regrid resolution major: 0.0071786 arcsec, minor: 0.00568032 arcsec, pa: 88.7859 deg
+2025-03-19 18:13:17	INFO	simanalyze::Image2DConvolver::_dealWithRestoringBeam	Output C10_10_36000s/C10_10_36000s.alma.cycle11.10.skymodel.flat.regrid.conv resolution major: 0.0071786 arcsec, minor: 0.00568032 arcsec, pa: 88.7859 deg
+2025-03-19 18:13:17	INFO	simanalyze::SubImageFactory::createImage	Creating image 'C10_10_36000s/C10_10_36000s.alma.cycle11.10.skymodel.flat.regrid.conv' of shape [100, 100, 1]
+2025-03-19 18:13:17	INFO	simanalyze::image::_setrestoringbeam 	Will use dictionary specified in beam parameter to set the beam(s)
+2025-03-19 18:13:17	INFO	simanalyze::BeamManipulator::set	Setting (global) restoring beam.
+2025-03-19 18:13:17	INFO	simanalyze::BeamManipulator::set	Beam parameters:  Major          : 0.0071786 arcsec
+2025-03-19 18:13:17	INFO	simanalyze::BeamManipulator::set+	  Minor          : 0.00568032 arcsec
+2025-03-19 18:13:17	INFO	simanalyze::BeamManipulator::set+	  Position Angle : 88.7859 deg
+2025-03-19 18:13:17	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:17	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:17	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:17	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:17	INFO1	simanalyze::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [13]
+2025-03-19 18:13:17	DEBUG1	simanalyze::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2025-03-19 18:13:18	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:18	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:18	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:18	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:18	INFO1	simanalyze::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [13]
+2025-03-19 18:13:18	DEBUG1	simanalyze::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2025-03-19 18:13:18	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:18	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:18	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:18	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:18	INFO1	simanalyze::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [13]
+2025-03-19 18:13:18	DEBUG1	simanalyze::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2025-03-19 18:13:18	INFO	tclean::statim::casa	C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.residual.flat: unknown units
+2025-03-19 18:13:18	INFO	statim::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:18	INFO	statim::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:18	INFO	statim::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:18	INFO	statim::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:18	INFO1	statim::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [13]
+2025-03-19 18:13:18	DEBUG1	statim::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2025-03-19 18:13:20	INFO	statim::ImageExprCalculator::_imagecalc	Creating image `C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.diff' of shape [100, 100, 1]
+2025-03-19 18:13:20	INFO	statim::ImageExprCalculator::_imagecalc	Creating image `C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.absdiff' of shape [100, 100, 1]
+2025-03-19 18:13:21	INFO	statim::ImageExprCalculator::_imagecalc	Creating image `C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.fidelity' of shape [100, 100, 1]
+2025-03-19 18:13:22	INFO	tclean::analysis::casa	fidelity image calculated
+2025-03-19 18:13:22	INFO	analysis::ImageExprCalculator::_imagecalc	Creating image `C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.absconv' of shape [100, 100, 1]
+2025-03-19 18:13:22	INFO	tclean::analysis::casa	fidelity range (max model / rms difference) = 49.36364476187501
+2025-03-19 18:13:24	INFO	analysis::CasacRegionManager::fromBCS	No directional region specified. Using full positional plane.
+2025-03-19 18:13:24	INFO	analysis::CasacRegionManager::fromBCS	Using all spectral channels.
+2025-03-19 18:13:24	INFO	analysis::CasacRegionManager::fromBCS	Using polarizations ALL
+2025-03-19 18:13:24	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:24	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0, 0] to [99, 99, 0, 0]  (14:08:10.119, -41.23.53.050, I, 8.7e+11Hz to 14:08:10.101, -41.23.52.852, I, 8.7e+11Hz)
+2025-03-19 18:13:24	INFO	analysis::ImageCollapser::_doDegenerateAxesCase	All subimage axes to be collapsed are degenerate, using algorithm optimized for that case.
+2025-03-19 18:13:24	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:24	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:24	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:24	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:24	INFO1	analysis::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [13]
+2025-03-19 18:13:24	DEBUG1	analysis::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2025-03-19 18:13:24	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:24	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:24	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:24	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:24	INFO1	analysis::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [13]
+2025-03-19 18:13:24	DEBUG1	analysis::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2025-03-19 18:13:25	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:25	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:25	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:25	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:25	INFO1	analysis::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [13]
+2025-03-19 18:13:25	DEBUG1	analysis::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2025-03-19 18:13:25	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:25	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:25	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:25	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:25	INFO1	analysis::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [13]
+2025-03-19 18:13:25	DEBUG1	analysis::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2025-03-19 18:13:26	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:26	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:26	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2025-03-19 18:13:26	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [99, 99, 0]  (14:08:10.119, -41.23.53.050, I to 14:08:10.101, -41.23.52.852, I)
+2025-03-19 18:13:26	INFO1	analysis::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [13]
+2025-03-19 18:13:26	DEBUG1	analysis::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2025-03-19 18:13:26	INFO	tclean::analysis::casa	Simulation rms: [0.00018769] Jy/pix = [0.00216803] Jy/bm
+2025-03-19 18:13:26	INFO	tclean::analysis::casa	Simulation max: [0.00588934] Jy/pix = [0.06802797] Jy/bm
+2025-03-19 18:13:26	INFO	tclean::analysis::casa	Beam bmaj: 0.007178600877523422 bmin: 0.005680319387465715 bpa: 88.78587341308594
+2025-03-19 18:13:26	INFO	analysis::name::	No table opened.
+2025-03-19 18:13:26	INFO	analysis::name::	No table opened.
+2025-03-19 18:13:27	INFO	simanalyze::::casa	Task simanalyze complete. Start time: 2025-03-19 18:12:07.661943 End time: 2025-03-19 18:13:26.504105
+2025-03-19 18:13:27	INFO	simanalyze::::casa	##### End Task: simanalyze           #####
+2025-03-19 18:13:27	INFO	simanalyze::::casa	##########################################
+2025-03-19 18:13:27	INFO	exportfits::::casa	##########################################
+2025-03-19 18:13:27	INFO	exportfits::::casa	##### Begin Task: exportfits         #####
+2025-03-19 18:13:27	INFO	exportfits::::casa	exportfits( imagename='C10_10_36000s/C10_10_36000s.alma.cycle11.10.noisy.image', fitsimage='C10_10_36000s.fits', velocity=False, optical=False, bitpix=-32, minpix=0, maxpix=-1, overwrite=False, dropstokes=False, stokeslast=True, history=True, dropdeg=False )
+2025-03-19 18:13:27	INFO	exportfits::ImageFactory::toFITS	Applying mask of name 'mask0'
+2025-03-19 18:13:27	DEBUG1	exportfits::FITSCoordinateUtil::toFITSHeader (file /source/casa6/casatools/casacore/coordinates/Coordinates/FITSCoordinateUtil.cc, line 79)	Identified axis number 2 as latitude axis for WCS. pv2_ is the keyword name.
+2025-03-19 18:13:27	INFO	exportfits::ImageFitsConverter::ImageHeaderToFITS 	Truncating miscinfo field useweightimage to useweigh
+2025-03-19 18:13:27	INFO	exportfits::::casa	Task exportfits complete. Start time: 2025-03-19 18:13:26.514945 End time: 2025-03-19 18:13:26.705842
+2025-03-19 18:13:27	INFO	exportfits::::casa	##### End Task: exportfits           #####
+2025-03-19 18:13:27	INFO	exportfits::::casa	##########################################
+2025-03-19 18:39:22	INFO	simobserve::::casa	##########################################
+2025-03-19 18:39:22	INFO	simobserve::::casa	##### Begin Task: simobserve         #####
+2025-03-19 18:39:22	INFO	simobserve::::casa	simobserve( project='C10_10_501120s', skymodel='RADMC3d_fits/CPD_PPD_PDS70_344.59.fits', inbright='', indirection='J2000 14h08m10.11s -41d23m52.95s', incell='0.002arcsec', incenter='870 GHz', inwidth='', complist='', compwidth='"8GHz"', comp_nchan=1, setpointings=True, ptgfile='$project.ptg.txt', integration='30s', direction=[], mapsize=["''", "''"], maptype='ALMA', pointingspacing='', caldirection='', calflux='1Jy', obsmode='int', refdate='2025/01/01', hourangle='transit', totaltime='501120s', antennalist='alma.cycle11.10.cfg', sdantlist='aca.tp.cfg', sdant=0, outframe='LSRK', thermalnoise='tsys-atm', user_pwv=0.412, t_ground=269.0, t_sky=260.0, tau0=0.1, seed=11111, leakage=0.0, graphics='none', verbose=False, overwrite=True )
+2025-03-19 18:39:22	INFO	simobserve::FITSCoordinateUtil::fromFITSHeader	The WCS for this image contains 1 degenerate axes.
+2025-03-19 18:39:22	INFO	simobserve::FITSImage::getImageAttributes 	Image dimension appears to be less than number of pixel axes in CoordinateSystem
+2025-03-19 18:39:22	INFO	simobserve::FITSImage::getImageAttributes +	Adding 1 degenerate trailing axes
+2025-03-19 18:39:22	INFO	simobserve::ImageFactory::createImage	Created Paged image 'C10_10_501120s/C10_10_501120s.alma.cycle11.10.skymodel' of shape [100, 100, 1, 1] with float valued pixels.
+2025-03-19 18:39:23	INFO	simobserve::ImageFactory::fromImage	Created Paged image 'C10_10_501120s/C10_10_501120s.alma.cycle11.10.skymodel.flat' of shape [100, 100] with float valued pixels.
+2025-03-19 18:39:23	INFO	simobserve::image::_adddegaxes 	Creating image 'C10_10_501120s/C10_10_501120s.alma.cycle11.10.skymodel.flat' of shape [100, 100, 1]
+2025-03-19 18:39:24	INFO	simobserve::readantenna::casa	Reading antenna positions from '/usr/local/bin/CASA/casa-6.6.1-17-pipeline-2024.1.0.8/lib/py/lib/python3.8/site-packages/casadata/__data__/alma/simmos/alma.cycle11.10.cfg'
+2025-03-19 18:39:24	INFO	simobserve::readantenna::casa	Reading antenna positions from '/usr/local/bin/CASA/casa-6.6.1-17-pipeline-2024.1.0.8/lib/py/lib/python3.8/site-packages/casadata/__data__/alma/simmos/alma.cycle11.10.cfg'
+2025-03-19 18:39:24	INFO	simobserve::simobserve::casa	calculating map pointings centered at J2000 14:08:10.11000 -041.23.52.950000
+2025-03-19 18:39:24	INFO	simobserve::calc_pointings::casa	using 1 generated pointing(s)
+2025-03-19 18:39:24	INFO	simobserve::simobserve::casa	center = J2000 14:08:10.11000 -041.23.52.950000
+2025-03-19 18:39:24	INFO	simobserve::simobserve::casa	preparing empty measurement set
+2025-03-19 18:39:24	INFO	simobserve::simobserve::casa	You desire an hour angle of 0.0 hours
+2025-03-19 18:39:25	INFO	simobserve::NewMSSimulator::initAnt() 	Using global coordinates for the antennas
+2025-03-19 18:39:25	INFO	simobserve::NewMSSimulator::initAnt() 	Added rows to ANTENNA table
+2025-03-19 18:39:25	INFO	simobserve::MSsimulator::initSpWindows() 	Creating new spectral window band9, ID 1
+2025-03-19 18:39:25	INFO	simobserve::MSsimulator::initFeeds() 	Added rows to FEED table
+2025-03-19 18:39:25	INFO	simobserve::simulator::settimes()	Times 
+2025-03-19 18:39:25	INFO	simobserve::simulator::settimes()+	     Integration time 30s
+2025-03-19 18:39:25	INFO	simobserve::simulator::settimes()	     Times will be interpreted as hour angles for first source
+2025-03-19 18:39:25	INFO	simobserve::NewMSSimulator::observe()	First source: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000
+2025-03-19 18:39:25	INFO	simobserve::NewMSSimulator::observe()+	Full time range: 29-Dec-2024/14:21:46.6 -- 04-Jan-2025/09:33:46.6 TAI with int = 30
+2025-03-19 18:39:27	INFO	simobserve::NewMSSimulator::observe()	Calculating a total of 16704 integrations
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()	   Field 0: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 1: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 2: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 3: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 4: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 5: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 6: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 7: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 8: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 9: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 10: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 11: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 12: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 13: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 14: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 15: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 16: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 17: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 18: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   Field 19: C10_10_501120s.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000 for 1 integrations 
+2025-03-19 18:39:27	DEBUG1	simobserve::NewMSSimulator::observe()+	   (continuing without printing to log -- see MS for details) 
+2025-03-19 18:46:34	INFO	simobserve::Simulator::setdata() 	Selecting data
+2025-03-19 18:46:34	INFO	simobserve::Simulator::setdata() 	Performing selection on MeasurementSet
+2025-03-19 18:46:34	INFO	simobserve::Simulator::setdata() 	Selecting on field and spectral window ids
+2025-03-19 18:46:40	INFO	simobserve::Simulator::setdata() 	No selection string given
+2025-03-19 18:46:40	INFO	simobserve::Simulator::setdata() 	Selection did not drop any rows
+2025-03-19 18:47:14	INFO	simobserve::Simulator::setvp()	Setting voltage pattern parameters
+2025-03-19 18:47:14	INFO	simobserve::Simulator::setvp()	Beam Squint will be included in the VP model
+2025-03-19 18:47:14	INFO	simobserve::Simulator::setvp()	and the parallactic angle increment is 360 degrees
+2025-03-19 18:47:14	INFO	simobserve::simobserve::casa	done setting up observations (blank visibilities)
+2025-03-19 18:47:14	INFO	simobserve::simobserve::casa	predicting from C10_10_501120s/C10_10_501120s.alma.cycle11.10.skymodel
+2025-03-19 18:47:14	INFO	simobserve::Simulator::predict() 	Predicting visibilities using model: [C10_10_501120s/C10_10_501120s.alma.cycle11.10.skymodel] and componentList: 
+2025-03-19 18:47:14	INFO	simobserve::Simulator::predict() 	The data column will be replaced
+2025-03-19 18:47:14	INFO	simobserve::Simulator::createSkyEquation() 	Opening model 0 named C10_10_501120s/C10_10_501120s.alma.cycle11.10.skymodel
+2025-03-19 18:47:46	INFO	simobserve::Simulator::getVPRecord 	Using Voltage Patterns from the VPManager
+2025-03-19 18:47:46	INFO	simobserve::Simulator::createSkyEquation() 	Synthesis gridding 
+2025-03-19 18:47:46	INFO	simobserve::Simulator::createSkyEquation() 	Fourier transforms will use image centers as tangent points
+2025-03-19 18:47:46	INFO	simobserve::VPSkyJones::VPSkyJones	PB used ALMA
+2025-03-19 18:47:46	INFO	simobserve::BeamSkyJones::summary	Beam Summary: 
+2025-03-19 18:47:46	INFO	simobserve::BeamSkyJones::summary	Model 1 for ALMA ant=-1 feed=-1 uses PB: AIRY
+2025-03-19 18:47:46	INFO	simobserve::PBMath1D::summary	Using AIRY PB Class 
+2025-03-19 18:47:46	INFO	simobserve::PBMathInterface::summary	These parameters are for Voltage Pattern
+2025-03-19 18:47:46	INFO	simobserve::PBMathInterface::summary	No Beam Squint
+2025-03-19 18:47:46	INFO	simobserve::PBMath1D::summary	Max Radius at 1 GHz: 107.04 arcmin 
+2025-03-19 18:47:46	INFO	simobserve::PBMath1DAiry::summary	   Dish Diameter: 10.7 m 
+2025-03-19 18:47:46	INFO	simobserve::PBMath1DAiry::summary	Blocked Diameter: 0.75 m 

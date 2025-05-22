@@ -1,0 +1,58 @@
+2025-03-19 16:31:37 INFO 	   
+2025-03-19 16:31:37 INFO 	   
+2025-03-19 16:31:37 INFO 	   
+2025-03-19 16:31:37 INFO 	   
+2025-03-19 16:31:38 INFO 	Python version 3.8.10
+2025-03-19 16:31:38 INFO 	CASA Version PIPELINE 6.6.1.17
+2025-03-19 16:31:38 INFO 	   
+2025-03-19 16:31:39 INFO 	optional configuration file config.py not found, continuing CASA startup without it
+2025-03-19 16:31:39 INFO 	   
+2025-03-19 16:31:39 INFO 	Checking Measures tables in data repository sub-directory /usr/local/bin/CASA/casa-6.6.1-17-pipeline-2024.1.0.8/lib/py/lib/python3.8/site-packages/casadata/__data__/geodetic
+2025-03-19 16:31:39 INFO 	  IERSeop2000 (version date, last date in table (UTC)): 2024/06/22/15:00, 2024/05/23/00:00:00
+2025-03-19 16:31:39 INFO 	  IERSeop97 (version date, last date in table (UTC)): 2024/06/22/15:00, 2024/05/23/00:00:00
+2025-03-19 16:31:39 INFO 	  IERSpredict (version date, last date in table (UTC)): 2024/06/23/15:00, 2024/09/21/00:00:00
+2025-03-19 16:31:39 INFO 	  TAI_UTC (version date, last date in table (UTC)): 2024/05/24/15:00, 2017/01/01/00:00:00
+2025-03-19 16:31:54	INFO	simobserve::::casa	##########################################
+2025-03-19 16:31:54	INFO	simobserve::::casa	##### Begin Task: simobserve         #####
+2025-03-19 16:31:54	INFO	simobserve::::casa	simobserve( project='C10_10', skymodel='RADMC3d_fits/CPD_PPD_PDS70_344.59.fits', inbright='', indirection='J2000 14h08m10.11s -41d23m52.95s', incell='0.002arcsec', incenter='870 GHz', inwidth='', complist='', compwidth='"8GHz"', comp_nchan=1, setpointings=True, ptgfile='$project.ptg.txt', integration='30s', direction=[], mapsize=["''", "''"], maptype='ALMA', pointingspacing='', caldirection='', calflux='1Jy', obsmode='int', refdate='2025/01/01', hourangle='transit', totaltime='2274680s', antennalist='alma.cycle11.10.cfg', sdantlist='aca.tp.cfg', sdant=0, outframe='LSRK', thermalnoise='tsys-atm', user_pwv=0.5, t_ground=269.0, t_sky=260.0, tau0=0.1, seed=11111, leakage=0.0, graphics='none', verbose=False, overwrite=True )
+2025-03-19 16:31:55	INFO	simobserve::FITSCoordinateUtil::fromFITSHeader	The WCS for this image contains 1 degenerate axes.
+2025-03-19 16:31:55	INFO	simobserve::FITSImage::getImageAttributes 	Image dimension appears to be less than number of pixel axes in CoordinateSystem
+2025-03-19 16:31:55	INFO	simobserve::FITSImage::getImageAttributes +	Adding 1 degenerate trailing axes
+2025-03-19 16:31:55	INFO	simobserve::ImageFactory::createImage	Created Paged image 'C10_10/C10_10.alma.cycle11.10.skymodel' of shape [100, 100, 1, 1] with float valued pixels.
+2025-03-19 16:31:55	INFO	simobserve::ImageFactory::fromImage	Created Paged image 'C10_10/C10_10.alma.cycle11.10.skymodel.flat' of shape [100, 100] with float valued pixels.
+2025-03-19 16:31:55	INFO	simobserve::image::_adddegaxes 	Creating image 'C10_10/C10_10.alma.cycle11.10.skymodel.flat' of shape [100, 100, 1]
+2025-03-19 16:31:56	INFO	simobserve::readantenna::casa	Reading antenna positions from '/usr/local/bin/CASA/casa-6.6.1-17-pipeline-2024.1.0.8/lib/py/lib/python3.8/site-packages/casadata/__data__/alma/simmos/alma.cycle11.10.cfg'
+2025-03-19 16:31:56	INFO	simobserve::readantenna::casa	Reading antenna positions from '/usr/local/bin/CASA/casa-6.6.1-17-pipeline-2024.1.0.8/lib/py/lib/python3.8/site-packages/casadata/__data__/alma/simmos/alma.cycle11.10.cfg'
+2025-03-19 16:31:56	INFO	simobserve::simobserve::casa	calculating map pointings centered at J2000 14:08:10.11000 -041.23.52.950000
+2025-03-19 16:31:56	INFO	simobserve::calc_pointings::casa	using 1 generated pointing(s)
+2025-03-19 16:31:56	INFO	simobserve::simobserve::casa	center = J2000 14:08:10.11000 -041.23.52.950000
+2025-03-19 16:31:56	INFO	simobserve::simobserve::casa	preparing empty measurement set
+2025-03-19 16:31:56	INFO	simobserve::simobserve::casa	You desire an hour angle of 0.0 hours
+2025-03-19 16:31:57	INFO	simobserve::NewMSSimulator::initAnt() 	Using global coordinates for the antennas
+2025-03-19 16:31:57	INFO	simobserve::NewMSSimulator::initAnt() 	Added rows to ANTENNA table
+2025-03-19 16:31:57	INFO	simobserve::MSsimulator::initSpWindows() 	Creating new spectral window band9, ID 1
+2025-03-19 16:31:57	INFO	simobserve::MSsimulator::initFeeds() 	Added rows to FEED table
+2025-03-19 16:31:57	INFO	simobserve::simulator::settimes()	Times 
+2025-03-19 16:31:57	INFO	simobserve::simulator::settimes()+	     Integration time 30s
+2025-03-19 16:31:57	INFO	simobserve::simulator::settimes()	     Times will be interpreted as hour angles for first source
+2025-03-19 16:31:58	SEVERE	simobserve::MeasTable::dUTC(Double) (file /source/casa6/casatools/casacore/measures/Measures/MeasTable.cc, line 4290)	Leap second table TAI_UTC seems out-of-date.
+2025-03-19 16:31:58	SEVERE	simobserve::MeasTable::dUTC(Double) (file /source/casa6/casatools/casacore/measures/Measures/MeasTable.cc, line 4290)+	Until the table is updated (see the CASA documentation or your system admin),
+2025-03-19 16:31:58	SEVERE	simobserve::MeasTable::dUTC(Double) (file /source/casa6/casatools/casacore/measures/Measures/MeasTable.cc, line 4290)+	times and coordinates derived from UTC could be wrong by 1s or more.
+2025-03-19 16:31:58	INFO	simobserve::MeasIERS::fillMeas(MeasIERS::Files, Double) 	Requested JD 60676 is outside the range of the IERS (Earth axis data) table.
+2025-03-19 16:31:58	INFO	simobserve::MeasIERS::fillMeas(MeasIERS::Files, Double) +	Calculations will proceed with less precision
+2025-03-19 16:31:58	INFO	simobserve::NewMSSimulator::observe()	First source: C10_10.alma.cycle11.10_0 @ 14:08:10.11   -41.23.52.95       J2000
+2025-03-19 16:31:58	INFO	simobserve::NewMSSimulator::observe()+	Full time range: 19-Dec-2024/08:02:06.6 -- 14-Jan-2025/15:53:36.6 TAI with int = 30
+2025-03-19 16:32:04	INFO	simobserve::NewMSSimulator::observe()	Calculating a total of 75823 integrations
+2025-03-19 17:02:06	INFO	simobserve::Simulator::setdata() 	Selecting data
+2025-03-19 17:02:06	INFO	simobserve::Simulator::setdata() 	Performing selection on MeasurementSet
+2025-03-19 17:02:06	INFO	simobserve::Simulator::setdata() 	Selecting on field and spectral window ids
+2025-03-19 17:02:38	INFO	simobserve::Simulator::setdata() 	No selection string given
+2025-03-19 17:02:38	INFO	simobserve::Simulator::setdata() 	Selection did not drop any rows
+2025-03-19 17:06:06	INFO	simobserve::Simulator::setvp()	Setting voltage pattern parameters
+2025-03-19 17:06:06	INFO	simobserve::Simulator::setvp()	Beam Squint will be included in the VP model
+2025-03-19 17:06:06	INFO	simobserve::Simulator::setvp()	and the parallactic angle increment is 360 degrees
+2025-03-19 17:06:06	INFO	simobserve::simobserve::casa	done setting up observations (blank visibilities)
+2025-03-19 17:06:06	INFO	simobserve::simobserve::casa	predicting from C10_10/C10_10.alma.cycle11.10.skymodel
+2025-03-19 17:06:06	INFO	simobserve::Simulator::predict() 	Predicting visibilities using model: [C10_10/C10_10.alma.cycle11.10.skymodel] and componentList: 
+2025-03-19 17:06:06	INFO	simobserve::Simulator::predict() 	The data column will be replaced
+2025-03-19 17:06:06	INFO	simobserve::Simulator::createSkyEquation() 	Opening model 0 named C10_10/C10_10.alma.cycle11.10.skymodel
